@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"private": false,
 	"scripts": {
-		"storybook": "start-storybook -p 6006 -c .storybook -s docs",
-		"build-storybook": "build-storybook"
+		"storybook": "start-storybook -p 6006 -c .storybook ",
+		"build-storybook": "build-storybook -o docs"
 	},
 	"description": "component library for ACC",
 	"main": "index.js",
