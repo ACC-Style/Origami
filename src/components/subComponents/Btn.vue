@@ -4,8 +4,8 @@
 		@click="onClick()"
 		:class="[buttonStyles,{'is-active':isActive}]"
 	>
-		<i class="far p-r_2" v-if="icon" :class="iconStyles"></i>
-		<slot></slot>
+		<i class="far" v-if="icon" :class="iconStyles"></i>
+		<slot class="p-l_2"></slot>
 	</button>
 </template>
 
@@ -64,8 +64,11 @@ export default {
 		buttonStyles() {
 			let size = "";
 			switch (this.size) {
+				case "tiny":
+					size = "p-y_2 p-x_2 font_n3 font_n3:md";
+					break;
 				case "small":
-					size = "p-y_2 p-x_3 font_n2 font_n3:md";
+					size = "p-y_2 p-x_3 font_n2 font_n2:md";
 					break;
 				case "large":
 					size = "p-y_3 p-x_4 font_1 font_2:md";
@@ -90,7 +93,7 @@ export default {
 					break;
 				case "secondary":
 					state =
-						"c_black h:c_black bg_secondary-3 h:bg_secondary-1 a:c_secondary-4 a:bg_secondary-n3";
+						"c_black bg_secondary-3 h:bg_secondary-1 h:c_white a:c_secondary-4 a:bg_secondary-n3";
 					break;
 
 				default:

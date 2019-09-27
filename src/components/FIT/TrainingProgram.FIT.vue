@@ -12,29 +12,28 @@
 				class="flex_shrink status_icon"
 				:state="statusOfRecord.state"
 			></StatusIcon>
-			<div class="flex_auto p-l_3 p-y_3 lh_1">
+			<div class="flex_auto p-l_3 p-y_3 lh_2">
 				<span class="fullName">{{fullName}}</span>
-				<a class="block email font_n2 c_primary h:underline">{{email}}</a>
-				<div class="statusMessage font_n3 font_bold" v-if="statusOfRecord.state != ''">
-					<span
-						class="c_alert"
-						v-if="statusOfRecord.state == 'error' && statusOfRecord.message == 'missingEndDate'"
-					>Missing End Date</span>
-					<span
-						class="c_warning"
-						v-if="statusOfRecord.state == 'warning' && statusOfRecord.message == 'missingBirthday'"
-					>Missing Birthday</span>
+				<a class="block email font_n1 c_primary h:underline">{{email}}</a>
+				<div class="endDate font_n2 font_italic c_primary-n3 lh_0">
+					<span class="font_bold">End Date:</span>
+					{{endDate}}
+					<span class="c_alert font_bold" v-if="endDate == ''">Missing End Date</span>
+				</div>
+				<div class="statusMessage font_n2 font_bold lh_0" v-if="birthday == ''">
+					<span class="c_warning">Missing Birthday</span>
 				</div>
 			</div>
-			<div class="flex_shrink actions p-r_3 p-y_2 text_right">
-				<Btn class :size="'small'" :state="'error'" :icon="true" @click="$emit('click')">Remove</Btn>
-				<div class="flex_shrink endDate font_n2 text_center font_italic c_primary-n3">
-					<span class="font_bold">end date:</span>
-					{{endDate}}
-					<span
-						class="c_alert font_bold"
-						v-if="statusOfRecord.state == 'error' && statusOfRecord.message == 'missingEndDate'"
-					>Missing End Date</span>
+
+			<div class="flex_shrink actions p-r_3 p-y_2 text_right self_center m-r_4">
+				<div class="flex_inline p_2 br_radius bg_secondary-4 shadow_n2">
+					<Btn
+						class="br_radius"
+						:size="'medium'"
+						:state="'error'"
+						:icon="true"
+						@click="$emit('click')"
+					>Remove</Btn>
 				</div>
 			</div>
 		</div>
@@ -49,18 +48,12 @@
 				<div class="birthday flex_auto">
 					<strong>Birthday:</strong>
 					{{birthday}}
-					<span
-						class="c_warning font_bold"
-						v-if="statusOfRecord.state == 'warning' && statusOfRecord.message == 'missingBirthday'"
-					>Missing End Date</span>
+					<span class="c_warning font_bold" v-if="birthday == ''">Missing Birthday</span>
 				</div>
 				<div class="endDate flex_auto">
 					<strong>End Date:</strong>
 					{{endDate}}
-					<span
-						class="c_alert font_bold"
-						v-if="statusOfRecord.state == 'error' && statusOfRecord.message == 'missingEndDate'"
-					>Missing End Date</span>
+					<span class="c_alert font_bold" v-if="endDate == ''">Missing End Date</span>
 				</div>
 			</div>
 		</div>

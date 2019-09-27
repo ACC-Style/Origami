@@ -11,7 +11,7 @@
 					<span class="font_bold">Product ID:</span>
 					<span class="font_italic c_primary font_n2">{{ID}}</span>
 				</div>
-				<section id="label" class="print-flex_row max-w_3">
+				<section id="label" class="print-flex_row max-w_3 lh_2">
 					<div class="block self_baseline m-b_3" v-if="selectedSort == 'Product' && ProductTitle">
 						<span
 							class="font_0 font_n1:md font_bold bg_accent-4 c_black-7 p_2 p-x_3 br_radius"
@@ -21,7 +21,10 @@
 						class="flex justify_between c_secondary-3 font_n2:lg font_n1 uppercase font_bold print-display_none w_50:md"
 						:class="{'bg_warning-2 c_black-7 p-l_3 br_radius':External}"
 					>
-						<div class="flex_shrink p-y_2 p-x_2">
+						<div
+							class="flex_shrink p-y_2 p-x_2 font_n3 font_italic vertical-align_middle self_center"
+							:class="[External ? 'font_n3' : 'font_n1 p-b_0']"
+						>
 							<span v-if="External">Non ACC</span>
 							<span>Activity</span>
 						</div>
@@ -46,7 +49,7 @@
 						</div>
 					</div>
 
-					<div class="block c_secondary-n4 m-t_2 font_1:md font_0">
+					<div class="block c_secondary-n4 font_1:md font_0">
 						<span
 							v-if="External"
 							class="font_n4 print-br_black display_none print-display_inline-block p_1 p-x_2 m-r_3 m-t_n2 vertical-align_middle"

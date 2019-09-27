@@ -53,3 +53,13 @@ export const missingBirthday = () => {
 		data: () => ({ fit: { ...fit, birthday: "" } })
 	};
 };
+export const missingBoth = () => {
+	return {
+		components: {
+			FIT
+		},
+		template: "<FIT v-bind='fit' />",
+		methods: {},
+		data: () => ({ fit: { ...fit, birthday: "", endDate: "" } })
+	};
+};

@@ -4,9 +4,9 @@
 			<!-- http://microformats.org/wiki/hcard -->
 			<h4
 				v-if="institution != ''"
-				class="m-b_0 font_bold m-b_2:md font_copy font_normal font_1:md font_2"
+				class="m-b_1 font_normal font_display font_regular font_1"
 			>{{institution}}</h4>
-			<div class="flex flex_column flex_row:md font_n1 lh_1 font_ui">
+			<div class="flex flex_column flex_row:md c_black-8 font_n1 lh_0 font_ui">
 				<ul class="flex_auto p-r_4 ul_none w_10:md w_50:lg">
 					<li class="m-b_1 m-b_2:md font_normal">
 						<span class="street-address">{{street_1}}</span>
