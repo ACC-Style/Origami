@@ -64,6 +64,25 @@ export const warning = () => ({
 		};
 	}
 });
+export const success = () => ({
+	components: {
+		Btn
+	},
+	template:
+		'<div class="flex p-y_3"><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="small" :state="status">Small Button</Btn></div><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="medium" :state="status">Medium Button</Btn></div><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="large" :state="status">Large Button</Btn></div></div>',
+	methods: {
+		action: action("clicked")
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "success",
+			iconBoolean: false
+		};
+	}
+});
 export const secondary = () => ({
 	components: {
 		Btn
@@ -80,6 +99,28 @@ export const secondary = () => ({
 			large: "large",
 			status: "secondary",
 			iconBoolean: false
+		};
+	}
+});
+
+export const isActivatable = () => ({
+	components: {
+		Btn
+	},
+	template:
+		'<div class="flex p-y_3"><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="small" :state="status"" @isActive="isActive" :isActivatable="isActivatableBoolean">Small Button</Btn></div><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="medium" :state="status"" @isActive="isActive" :isActivatable="isActivatableBoolean">Medium Button</Btn></div><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="large" :state="status" @isActive="isActive" :isActivatable="isActivatableBoolean">Large Button</Btn></div></div>',
+	methods: {
+		action: action("clicked"),
+		isActive: action("I am active")
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "secondary",
+			iconBoolean: false,
+			isActivatableBoolean: true
 		};
 	}
 });

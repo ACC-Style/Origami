@@ -1,10 +1,10 @@
 <template>
 	<button
 		class="button text_center br_radius br_none inline-block undecorated h:undecorated"
-		:class="buttonStyles"
 		@click="onClick()"
+		:class="[buttonStyles,{'is-active':isActive}]"
 	>
-		<i class="far p-r_2" v-if="icon" :class="iconStyle"></i>
+		<i class="far p-r_2" v-if="icon" :class="iconStyles"></i>
 		<slot></slot>
 	</button>
 </template>
@@ -20,16 +20,31 @@ export default {
 		icon: { type: Boolean, default: false },
 		state: {
 			type: String,
-			default: "error"
-		}
+			default: "primary"
+		},
+		isActivatable: { type: Boolean, default: false }
+	},
+	data() {
+		return {
+			isActive: false
+		};
 	},
 	methods: {
 		onClick() {
 			this.$emit("click");
+			if (this.isActivatable) {
+				this.onActivate();
+			}
+		},
+		onActivate() {
+			this.isActive = !this.isActive;
+			if (this.isActive) {
+				this.$emit("isActive");
+			}
 		}
 	},
 	computed: {
-		iconStyle() {
+		iconStyles() {
 			let classes = "";
 			switch (this.state) {
 				case "error":
@@ -62,20 +77,25 @@ export default {
 			let state = "";
 			switch (this.state) {
 				case "error":
-					state = "c_white h:c_white bg_alert-n1 h:bg_alert-n3";
+					state =
+						"c_white h:c_white bg_alert-n1 h:bg_alert-n3 a:bg-alert-n5";
 					break;
 				case "warning":
-					state = "c_white h:c_white bg_warning-n1 h:bg_warning-n3";
+					state =
+						"c_white h:c_white bg_warning-n1 h:bg_warning-n3 a:bg_warning-n5";
 					break;
-				case "sucess":
-					state = "c_white h:c_white bg_sucess-n1 h:bg_sucess-n3";
+				case "success":
+					state =
+						"c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n5";
 					break;
 				case "secondary":
-					state = "c_black h:c_black bg_secondary-3 h:bg_secondary-1";
+					state =
+						"c_black h:c_black bg_secondary-3 h:bg_secondary-1 a:c_secondary-4 a:bg_secondary-n3";
 					break;
 
 				default:
-					state = "c_white h:c_white bg_primary h:bg_primary-n2";
+					state =
+						"c_white h:c_white bg_primary h:bg_primary-n2 a:bg_primary-n5";
 					break;
 			}
 			return size + " " + state;
