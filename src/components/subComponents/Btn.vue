@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="button text_center br_radius br_none inline-block undecorated h:undecorated"
+		class="button text_center br_none inline-block undecorated h:undecorated"
 		@click="onClick()"
 		:class="[buttonStyles,{'is-active':isActive}]"
 	>
@@ -78,15 +78,15 @@ export default {
 			switch (this.state) {
 				case "error":
 					state =
-						"c_white h:c_white bg_alert-n1 h:bg_alert-n3 a:bg-alert-n5";
+						"c_white h:c_white bg_alert-n1 h:bg_alert-n3 a:bg_alert-n4";
 					break;
 				case "warning":
 					state =
-						"c_white h:c_white bg_warning-n1 h:bg_warning-n3 a:bg_warning-n5";
+						"c_white h:c_white bg_warning-n1 h:bg_warning-n3 a:bg_warning-n4";
 					break;
 				case "success":
 					state =
-						"c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n5";
+						"c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n4";
 					break;
 				case "secondary":
 					state =
@@ -95,7 +95,7 @@ export default {
 
 				default:
 					state =
-						"c_white h:c_white bg_primary h:bg_primary-n2 a:bg_primary-n5";
+						"c_white h:c_white bg_primary h:bg_primary-n2 a:bg_primary-n4";
 					break;
 			}
 			return size + " " + state;
