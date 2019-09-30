@@ -104,6 +104,7 @@ export default {
 				return { institution: "missing" };
 			}
 		}
+		,pendingReview:{type:Boolean, defualt:false}
 	},
 	methods: {
 		updatedBirthday() {
