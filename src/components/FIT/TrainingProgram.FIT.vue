@@ -1,15 +1,19 @@
 <template>
-	<section class="font_0 font_ui br_solid br-b_1 br_secondary-4">
+	<section
+		class="font_0 font_ui br_solid br-b_1 br_secondary-4 h:bg_primary-5"
+		:data-id="id"
+		@click="function(){showSecondaryInfo = !showSecondaryInfo}"
+	>
 		<div class="primaryData flex">
 			<div
 				class="flex_shrink flex toggle_handle p_3 br_secondary-3 br-r_1 br_solid h:bg_secondary-4 self_stretch"
-				@click="function(){showSecondaryInfo = !showSecondaryInfo}"
 			>
 				<i class="far fa-plus-square vertical-align_middle flex_grow-0 self_center"></i>
 			</div>
 			<StatusIcon
 				v-if="statusOfRecord.state != ''"
-				class="flex_shrink status_icon"
+				class="flex_shrink text_center status_icon"
+				style="min-width:2.25rem;"
 				:state="statusOfRecord.state"
 			></StatusIcon>
 			<div class="flex_auto p-l_3 p-y_3 lh_2">
@@ -18,9 +22,12 @@
 				<div class="endDate font_n2 font_italic c_primary-n3 lh_0">
 					<span class="font_bold">End Date:</span>
 					{{endDate}}
-					<span class="c_alert font_bold" v-if="endDate == ''">Missing End Date</span>
+					<span
+						class="c_alert font_bold"
+						v-if="endDate == '' || endDate == null"
+					>Missing End Date</span>
 				</div>
-				<div class="statusMessage font_n2 font_bold lh_0" v-if="birthday == ''">
+				<div class="statusMessage font_n2 font_bold lh_0" v-if="birthday == ''||birthday == null">
 					<span class="c_warning">Missing Birthday</span>
 				</div>
 			</div>
@@ -73,7 +80,7 @@ export default {
 		StatusIcon
 	},
 	props: {
-		ID: {
+		id: {
 			type: Number,
 			default: 0
 		},
@@ -115,11 +122,11 @@ export default {
 	computed: {
 		statusOfRecord() {
 			let status = { state: "", message: "" };
-			if (this.birthday == "") {
+			if (this.birthday == "" || this.birthday == null) {
 				status.state = "warning";
 				status.message = "missingBirthday";
 			}
-			if (this.endDate == "") {
+			if (this.endDate == "" || this.endDate == null) {
 				(status.state = "error"), (status.message = "missingEndDate");
 			}
 			return status;

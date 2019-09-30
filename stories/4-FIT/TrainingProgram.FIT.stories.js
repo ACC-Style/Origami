@@ -1,4 +1,6 @@
-import { action } from "@storybook/addon-actions";
+import {
+	action
+} from "@storybook/addon-actions";
 import FIT from "../../src/components/FIT/TrainingProgram.FIT";
 
 export default {
@@ -6,21 +8,21 @@ export default {
 	parameters: {
 		componentSubtitle: "A Fellow in Training"
 	},
-	excludeStories: ["fit"]
+	excludeStories: [ "fit" ]
 };
 export const fit = {
-	ID: 234,
-	fullName: "Micheal Simons PHD, FACC",
-	endDate: "30/09/2019",
-	email: "msimons@fakeemail.com",
-	birthday: "09/12/1985",
-	address: {
-		institution: "American College of Cardiology",
-		street_1: "1000 Beacher Street",
-		street_2: "Apt 543",
-		city: "Washington",
-		state: "DC",
-		zip: "20006"
+	"id": 752843,
+	"fullName": "Min Grishukov",
+	"endDate": "1/28/2019",
+	"email": "mgrishukov0@zdnet.com",
+	"birthday": "8/23/2019",
+	"address": {
+		"institution": "Nader-Orn",
+		"street_1": "95866 Summerview Street",
+		"streee_2": null,
+		"city": "San Antonio",
+		"state": null,
+		"zip": "78291"
 	}
 };
 export const basic = () => {
@@ -29,8 +31,12 @@ export const basic = () => {
 			FIT
 		},
 		template: "<FIT v-bind='fit' @click='removeClick'/>",
-		methods: { removeClick: action("remove clicked") },
-		data: () => ({ fit })
+		methods: {
+			removeClick: action( "remove clicked" )
+		},
+		data: () => ( {
+			fit
+		} )
 	};
 };
 export const missingEndDate = () => {
@@ -40,7 +46,12 @@ export const missingEndDate = () => {
 		},
 		template: "<FIT v-bind='fit' />",
 		methods: {},
-		data: () => ({ fit: { ...fit, endDate: "" } })
+		data: () => ( {
+			fit: {
+				...fit,
+				endDate: ""
+			}
+		} )
 	};
 };
 export const missingBirthday = () => {
@@ -50,7 +61,12 @@ export const missingBirthday = () => {
 		},
 		template: "<FIT v-bind='fit' />",
 		methods: {},
-		data: () => ({ fit: { ...fit, birthday: "" } })
+		data: () => ( {
+			fit: {
+				...fit,
+				birthday: ""
+			}
+		} )
 	};
 };
 export const missingBoth = () => {
@@ -60,6 +76,12 @@ export const missingBoth = () => {
 		},
 		template: "<FIT v-bind='fit' />",
 		methods: {},
-		data: () => ({ fit: { ...fit, birthday: "", endDate: "" } })
+		data: () => ( {
+			fit: {
+				...fit,
+				birthday: "",
+				endDate: ""
+			}
+		} )
 	};
 };

@@ -1,6 +1,6 @@
 <template>
 	<div class="p-x_3 flex" :class="areaStyle">
-		<i class="far vertical-align_middle flex-grow_0 self_center" :class="iconStyle"></i>
+		<i class="far fa-fw vertical-align_middle flex-grow_0 self_center m_auto" :class="iconStyle"></i>
 	</div>
 </template>
 
