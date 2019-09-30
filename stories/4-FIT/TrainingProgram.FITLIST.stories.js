@@ -3,7 +3,9 @@ import {
 } from "@storybook/addon-actions";
 import FIT from "../../src/components/FIT/TrainingProgram.FIT";
 import ListFIT from "../../src/components/FIT/TrainingProgram.listOfFITs";
-
+import {
+   methods
+} from "../4-FIT/TrainingProgram.FIT.stories";
 export default {
    title: "FIT/List FITs",
    parameters: {
@@ -88,12 +90,39 @@ export const basic = () => {
          FIT,
          ListFIT
       },
-      template: "<ListFIT :fits='fits' @click='removeClick'/>",
-      methods: {
-         removeClick: action( "remove clicked" )
-      },
+      template: "<ListFIT :finishedLoading='finishedLoading' :fits='fits' @removeFIT='removeFIT'/>",
+      methods: methods,
       data: () => ( {
-         fits
+         fits,
+         finishedLoading: true
+      } )
+   };
+};
+export const loading = () => {
+   return {
+      components: {
+         FIT,
+         ListFIT
+      },
+      template: "<ListFIT :finishedLoading='finishedLoading' :fits='fits' @removeFIT='removeFIT'/>",
+      methods: methods,
+      data: () => ( {
+         fits,
+         finishedLoading: false
+      } )
+   };
+};
+export const empty = () => {
+   return {
+      components: {
+         FIT,
+         ListFIT
+      },
+      template: "<ListFIT :finishedLoading='finishedLoading' :fits='fits' @removeFIT='removeFIT'/>",
+      methods: methods,
+      data: () => ( {
+         fits: [],
+         finishedLoading: true
       } )
    };
 };

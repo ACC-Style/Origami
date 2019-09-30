@@ -1,11 +1,8 @@
 <template>
-	<section
-		class="font_0 font_ui br_solid br-b_1 br_secondary-4 h:bg_primary-5"
-		:data-id="id"
-		@click="function(){showSecondaryInfo = !showSecondaryInfo}"
-	>
+	<section class="font_0 font_ui br_solid br-b_1 br_secondary-4 h:bg_primary-5" :data-id="id">
 		<div class="primaryData flex">
 			<div
+				@click="function(){showSecondaryInfo = !showSecondaryInfo}"
 				class="flex_shrink flex toggle_handle p_3 br_secondary-3 br-r_1 br_solid h:bg_secondary-4 self_stretch"
 			>
 				<i class="far fa-plus-square vertical-align_middle flex_grow-0 self_center"></i>
@@ -39,7 +36,7 @@
 						:size="'medium'"
 						:state="'error'"
 						:icon="true"
-						@click="$emit('click')"
+						@click="$emit('removeFIT', id)"
 					>Remove</Btn>
 				</div>
 			</div>
@@ -109,14 +106,11 @@ export default {
 		}
 	},
 	methods: {
-		removeFit() {
-			$emit("removeFIT");
-		},
 		updatedBirthday() {
-			$emit("update:Brithday");
+			this.$emit("update:Brithday");
 		},
 		updateEndDate() {
-			$emit("update:endDate");
+			this.$emit("update:endDate");
 		}
 	},
 	computed: {

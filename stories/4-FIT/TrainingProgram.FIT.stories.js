@@ -8,8 +8,12 @@ export default {
 	parameters: {
 		componentSubtitle: "A Fellow in Training"
 	},
-	excludeStories: [ "fit" ]
+	excludeStories: [ 'fit', 'methods' ]
 };
+export const methods = {
+	removeFIT: action( "remove clicked " )
+
+}
 export const fit = {
 	"id": 752843,
 	"fullName": "Min Grishukov",
@@ -30,10 +34,8 @@ export const basic = () => {
 		components: {
 			FIT
 		},
-		template: "<FIT v-bind='fit' @click='removeClick'/>",
-		methods: {
-			removeClick: action( "remove clicked" )
-		},
+		template: "<FIT v-bind='fit' @removeFIT='removeFIT'/>",
+		methods: methods,
 		data: () => ( {
 			fit
 		} )
@@ -45,7 +47,7 @@ export const missingEndDate = () => {
 			FIT
 		},
 		template: "<FIT v-bind='fit' />",
-		methods: {},
+		methods: methods,
 		data: () => ( {
 			fit: {
 				...fit,
@@ -60,7 +62,7 @@ export const missingBirthday = () => {
 			FIT
 		},
 		template: "<FIT v-bind='fit' />",
-		methods: {},
+		methods: methods,
 		data: () => ( {
 			fit: {
 				...fit,
@@ -75,7 +77,7 @@ export const missingBoth = () => {
 			FIT
 		},
 		template: "<FIT v-bind='fit' />",
-		methods: {},
+		methods: methods,
 		data: () => ( {
 			fit: {
 				...fit,
