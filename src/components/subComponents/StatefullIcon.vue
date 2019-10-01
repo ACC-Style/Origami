@@ -23,6 +23,12 @@ export default {
 				case "warning":
 					classes = "fa-exclamation-triangle c_white";
 					break;
+				case "info":
+					classes = "fa-info-circle c_black-8";
+					break;
+				case "accent":
+					classes = "fa-info-square c_white";
+					break;
 				default:
 					break;
 			}
@@ -42,6 +48,12 @@ export default {
 					break;
 				case "secondary":
 					state += "c_black bg_secondary-3";
+					break;				
+				case "info":
+					state += "c_black bg_info-3";
+					break;
+				case "accent":
+					state += "c_black bg_accent";
 					break;
 
 				default:

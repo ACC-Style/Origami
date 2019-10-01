@@ -15,7 +15,8 @@ export const methods = {
 
 }
 export const fit = {
-	"id": 752843,
+	"id": "752843",
+	"pendingReview": false,
 	"fullName": "Min Grishukov",
 	"endDate": "1/28/2019",
 	"email": "mgrishukov0@zdnet.com",
@@ -83,6 +84,21 @@ export const missingBoth = () => {
 				...fit,
 				birthday: "",
 				endDate: ""
+			}
+		} )
+	};
+};
+export const pendingReview = () => {
+	return {
+		components: {
+			FIT
+		},
+		template: "<FIT v-bind='fit' />",
+		methods: methods,
+		data: () => ( {
+			fit: {
+				...fit,
+				pendingReview: true
 			}
 		} )
 	};

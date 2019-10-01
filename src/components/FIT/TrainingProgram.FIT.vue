@@ -13,19 +13,29 @@
 				style="min-width:2.25rem;"
 				:state="statusOfRecord.state"
 			></StatusIcon>
+						<StatusIcon
+				v-if="statusOfRecord.state == ''"
+				class="flex_shrink text_center status_icon shadow_n1 opacity_4"
+				style="min-width:2.25rem;"
+				:state="'secondary'"
+			></StatusIcon>
 			<div class="flex_auto p-l_3 p-y_3 lh_2">
 				<span class="fullName">{{fullName}}</span>
 				<a class="block email font_n1 c_primary h:underline">{{email}}</a>
-				<div class="endDate font_n2 font_italic c_primary-n3 lh_0">
-					<span class="font_bold">End Date:</span>
+				<div class="statusMessage font_n2  " v-if="pendingReview">
+					<span class="c_alert">Pending Review</span>
+				</div>
+				<div class="endDate font_n2 c_primary-n3 " v-else>
+					<span class="">End Date:</span>
 					{{endDate}}
 					<span
-						class="c_alert font_bold"
+						class="c_warning "
 						v-if="endDate == '' || endDate == null"
 					>Missing End Date</span>
 				</div>
-				<div class="statusMessage font_n2 font_bold lh_0" v-if="birthday == ''||birthday == null">
-					<span class="c_warning">Missing Birthday</span>
+				<div class="statusMessage font_n2  " v-if="birthday == ''||birthday == null">
+
+					<span class="c_accent">Missing Birthday</span>
 				</div>
 			</div>
 
@@ -52,12 +62,18 @@
 				<div class="birthday flex_auto">
 					<strong>Birthday:</strong>
 					{{birthday}}
-					<span class="c_warning font_bold" v-if="birthday == ''">Missing Birthday</span>
+					<span class="c_accent " v-if="birthday == '' || birthday == null">Missing Birthday</span>
 				</div>
 				<div class="endDate flex_auto">
 					<strong>End Date:</strong>
-					{{endDate}}
-					<span class="c_alert font_bold" v-if="endDate == ''">Missing End Date</span>
+					
+					<span v-if="pendingReview" class="c_alert">
+						<i class="far fa-lock"/> locked till approved
+					</span>
+					<span v-else>
+						{{endDate}}
+						<span class="c_warning " v-if="endDate == '' || endDate == null">Missing End Date</span>
+					</span>
 				</div>
 			</div>
 		</div>
@@ -78,7 +94,7 @@ export default {
 	},
 	props: {
 		id: {
-			type: Number,
+			type: String,
 			default: 0
 		},
 		fullName: {
@@ -103,8 +119,8 @@ export default {
 			default: function() {
 				return { institution: "missing" };
 			}
-		}
-		,pendingReview:{type:Boolean, defualt:false}
+		},
+		pendingReview:{type:Boolean, defualt:true}
 	},
 	methods: {
 		updatedBirthday() {
@@ -118,11 +134,16 @@ export default {
 		statusOfRecord() {
 			let status = { state: "", message: "" };
 			if (this.birthday == "" || this.birthday == null) {
-				status.state = "warning";
+				status.state = "accent";
 				status.message = "missingBirthday";
 			}
 			if (this.endDate == "" || this.endDate == null) {
-				(status.state = "error"), (status.message = "missingEndDate");
+				status.state = "warning";
+				status.message = "missingEndDate";
+			}
+			if(this.pendingReview){
+				status.state = "error";
+				status.message = "pendingReview";
 			}
 			return status;
 		}

@@ -4,8 +4,8 @@
 		@click="onClick()"
 		:class="[buttonStyles,{'is-active':isActive}]"
 	>
-		<i class="far" v-if="icon" :class="iconStyles"></i>
-		<slot class="p-l_2"></slot>
+		<i class="far" v-if="icon" :class="[iconStyles,{'p-r_2 p-l_1 faw':hasSlotData}]"></i>
+		<slot class="m-l_3 display_none inline:md"></slot>
 	</button>
 </template>
 
@@ -43,18 +43,24 @@ export default {
 			}
 		}
 	},
-	computed: {
+	computed: { 
+		hasSlotData() {
+    	return this.$slots.default;
+    	},
 		iconStyles() {
 			let classes = "";
 			switch (this.state) {
+				case "add":
+					classes = "fa-plus m-t_1";
+					break;
 				case "error":
-					classes = "fa-times";
+					classes = "fa-times m-t_1";
 					break;
 				case "success":
-					classes = "fa-check";
+					classes = "fa-check m-t_1";
 					break;
 				case "warning":
-					classes = "fa-exclamation-triangle";
+					classes = "fa-exclamation-triangle m-t_1";
 					break;
 				default:
 					break;
