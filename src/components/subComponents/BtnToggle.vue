@@ -1,28 +1,31 @@
 <template>
 	<button
-		class="button text_center br_none flex inline-block undecorated h:undecorated"
+		class="button text_center br_none inline-block undecorated h:undecorated"
 		@click="onClick()"
 		:class="[buttonStyles,{'is-active':isActive}]"
 	>
-		<span class="display_none inline:md flex_auto p-x_2"><slot></slot></span>
-		<span class="flex_shrink flex flex_column self_center" v-if="icon"><i class="far flex_shrink" :class="[iconStyles]"></i></span>
+      <i class="far" v-if="icon && isActive" :class="[iconStyles,iconActive]"></i>
+      <i class="far" v-if="icon && !isActive" :class="[iconStyles,iconNotActive]"></i>
+      <slot class="m-l_3 display_none inline:md" name="activeText" v-if="isActive">ON</slot>
+      <slot class="m-l_3 display_none inline:md" name="notActiveText" v-if="!isActive">OFF</slot>
 	</button>
 </template>
 
 <script>
 export default {
-	name: "Btn",
+	name: "BtnToggle",
 	props: {
 		size: {
 			type: String,
 			default: ""
 		},
-		icon: { type: Boolean, default: false },
+      icon: { type: Boolean, default: false },
+      iconActive: { type: String, default: 'fa-check-square' },
+      iconNotActive: { type: String, default: 'fa-square' },
 		state: {
 			type: String,
 			default: "primary"
 		},
-		isActivatable: { type: Boolean, default: false }
 	},
 	data() {
 		return {
@@ -31,36 +34,28 @@ export default {
 	},
 	methods: {
 		onClick() {
-			this.$emit("click");
-			if (this.isActivatable) {
-				this.onActivate();
-			}
-		},
-		onActivate() {
-			this.isActive = !this.isActive;
-			if (this.isActive) {
-				this.$emit("isActive");
-			}
+        
+         this.isActive = !this.isActive;
+         this.isActive ?	this.$emit('clickActive') : this.$emit('clickNotActive');
+			 this.$emit('click');
 		}
+		
 	},
 	computed: { 
-		hasSlotData() {
-    	return this.$slots.default;
-    	},
 		iconStyles() {
 			let classes = "";
 			switch (this.state) {
 				case "add":
-					classes = "fa-plus m-t_1";
+					classes = "";
 					break;
 				case "error":
-					classes = "fa-times m-t_1";
+					classes = "";
 					break;
 				case "success":
-					classes = "fa-check m-t_1";
+					classes = "";
 					break;
 				case "warning":
-					classes = "fa-exclamation-triangle m-t_1";
+					classes = "";
 					break;
 				default:
 					break;

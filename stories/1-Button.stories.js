@@ -6,6 +6,7 @@ import {
 } from "@storybook/addon-links";
 
 import Btn from "../src/components/subComponents/Btn.vue";
+import BtnToggle from "../src/components/subComponents/BtnToggle.vue";
 
 export default {
 	title: "Basic/Button"
@@ -43,6 +44,26 @@ export const add = () => ( {
 			medium: "medium",
 			large: "large",
 			status: "add",
+			iconBoolean: true
+		};
+	}
+} );
+export const toggle = () => ( {
+	components: {
+		BtnToggle
+	},
+	template: '<div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>Active</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div>',
+	methods: {
+		click: action( "clicked" ),
+		clickActive: action( "active" ),
+		clickNotActive: action( "not active" )
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "warning",
 			iconBoolean: true
 		};
 	}
