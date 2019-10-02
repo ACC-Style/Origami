@@ -1,68 +1,117 @@
 <template>
-	<div id="inputEmail" class="question">
+	<div id="inputEmail" class="question font_ui">
 		<label
 			for="email"
 			v-bind:class="{'c_alert': inputState == 'alert','c_warning': inputState == 'warning'}"
-			class="label-holder grid-x font_1 font_bold"
+			class="label-holder flex font_1 p-y_2"
 		>
-			<span class="text cell shrink">{{ label }}</span>
-			<span v-if="required" class="required-holder cell shrink">
+			<span class="text cell flex_shrink">
+				<slot></slot>
+			</span>
+			<span v-if="required" class="required-holder flex_shrink">
 				<i class="fas fa-asterisk c_warning font_n3 vertical-align_top"></i>
 			</span>
 		</label>
-		<div class="input-holder grid-x">
-			<valueIcon :icon="icon" :inputState="inputState"></valueIcon>
-			<div class="input-space cell auto">
-				<input
-					id="email"
-					v-on:change="onChange(username)"
-					class="input-group-field"
-					type="text"
-					v-model="username"
-					placeholder="youremail@acc.org"
-					required
-					v-bind:class="{
-						'br_alert-n1': inputState == 'alert',
+		<div class="input-holder flex self_end">
+			<ValueIcon class="flex_shrink" :state="inputState" :icon="icon" inputNameTarget="'email'" />
+			<!-- <div class="flex_shrink">
+				<stateIcon :state="inputState"></stateIcon>
+			</div>-->
+
+			<input
+				id="email"
+				name="email"
+				v-on:change="onChange(username)"
+				class="br_0 br-b_1 p-y_2 br_solid flex_auto p-x_4 lh_3"
+				type="text"
+				v-model="username"
+				placeholder="youremail@acc.org"
+				required="required"
+				:class="{
+						'br_alert-n1': inputState == 'error',
 						'br_warning-n1': inputState == 'warning',
 						'br_info-n1': inputState == 'info',
-						'br_success-n1': inputState == 'success'
+						'br_success-n1': inputState == 'success',' br_secondary ': inputState == ''
           }"
-				/>
+			/>
+			<div
+				class="optional br_0 br_solid br-b_1 p-y_3 flex_shrink p-x_3 lh_3"
+				v-if="!required"
+				:class="{
+						'br_alert-n1 c_alert': inputState == 'error',
+						'br_warning-n1 c_warning': inputState == 'warning',
+						'br_info-n1 c_primary': inputState == 'info',
+						'br_success-n1 c_primary': inputState == 'success',' br_secondary c_primary ': inputState == ''
+          }"
+			>
+				<small>optional</small>
 			</div>
 		</div>
-		<messageHolder v-bind:inputState="inputState" v-bind:stateMessage="stateMessage"></messageHolder>
+
+		<messageHolder :state="inputState">{{stateMessage}}</messageHolder>
 	</div>
 </template>
 
 <script>
-import messageHolder from "@/components/subComponents/inputMessageHolder.vue";
-import valueIcon from "@/components/subComponents/stateIcons.vue";
+import messageHolder from "../subComponents/InputMessageHolder.vue";
+import stateIcon from "../subComponents/StatefullIcon";
+import ValueIcon from "../subComponents/inputValueIcon";
 
 export default {
 	name: "inputEmail",
 	props: {
-		label: { type: String, default: "UserName" },
 		value: { type: String, default: "" },
 		icon: { type: String, default: "fa-user" },
-		required: { type: Boolean, default: "true" },
-		pageHasError: { type: Boolean, default: false }
+		required: { type: Boolean, default: true },
+		state: { type: String, default: "" }
 	},
 	data() {
 		return {
 			username: this.value,
-			inputState: "",
+			inputState: this.state,
 			stateMessage: ""
 		};
 	},
+	computed: {
+		inputStyles() {
+			let styles = "";
+			switch (this.state) {
+				case "error":
+					styles += " bg_alert-4 br_alert c_alert ";
+					break;
+				case "warning":
+					styles += " bg_warning-4 br_warning c_warning ";
+					break;
+				case "success":
+					styles += " bg_sucess-4 br_sucess c_sucess ";
+					break;
+				case "secondary":
+					styles += " c_black bg_secondary-3 ";
+					break;
+				case "info":
+					styles += " bg_info-4 br_info c_info ";
+					break;
+				case "accent":
+					styles += " c_black bg_accent-n2 ";
+					break;
+					return styles;
+				default:
+					styles += " c_black bg_secondary-3 br_secondary-2";
+					break;
+			}
+			return styles;
+		}
+	},
 	components: {
 		messageHolder,
-		valueIcon
+		stateIcon,
+		ValueIcon
 	},
 	methods: {
 		onChange: function(value) {
 			console.log(value);
 			if (value == "") {
-				this.inputState = "alert";
+				this.inpusttState = "error";
 				this.stateMessage = "You didn't seem to type anything.";
 				this.$emit("update:username", "");
 			} else if (
@@ -71,7 +120,7 @@ export default {
 				this.inputState = "";
 				this.$emit("update:username", value);
 			} else {
-				this.inputState = "alert";
+				this.inputState = "error";
 				this.stateMessage = "This is not an email.";
 				this.$emit("update:username", "");
 			}
@@ -81,4 +130,8 @@ export default {
 </script>
 
 <style scoped>
+.question .input:focus {
+	border: inherit;
+	background: inherit;
+}
 </style>

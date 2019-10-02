@@ -24,7 +24,16 @@
 export default {
 	name: "credit-legend",
 	props: {
-		creditTypes: { type: Array }
+		creditTypes: {
+			type: Array,
+			default: () => [
+				{
+					styleCode: "COP",
+					shortName: "bg_COP",
+					fullName: "Certificate of Participation"
+				}
+			]
+		}
 	},
 	data: function() {
 		return { foo: "bar" };
