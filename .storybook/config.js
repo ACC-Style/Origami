@@ -1,6 +1,6 @@
 import { configure, addParameters, addDecorator } from "@storybook/vue";
-import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
 import { withInfo } from "storybook-addon-vue-info";
+import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
 import "@storybook/addon-knobs/register";
 import "@storybook/addon-notes/register";
 

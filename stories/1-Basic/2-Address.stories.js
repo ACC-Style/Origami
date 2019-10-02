@@ -1,10 +1,11 @@
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import AddressBlock from "../src/components/subComponents/AddressBlock.vue";
+import AddressBlock from "../../src/components/subComponents/AddressBlock.vue";
 
 export default {
 	title: "Basic/Address",
+	component: AddressBlock,
 	excludeStories: ["address"]
 };
 export const address = {

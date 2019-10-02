@@ -19,7 +19,6 @@ export const basic = () => {
 			"<Request @cancelRequest='cancelRequest' @resendRequest='resendRequest'/>",
 		methods: {
 			cancelRequest: action("Cancel the Request"),
-
 			resendRequest: action("Resend the Request")
 		},
 		data: () => ({})

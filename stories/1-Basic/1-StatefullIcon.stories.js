@@ -4,6 +4,7 @@ import StatefullIcon from "../../src/components/subComponents/StatefullIcon.vue"
 
 export default {
 	title: "Basic/StatefullIcon",
+	component: StatefullIcon,
 	excludeStories: ["iconTemplate", "statefulIconDescription"],
 	parameters: {
 		notes:

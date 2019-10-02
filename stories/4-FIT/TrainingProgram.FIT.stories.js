@@ -3,6 +3,7 @@ import FIT from "../../src/components/FIT/TrainingProgram.FIT";
 
 export default {
 	title: "FIT/FIT",
+	component: FIT,
 	parameters: {
 		componentSubtitle: "A Fellow in Training",
 		notes:
