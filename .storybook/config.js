@@ -1,8 +1,10 @@
 import { configure, addParameters, addDecorator } from "@storybook/vue";
 import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
 import { withInfo } from "storybook-addon-vue-info";
+import "@storybook/addon-knobs/register";
+import "@storybook/addon-notes/register";
 
-import "../arches/dist/css/uconly_acc.css";
+import "../arches/dist/css/uc_acc.css";
 import "../arches/dist/css/color-code_credits.css";
 import "../arches/dist/icons/css/all.css";
 import "../arches/dist/icons/css/light.css";

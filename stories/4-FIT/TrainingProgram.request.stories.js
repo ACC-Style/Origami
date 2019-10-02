@@ -1,6 +1,4 @@
-import {
-	action
-} from "@storybook/addon-actions";
+import { action } from "@storybook/addon-actions";
 
 import Request from "../../src/components/FIT/TrainingProgram.request";
 
@@ -8,7 +6,8 @@ export default {
 	title: "FIT/Request",
 	component: Request,
 	parameters: {
-		componentSubtitle: "A Fellow in Training"
+		componentSubtitle: "A Fellow in Training",
+		info: true
 	}
 };
 export const basic = () => {
@@ -16,12 +15,13 @@ export const basic = () => {
 		components: {
 			Request
 		},
-		template: "<Request @cancelRequest='cancelRequest' @resendRequest='resendRequest'/>",
+		template:
+			"<Request @cancelRequest='cancelRequest' @resendRequest='resendRequest'/>",
 		methods: {
-			cancelRequest: action( "Cancel the Request" ),
+			cancelRequest: action("Cancel the Request"),
 
-			resendRequest: action( "Resend the Request" )
+			resendRequest: action("Resend the Request")
 		},
-		data: () => ( {} )
+		data: () => ({})
 	};
 };

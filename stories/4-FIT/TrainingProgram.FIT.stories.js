@@ -1,33 +1,33 @@
-import {
-	action
-} from "@storybook/addon-actions";
+import { action } from "@storybook/addon-actions";
 import FIT from "../../src/components/FIT/TrainingProgram.FIT";
 
 export default {
 	title: "FIT/FIT",
 	parameters: {
-		componentSubtitle: "A Fellow in Training"
+		componentSubtitle: "A Fellow in Training",
+		notes:
+			"Fit is a container of information about the ACC Logged in User that is attached to a Training Program",
+		info: true
 	},
-	excludeStories: [ 'fit', 'methods' ]
+	excludeStories: ["fit", "methods"]
 };
 export const methods = {
-	removeFIT: action( "remove clicked " )
-
-}
+	removeFIT: action("remove clicked ")
+};
 export const fit = {
-	"id": "752843",
-	"pendingReview": false,
-	"fullName": "Min Grishukov",
-	"endDate": "1/28/2019",
-	"email": "mgrishukov0@zdnet.com",
-	"birthday": "8/23/2019",
-	"address": {
-		"institution": "Nader-Orn",
-		"street_1": "95866 Summerview Street",
-		"streee_2": null,
-		"city": "San Antonio",
-		"state": null,
-		"zip": "78291"
+	id: "752843",
+	pendingReview: false,
+	fullName: "Min Grishukov",
+	endDate: "1/28/2019",
+	email: "mgrishukov0@zdnet.com",
+	birthday: "8/23/2019",
+	address: {
+		institution: "Nader-Orn",
+		street_1: "95866 Summerview Street",
+		streee_2: null,
+		city: "San Antonio",
+		state: null,
+		zip: "78291"
 	}
 };
 export const basic = () => {
@@ -37,9 +37,9 @@ export const basic = () => {
 		},
 		template: "<FIT v-bind='fit' @removeFIT='removeFIT'/>",
 		methods: methods,
-		data: () => ( {
+		data: () => ({
 			fit
-		} )
+		})
 	};
 };
 export const missingEndDate = () => {
@@ -49,12 +49,12 @@ export const missingEndDate = () => {
 		},
 		template: "<FIT v-bind='fit' />",
 		methods: methods,
-		data: () => ( {
+		data: () => ({
 			fit: {
 				...fit,
 				endDate: ""
 			}
-		} )
+		})
 	};
 };
 export const missingBirthday = () => {
@@ -64,12 +64,12 @@ export const missingBirthday = () => {
 		},
 		template: "<FIT v-bind='fit' />",
 		methods: methods,
-		data: () => ( {
+		data: () => ({
 			fit: {
 				...fit,
 				birthday: ""
 			}
-		} )
+		})
 	};
 };
 export const missingBoth = () => {
@@ -79,13 +79,13 @@ export const missingBoth = () => {
 		},
 		template: "<FIT v-bind='fit' />",
 		methods: methods,
-		data: () => ( {
+		data: () => ({
 			fit: {
 				...fit,
 				birthday: "",
 				endDate: ""
 			}
-		} )
+		})
 	};
 };
 export const pendingReview = () => {
@@ -95,11 +95,11 @@ export const pendingReview = () => {
 		},
 		template: "<FIT v-bind='fit' />",
 		methods: methods,
-		data: () => ( {
+		data: () => ({
 			fit: {
 				...fit,
 				pendingReview: true
 			}
-		} )
+		})
 	};
 };

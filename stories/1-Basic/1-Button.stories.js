@@ -1,16 +1,53 @@
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import Btn from "../src/components/subComponents/Btn.vue";
-import BtnToggle from "../src/components/subComponents/BtnToggle.vue";
+import Btn from "../../src/components/subComponents/Btn.vue";
+import BtnToggle from "../../src/components/subComponents/BtnToggle.vue";
 
 export default {
 	title: "Basic/Button",
-	excludeStories: "templateBasic"
+	excludeStories: ["templateBasic", "btnDescription"],
+	parameters: {
+		notes:
+			"Buttons are highly flexable with icons and colors changed by ':state' and you can even pass icons in with the text for even more options of icon.  Try adding 'br_radius' to add curved corders.",
+		info: true
+	}
 };
-export const templateBasic =
-	'<div class="flex p-y_3"><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="small" :state="status">Small Button</Btn></div><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="medium" :state="status">Medium Button</Btn></div><div class="flex_shrink p-x_3"><Btn @click="action" :icon="iconBoolean" :size="large" :state="status">Large Button</Btn></div><div class="flex_shrink p-x_3"><Btn @click="action" :isDisabled="true" :icon="iconBoolean" :size="large" :state="status">Disabled Large Button</Btn></div></div>';
-
+export const templateBasic = `
+	<div class="flex p-y_3">
+		<div class="flex_shrink p-x_3">
+			<Btn @click="action" :icon="iconBoolean" :size="small" :state="status">Small Button</Btn>
+		</div>
+		<div class="flex_shrink p-x_3">
+			<Btn @click="action" :icon="iconBoolean" :size="medium" :state="status">Medium Button</Btn>
+		</div>
+		<div class="flex_shrink p-x_3">
+			<Btn @click="action" :icon="iconBoolean" :size="large" :state="status">Large Button</Btn>
+		</div>
+		<div class="flex_shrink p-x_3">
+			<Btn @click="action" :isDisabled="true" :icon="iconBoolean" :size="large" :state="status">Disabled Large Button</Btn>
+		</div>
+	</div>`;
+export const btnDescription = {
+	Btn: {
+		props: {
+			// These description will appear in `description` column in props table
+			size: "small, medium, or large",
+			state: "primary,secondary,add,error,warning,success",
+			icon: "Whether icon is visible or not",
+			isDisabled: "Boolean for toggling the look and click event",
+			isActivatable: "Allows the button to have an ON or OFF state"
+		},
+		events: {
+			click: "Event for user clicking the component",
+			isActive:
+				"if isActivable is set to true the event will fire when the isActive is set to true by the toggled click"
+		},
+		slots: {
+			default: "Place text or icon here"
+		}
+	}
+};
 export const primary = () => ({
 	components: {
 		Btn
@@ -27,7 +64,8 @@ export const primary = () => ({
 			status: "",
 			iconBoolean: false
 		};
-	}
+	},
+	description: btnDescription
 });
 export const add = () => ({
 	components: {
@@ -45,14 +83,16 @@ export const add = () => ({
 			status: "add",
 			iconBoolean: true
 		};
-	}
+	},
+	description: btnDescription
 });
+
 export const toggle = () => ({
 	components: {
 		BtnToggle
 	},
 	template:
-		'<div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>Active</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div>',
+		'<section><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>Active</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :defaultActiveState="true" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>On By Defualt</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean"  :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div></section>',
 	methods: {
 		click: action("clicked"),
 		clickActive: action("active"),
@@ -85,7 +125,8 @@ export const radius = () => ({
 			status: "",
 			iconBoolean: false
 		};
-	}
+	},
+	description: btnDescription
 });
 export const error = () => ({
 	components: {
@@ -103,7 +144,8 @@ export const error = () => ({
 			status: "error",
 			iconBoolean: true
 		};
-	}
+	},
+	description: btnDescription
 });
 export const warning = () => ({
 	components: {
@@ -121,7 +163,8 @@ export const warning = () => ({
 			status: "warning",
 			iconBoolean: true
 		};
-	}
+	},
+	description: btnDescription
 });
 export const success = () => ({
 	components: {
@@ -139,7 +182,8 @@ export const success = () => ({
 			status: "success",
 			iconBoolean: true
 		};
-	}
+	},
+	description: btnDescription
 });
 export const secondary = () => ({
 	components: {
@@ -157,7 +201,8 @@ export const secondary = () => ({
 			status: "secondary",
 			iconBoolean: false
 		};
-	}
+	},
+	description: btnDescription
 });
 
 export const isActivatable = () => ({
@@ -179,7 +224,8 @@ export const isActivatable = () => ({
 			iconBoolean: false,
 			isActivatableBoolean: true
 		};
-	}
+	},
+	description: btnDescription
 });
 export const buttonGroup = () => ({
 	components: {
@@ -204,5 +250,6 @@ export const buttonGroup = () => ({
 			iconBoolean: false,
 			isActivatableBoolean: true
 		};
-	}
+	},
+	description: btnDescription
 });

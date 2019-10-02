@@ -6,7 +6,9 @@ export default {
 	title: "FIT/Administrator",
 	component: Administrator,
 	parameters: {
-		componentSubtitle: "Administrator of Training Program"
+		componentSubtitle: "Administrator of Training Program",
+		notes: true,
+		info: true
 	},
 	excludeStories: ["adminData", "methods"],
 	methods: {

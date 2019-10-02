@@ -4,10 +4,10 @@
 		@click="onClick()"
 		:class="[buttonStyles,{'is-active':isActive}]"
 	>
-      <i class="far" v-if="icon && isActive" :class="[iconStyles,iconActive]"></i>
-      <i class="far" v-if="icon && !isActive" :class="[iconStyles,iconNotActive]"></i>
-      <slot class="m-l_3 display_none inline:md" name="activeText" v-if="isActive">ON</slot>
-      <slot class="m-l_3 display_none inline:md" name="notActiveText" v-if="!isActive">OFF</slot>
+		<i class="far" v-if="icon && isActive" :class="[iconStyles,iconActive]"></i>
+		<i class="far" v-if="icon && !isActive" :class="[iconStyles,iconNotActive]"></i>
+		<slot class="m-l_3 display_none inline:md" name="activeText" v-if="isActive">ON</slot>
+		<slot class="m-l_3 display_none inline:md" name="notActiveText" v-if="!isActive">OFF</slot>
 	</button>
 </template>
 
@@ -19,29 +19,33 @@ export default {
 			type: String,
 			default: ""
 		},
-      icon: { type: Boolean, default: false },
-      iconActive: { type: String, default: 'fa-check-square' },
-      iconNotActive: { type: String, default: 'fa-square' },
+		icon: { type: Boolean, default: false },
+		iconActive: { type: String, default: "fa-check-square" },
+		iconNotActive: { type: String, default: "fa-square" },
 		state: {
 			type: String,
 			default: "primary"
 		},
+		isDisabled: { type: Boolean, default: false },
+		defaultActiveState: { type: Boolean, defualt: false }
 	},
 	data() {
 		return {
-			isActive: false
+			isActive: this.defaultActiveState
 		};
 	},
 	methods: {
 		onClick() {
-        
-         this.isActive = !this.isActive;
-         this.isActive ?	this.$emit('clickActive') : this.$emit('clickNotActive');
-			 this.$emit('click');
+			if (!this.isDisabled) {
+				this.isActive = !this.isActive;
+				this.isActive
+					? this.$emit("clickActive")
+					: this.$emit("clickNotActive");
+				this.$emit("click");
+			}
 		}
-		
 	},
-	computed: { 
+	computed: {
 		iconStyles() {
 			let classes = "";
 			switch (this.state) {
@@ -81,26 +85,34 @@ export default {
 			let state = "";
 			switch (this.state) {
 				case "error":
-					state =
-						"c_white h:c_white bg_alert-n1 h:bg_alert-n3 a:bg_alert-n4";
+					state = this.isDisabled
+						? " bg_alert-4"
+						: "c_white h:c_white bg_alert-n1 h:bg_alert-n3 a:bg_alert-n4";
 					break;
 				case "warning":
-					state =
-						"c_white h:c_white bg_warning-n1 h:bg_warning-n3 a:bg_warning-n4";
+					state = this.isDisabled
+						? " bg_warning-4"
+						: "c_white h:c_white bg_warning-n1 h:bg_warning-n3 a:bg_warning-n4";
 					break;
 				case "success":
-					state =
-						"c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n4";
+					state = this.isDisabled
+						? " bg_success-4"
+						: "c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n4";
 					break;
 				case "secondary":
-					state =
-						"c_black bg_secondary-3 h:bg_secondary-1 h:c_white a:c_secondary-4 a:bg_secondary-n3";
+					state = this.isDisabled
+						? " bg_secondary-4"
+						: "c_black bg_secondary-3 h:bg_secondary-1 h:c_white a:c_secondary-4 a:bg_secondary-n3";
 					break;
 
 				default:
-					state =
-						"c_white h:c_white bg_primary h:bg_primary-n2 a:bg_primary-n4";
+					state = this.isDisabled
+						? " bg_primary-4"
+						: "c_white h:c_white bg_primary h:bg_primary-n2 a:bg_primary-n4";
 					break;
+			}
+			if (this.isDisabled) {
+				state += "  c_black-3  disabled";
 			}
 			return size + " " + state;
 		}

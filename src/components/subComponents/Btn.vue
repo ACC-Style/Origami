@@ -4,7 +4,7 @@
 		@click="onClick()"
 		:class="[buttonStyles,{'is-active':isActive}]"
 	>
-		<span class="display_none inline:md flex_auto p-x_2">
+		<span class="display_none inline:md flex_auto p-x_2" v-if="hasSlotData">
 			<slot></slot>
 		</span>
 		<span class="flex_shrink flex flex_column self_center" v-if="icon">

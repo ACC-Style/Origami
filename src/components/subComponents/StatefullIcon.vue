@@ -8,26 +8,29 @@
 export default {
 	name: "statefullIcon",
 	props: {
-		state: { type: String, default: "" }
+		state: {
+			type: String,
+			default: ""
+		}
 	},
 	computed: {
 		iconStyle() {
 			let classes = "";
 			switch (this.state) {
 				case "error":
-					classes = "fa-times c_white";
+					classes = "fa-times";
 					break;
 				case "success":
 					classes = "fa-check";
 					break;
 				case "warning":
-					classes = "fa-exclamation-triangle c_white";
+					classes = "fa-exclamation-triangle";
 					break;
 				case "info":
-					classes = "fa-info-circle c_black-8";
+					classes = "fa-info-circle";
 					break;
 				case "accent":
-					classes = "fa-info-square c_white";
+					classes = "fa-info-square";
 					break;
 				default:
 					break;
@@ -35,29 +38,29 @@ export default {
 			return classes;
 		},
 		areaStyle() {
-			let state = "texture_light";
+			let state = "texture_dust";
 			switch (this.state) {
 				case "error":
-					state += "c_white bg_alert-n1";
+					state += " c_white bg_alert-n2 ";
 					break;
 				case "warning":
-					state += "c_white bg_warning-n1";
+					state += " c_white bg_warning-n2 ";
 					break;
-				case "sucess":
-					state += "c_white bg_sucess-n1";
+				case "success":
+					state += " c_white bg_success-n2 ";
 					break;
 				case "secondary":
-					state += "c_black bg_secondary-3";
-					break;				
+					state += " c_black bg_secondary-3 ";
+					break;
 				case "info":
-					state += "c_black bg_info-3";
+					state += " c_black bg_info-3 ";
 					break;
 				case "accent":
-					state += "c_black bg_accent";
+					state += " c_black bg_accent-n2 ";
 					break;
 
 				default:
-					state = "display_none";
+					state = " display_none ";
 					break;
 			}
 			return state;
@@ -65,3 +68,8 @@ export default {
 	}
 };
 </script>
+<style scoped>
+.c_inherit {
+	color: inherit !important;
+}
+</style>

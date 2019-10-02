@@ -7,7 +7,8 @@ export default {
 	component: CreditFilter,
 	parameters: {
 		componentSubtitle:
-			"Filter bar that can control what activites are seen in the list"
+			"Filter bar that can control what activites are seen in the list",
+		info: true
 	},
 	excludeStories: ["creditTypes", "creditsInList"]
 };

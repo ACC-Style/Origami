@@ -4,7 +4,8 @@ import CreditLegend from "../../src/components/Transcript/Transcript.CreditLegen
 export default {
 	title: "Transcript/Legend",
 	parameters: {
-		componentSubtitle: "Handy status label"
+		componentSubtitle: "Handy status label",
+		info: true
 	}
 };
 
