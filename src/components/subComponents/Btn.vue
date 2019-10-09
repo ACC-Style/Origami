@@ -1,14 +1,16 @@
 <template>
 	<button
-		class="button text_center br_none flex inline-block"
+		class="button text_center br_none inline-block w_auto"
 		@click="onClick()"
 		:class="[buttonStyles,{'is-active':isActive}]"
 	>
-		<span class="display_none inline:md flex_auto p-x_2" v-if="hasSlotData">
-			<slot></slot>
-		</span>
-		<span class="flex_shrink flex flex_column self_center" v-if="icon">
-			<i class="far flex_shrink" :class="[iconStyles]"></i>
+		<span class="flex">
+			<span class="flex_auto p-x_2" v-if="hasSlotData">
+				<slot></slot>
+			</span>
+			<span class="flex_shrink flex flex_column self_center" v-if="icon">
+				<i class="far flex_shrink" :class="[iconStyles]"></i>
+			</span>
 		</span>
 	</button>
 </template>
