@@ -26,8 +26,9 @@
 				:state="'none'"
 				:size="'tiny'"
 			>
-				<i class="fas fa-share-square m-r_3"></i>
-				<span>FULL DOC</span>
+				<i class="fas fa-share-square m-r_2"></i>
+				<span class="display_none inline:md">FULL&nbsp;</span>
+				<span>DOC</span>
 			</BTN>
 			<BTN
 				v-if="PDFurl !=''"
