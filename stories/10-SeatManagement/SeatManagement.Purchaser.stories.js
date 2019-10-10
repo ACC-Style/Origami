@@ -1,20 +1,22 @@
-import {action} from "@storybook/addon-actions";
-import Result from "../../src/components/GLSearch/GLSearch.Result";
+import {
+   action
+} from "@storybook/addon-actions";
+
 
 export default {
-    title: "SeatManagement",
-    component: Result,
-    parameters: {
-        componentSubtitle: "The Owner of the Contract",
-        notes: true,
-        info: true
-    },
-    excludeStories: ["purchaserData", "methods"]
+   title: "SeatManagement",
+   parameters: {
+      componentSubtitle: "The Owner of the Contract",
+      notes: true,
+      info: true
+   },
+   excludeStories: [ "purchaserData", "methods" ]
 };
 export const methods = {};
 export const purchaserData = {};
 export const purchaser = () => {
-    return {template: `
+   return {
+      template: `
          <div>
             <h1>Purchaser</h1>
             <ul> 
@@ -26,10 +28,12 @@ export const purchaser = () => {
                <li>Remove</li>
             </ul>
          </div>
-      `};
+      `
+   };
 };
 export const contract = () => {
-    return {template: `
+   return {
+      template: `
          <div>
                <h1>contract</h1>
                <ul> 
@@ -44,10 +48,12 @@ export const contract = () => {
 
                </ul>
          </div>
-    `};
+    `
+   };
 };
 export const bundle = () => {
-    return {template: `
+   return {
+      template: `
          <div>
                <h1>Bundle</h1>
                <ul> 
@@ -68,10 +74,12 @@ export const bundle = () => {
                   <li>Partician Bundle</li>
                </ul>
          </div>
-    `};
+    `
+   };
 };
 export const groupAdmin = () => {
-    return {template: `
+   return {
+      template: `
          <div>
             <h1>Group Admin</h1>
             <ul> 
@@ -85,10 +93,12 @@ export const groupAdmin = () => {
                <li>Remove</li>
             </ul>
          </div>
-    `};
+    `
+   };
 };
 export const group = () => {
-    return {template: `<div>
+   return {
+      template: `<div>
          <h1>Group</h1>
          <ul> 
             <li>Identification</li>
@@ -103,11 +113,13 @@ export const group = () => {
             <li>Change Partition</li>
             <li>Add Consumer</li>
          </ul>
-      </div>`};
+      </div>`
+   };
 };
 
 export const seats = () => {
-    return {template: `<div>
+   return {
+      template: `<div>
          <h1>Group</h1>
          <ul> 
             <li>User</li>
@@ -122,5 +134,6 @@ export const seats = () => {
             <li>Extend Seat</li>
             <li>Retire Seat</li>
          </ul>
-      </div>`};
+      </div>`
+   };
 };
