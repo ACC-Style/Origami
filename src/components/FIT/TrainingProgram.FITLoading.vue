@@ -1,10 +1,10 @@
 <template>
-	<div class="flex p_1 br_1 br_solid br_secondary-4">
+	<div class="flex p_1 br_1 br_solid br_shade-4">
 				<div
-					class="lorem-status flex_shrink flex toggle_handle p_3 br_secondary-5 br-r_1 br_solid self_stretch"
+					class="lorem-status flex_shrink flex toggle_handle p_3 br_shade-5 br-r_1 br_solid self_stretch"
 				>
 					<i
-						class="far fa-plus-square vertical-align_middle flex_grow-0 m_auto self_center c_secondary-5"
+						class="far fa-plus-square vertical-align_middle flex_grow-0 m_auto self_center c_shade-5"
 					></i>
 				</div>
 				<div class="lorem-status flex_shrink m_2 lorem-loader"></div>

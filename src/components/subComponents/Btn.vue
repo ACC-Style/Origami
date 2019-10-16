@@ -112,6 +112,11 @@ export default {
 						"c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n4 br_success-n3";
 					if (this.isDisabled) stateStyle = "bg_success-4";
 					break;
+				case "shade":
+					stateStyle =
+						"c_black bg_shade-3 h:bg_shade-1 h:c_white a:c_shade-4 a:bg_shade-n3";
+					if (this.isDisabled) stateStyle = "bg_shade-4";
+					break;
 				case "secondary":
 					stateStyle =
 						"c_black bg_secondary-3 h:bg_secondary-1 h:c_white a:c_secondary-4 a:bg_secondary-n3";
@@ -119,7 +124,7 @@ export default {
 					break;
 				case "none":
 					stateStyle = this.isDisabled
-						? "c_secondary bg_tansparent"
+						? "c_shade bg_tansparent"
 						: "undecorated h:underline c_black-7 h:c_black bg_tansparent";
 					break;
 				default:

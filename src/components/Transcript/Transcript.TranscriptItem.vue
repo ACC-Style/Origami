@@ -18,7 +18,7 @@
 						>{{ProductTitle}}</span>
 					</div>
 					<div
-						class="flex justify_between c_secondary-3 font_n2:lg font_n1 uppercase font_bold print-display_none w_50:md"
+						class="flex justify_between c_shade-3 font_n2:lg font_n1 uppercase font_bold print-display_none w_50:md"
 						:class="{'bg_warning-2 c_black-7 p-l_3 br_radius':External}"
 					>
 						<div
@@ -34,14 +34,14 @@
 						>
 							<span
 								@click="$emit('editExternal')"
-								class="print-display_none flex_auto p-y_2 p-x_4 br-l_1 br_solid br_black-3 bg_secondary-4 h:bg_secondary-n5 h:c_white"
+								class="print-display_none flex_auto p-y_2 p-x_4 br-l_1 br_solid br_black-3 bg_shade-4 h:bg_shade-n5 h:c_white"
 							>
 								<i class="fas fa-edit"></i>
 								<span class="display_none inline:md">&nbsp;Edit</span>
 							</span>
 							<span
 								@click="$emit('deleteExternal')"
-								class="print-display_none flex_auto p-y_2 p-x_4 br-l_1 br_solid br_black-3 bg_secondary-4 h:bg_secondary-n5 h:c_white br-tr_radius br-br_radius"
+								class="print-display_none flex_auto p-y_2 p-x_4 br-l_1 br_solid br_black-3 bg_shade-4 h:bg_shade-n5 h:c_white br-tr_radius br-br_radius"
 							>
 								<i class="fas fa-trash"></i>
 								<span class="display_none inline:md">&nbsp;Delete</span>
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 
-					<div class="block c_secondary-n4 font_1:md font_0">
+					<div class="block c_shade-n4 font_1:md font_0">
 						<span
 							v-if="External"
 							class="font_n4 print-br_black display_none print-display_inline-block p_1 p-x_2 m-r_3 m-t_n2 vertical-align_middle"
@@ -130,7 +130,7 @@ export default {
 				this.selectedCreditFilter.indexOf(type) != -1 ||
 				this.selectedCreditFilter.length == 1
 					? "order_0 c_white bg_" +type +" br_solid br_1 print-display_block br_" +type
-					: "order_last br_secondary-4 bg_secondary-5  c_secondary-3 br_1 br_dashed print-display_none";
+					: "order_last br_shade-4 bg_shade-5  c_shade-3 br_1 br_dashed print-display_none";
 			return decorationClasses;
 		}
 	}

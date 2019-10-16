@@ -31,7 +31,7 @@
 						'br_alert-n1': inputState == 'error',
 						'br_warning-n1': inputState == 'warning',
 						'br_info-n1': inputState == 'info',
-						'br_success-n1': inputState == 'success',' br_secondary ': inputState == ''
+						'br_success-n1': inputState == 'success',' br_shade ': inputState == ''
           }"
 			/>
 			<div
@@ -41,7 +41,7 @@
 						'br_alert-n1 c_alert': inputState == 'error',
 						'br_warning-n1 c_warning': inputState == 'warning',
 						'br_info-n1 c_primary': inputState == 'info',
-						'br_success-n1 c_primary': inputState == 'success',' br_secondary c_primary ': inputState == ''
+						'br_success-n1 c_primary': inputState == 'success',' br_shade c_primary ': inputState == ''
           }"
 			>
 				<small>optional</small>
@@ -85,8 +85,8 @@ export default {
 				case "success":
 					styles += " bg_sucess-4 br_sucess c_sucess ";
 					break;
-				case "secondary":
-					styles += " c_black bg_secondary-3 ";
+				case "shade":
+					styles += " c_black bg_shade-3 ";
 					break;
 				case "info":
 					styles += " bg_info-4 br_info c_info ";
@@ -96,7 +96,7 @@ export default {
 					break;
 					return styles;
 				default:
-					styles += " c_black bg_secondary-3 br_secondary-2";
+					styles += " c_black bg_shade-3 br_shade-2";
 					break;
 			}
 			return styles;

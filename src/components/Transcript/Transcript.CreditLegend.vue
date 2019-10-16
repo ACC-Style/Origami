@@ -12,7 +12,7 @@
 			></div>
 			<div class="w_70 p-x_3 p-y_2 br-t_1 br-r_1 br-b_1 br_solid br_black-2">
 				<p
-					class="font_0 c_secondary-n4 lh_1 font_copy vertical-align_middle inline-block"
+					class="font_0 c_shade-n4 lh_1 font_copy vertical-align_middle inline-block"
 					v-html="credit.fullName"
 				></p>
 			</div>

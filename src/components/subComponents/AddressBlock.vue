@@ -1,5 +1,5 @@
 <template>
-	<section class="address c_secondary-n4 p-l_0:md p-y_0:md p-y_3">
+	<section class="address c_shade-n4 p-l_0:md p-y_0:md p-y_3">
 		<address>
 			<!-- http://microformats.org/wiki/hcard -->
 			<h4

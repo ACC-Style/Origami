@@ -1,10 +1,10 @@
 <template>
 	<div
-		class="flex font_ui br_solid br-b_1 br_secondary-4 h:bg_primary-5"
+		class="flex font_ui br_solid br-b_1 br_shade-4 h:bg_primary-5"
 		v-on:click="function(){isSelected = !isSelected}"
 	>
 		<div
-			class="flex_shrink flex toggle_handle p_3 br_secondary-3 br-r_1 br_solid h:bg_secondary-4 self_stretch"
+			class="flex_shrink flex toggle_handle p_3 br_shade-3 br-r_1 br_solid h:bg_shade-4 self_stretch"
 		>
 			<i
 				class="far vertical-align_middle flex_grow-0 self_center"
@@ -19,10 +19,10 @@
 			</div>
 		</div>
 		<div class="flex_shrink m-x_4 self_center">
-			<div class="flex p_2 br_radius bg_secondary-4 shadow_n2">
+			<div class="flex p_2 br_radius bg_shade-4 shadow_n2">
 				<div class="flex_shrink self_center">
 					<Btn
-						:state="'secondary'"
+						:state="'shade'"
 						class="br_solid br_1 br_black-2 br-tl_radius br-bl_radius"
 						:icon="false"
 						:size="'medium'"

@@ -22,7 +22,7 @@
 						class="far fa-thumbs-down"
 					></i>
 				</p>
-				<BTN class="br_radius shadow_2 br_solid br_2 br_white" :state="'secondary'" :size="'large'">
+				<BTN class="br_radius shadow_2 br_solid br_2 br_white" :state="'shade'" :size="'large'">
 					Expand Table On A New Tab
 					<i class="fas fa-external-link-square"></i>
 				</BTN>

@@ -49,6 +49,9 @@ export default {
 				case "success":
 					state += " c_white bg_success-n2 ";
 					break;
+				case "shade":
+					state += " c_black bg_shade-3 ";
+					break;
 				case "secondary":
 					state += " c_black bg_secondary-3 ";
 					break;
@@ -58,7 +61,6 @@ export default {
 				case "accent":
 					state += " c_black bg_accent-n2 ";
 					break;
-
 				default:
 					state = " display_none ";
 					break;

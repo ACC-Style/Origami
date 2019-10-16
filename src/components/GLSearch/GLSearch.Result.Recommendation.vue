@@ -16,7 +16,7 @@
 			</div>
 			<div class="inline">{{content}}</div>
 		</main>
-		<aside class="m-x_3 p_2 bg_secondary-5 lh_3 m-b_3">
+		<aside class="m-x_3 p_2 bg_shade-5 lh_3 m-b_3">
 			<div class="flex m_n2">
 				<div
 					@click="showExtra = !showExtra"

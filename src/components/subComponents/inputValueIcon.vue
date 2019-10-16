@@ -29,8 +29,8 @@ export default {
 				case "success":
 					styles += " bg_sucess-4 br_sucess c_sucess ";
 					break;
-				case "secondary":
-					styles += " c_black bg_secondary-3 ";
+				case "shade":
+					styles += " c_black bg_shade-3 ";
 					break;
 				case "info":
 					styles += " bg_info-4 br_info c_info ";
@@ -40,7 +40,7 @@ export default {
 					break;
 					return styles;
 				default:
-					styles += " c_black bg_secondary-3 br_secondary-2";
+					styles += " c_black bg_shade-3 br_shade-2";
 					break;
 			}
 			return styles;

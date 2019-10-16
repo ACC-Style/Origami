@@ -99,6 +99,11 @@ export default {
 						? " bg_success-4"
 						: "c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n4";
 					break;
+				case "shade":
+					state = this.isDisabled
+						? " bg_shade-4"
+						: "c_black bg_shade-3 h:bg_shade-1 h:c_white a:c_shade-4 a:bg_shade-n3";
+					break;
 				case "secondary":
 					state = this.isDisabled
 						? " bg_secondary-4"

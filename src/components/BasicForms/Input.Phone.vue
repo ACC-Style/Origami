@@ -49,7 +49,7 @@
 			<button
 				v-if="phone !=''"
 				type="button"
-				class="c_secondary-4 hover:c_black value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-4 texture_light"
+				class="c_shade-4 hover:c_black value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_shade-4 texture_light"
 				@click="resetphone"
 			>
 				<i class="fas fa-times"></i>
@@ -57,7 +57,7 @@
 
 			<button
 				type="button"
-				class="value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_secondary-4 texture_light c_secondary-4 hover:c_black"
+				class="value-space cell shrink br_solid br-w_1 p_3 p-b_2 br_shade-4 texture_light c_shade-4 hover:c_black"
 				@click="phoneShowToggle"
 			>
 				<i v-if="phoneShow" class="fas fa-eye"></i>

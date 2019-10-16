@@ -1,9 +1,9 @@
 <template>
-	<section class="font_0 font_ui br_solid br-b_1 br_secondary-4 h:bg_primary-5" :data-id="id">
+	<section class="font_0 font_ui br_solid br-b_1 br_shade-4 h:bg_primary-5" :data-id="id">
 		<div class="primaryData flex">
 			<div
-				@click="function(){showSecondaryInfo = !showSecondaryInfo}"
-				class="flex_shrink flex toggle_handle p_3 br_secondary-3 br-r_1 br_solid h:bg_secondary-4 self_stretch"
+				@click="function(){showshadeInfo = !showshadeInfo}"
+				class="flex_shrink flex toggle_handle p_3 br_shade-3 br-r_1 br_solid h:bg_shade-4 self_stretch"
 			>
 				<i class="far fa-plus-square vertical-align_middle flex_grow-0 self_center"></i>
 			</div>
@@ -17,7 +17,7 @@
 				v-if="statusOfRecord.state == ''"
 				class="flex_shrink text_center status_icon shadow_n1 opacity_4"
 				style="min-width:2.25rem;"
-				:state="'secondary'"
+				:state="'shade'"
 			></StatusIcon>
 			<div class="flex_auto p-l_3 p-y_3 lh_2">
 				<span class="fullName">{{fullName}}</span>
@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="flex_shrink actions p-r_3 p-y_2 text_right self_center m-r_4">
-				<div class="flex_inline p_2 br_radius bg_secondary-4 shadow_n2">
+				<div class="flex_inline p_2 br_radius bg_shade-4 shadow_n2">
 					<Btn
 						class="br_radius"
 						:size="'medium'"
@@ -52,8 +52,8 @@
 			</div>
 		</div>
 		<div
-			class="secondaryData br_solid p_4 p-y_3 br-t_1 br_secondary-4 shadow_n1 texture_light"
-			v-if="showSecondaryInfo"
+			class="shadeData br_solid p_4 p-y_3 br-t_1 br_shade-4 shadow_n1 texture_light"
+			v-if="showshadeInfo"
 		>
 			<div class="flex">
 				<addressBlock class="flex_auto" v-bind="address"></addressBlock>
@@ -150,7 +150,7 @@ export default {
 	},
 	data() {
 		return {
-			showSecondaryInfo: false
+			showshadeInfo: false
 		};
 	}
 };

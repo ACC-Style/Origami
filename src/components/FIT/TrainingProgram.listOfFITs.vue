@@ -2,14 +2,14 @@
 	<div class="fits m_3">
 		<h1 class="br-b_1 br_solid br_primary m-b_3 font_display font_3 font_regular p-y_3">Fellows In Training Program <Btn class="br_radius float_right m-t_3 m-r_4" :state='"add"' :icon='true'>Add Fellow</Btn></h1>
 		<div v-if="!finishedLoading" class>
-			<div class="text_center font_ui p_3 c_secondary-3">Loading ...</div>
+			<div class="text_center font_ui p_3 c_shade-3">Loading ...</div>
 			<FITLoading/>
 			<FITLoading/>
 			<FITLoading/>
 		</div>
 		<div v-if="finishedLoading && fits.length == 0">
-			<article class="m_5 p_4 shadow_2 br_radius br_solid br_2 br_white-9 bg_secondary-5 font_ui">
-				<h1 class="font_regular p_3 font_2 text_center br-b_1 br_solid br_secondary-4">
+			<article class="m_5 p_4 shadow_2 br_radius br_solid br_2 br_white-9 bg_shade-5 font_ui">
+				<h1 class="font_regular p_3 font_2 text_center br-b_1 br_solid br_shade-4">
 					<i class="far fa-exclamation-triangle"></i> You have No Fellows in your Training Program
 					<i class="far fa-exclamation-triangle"></i>
 				</h1>
@@ -21,7 +21,7 @@
 				</div>
 			</article>
 		</div>
-		<div v-if="finishedLoading && fits.length != 0" class="br_solid br_1 br-b_0 br_secondary-4">
+		<div v-if="finishedLoading && fits.length != 0" class="br_solid br_1 br-b_0 br_shade-4">
 			<FIT v-for="fit in fits" :key="'fit_'+fit.id" v-bind="fit" @removeFIT="$emit('removeFIT', fit)" />
 		</div>
 	</div>

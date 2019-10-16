@@ -68,6 +68,44 @@ export const primary = () => ({
 	},
 	description: btnDescription
 });
+export const secondary = () => ({
+	components: {
+		Btn
+	},
+	template: templateBasic,
+	methods: {
+		action: action("clicked")
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "secondary",
+			iconBoolean: false
+		};
+	},
+	description: btnDescription
+});
+export const shade = () => ({
+	components: {
+		Btn
+	},
+	template: templateBasic,
+	methods: {
+		action: action("clicked")
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "shade",
+			iconBoolean: false
+		};
+	},
+	description: btnDescription
+});
 export const add = () => ({
 	components: {
 		Btn
@@ -83,48 +121,6 @@ export const add = () => ({
 			large: "large",
 			status: "add",
 			iconBoolean: true
-		};
-	},
-	description: btnDescription
-});
-
-export const toggle = () => ({
-	components: {
-		BtnToggle
-	},
-	template:
-		'<section><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>Active</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :defaultActiveState="true" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>On By Defualt</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean"  :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div></section>',
-	methods: {
-		click: action("clicked"),
-		clickActive: action("active"),
-		clickNotActive: action("not active")
-	},
-	data() {
-		return {
-			small: "small",
-			medium: "medium",
-			large: "large",
-			status: "warning",
-			iconBoolean: true
-		};
-	}
-});
-export const radius = () => ({
-	components: {
-		Btn
-	},
-	template:
-		'<div class="flex p-y_3"><div class="flex_shrink p-x_3"><Btn class="br_radius" @click="action" :icon="iconBoolean" :size="small" :state="status">Small Button</Btn></div><div class="flex_shrink p-x_3"><Btn class="br_radius" @click="action" :icon="iconBoolean" :size="medium" :state="status">Medium Button</Btn></div><div class="flex_shrink p-x_3"><Btn class="br_radius" @click="action" :icon="iconBoolean" :size="large" :state="status">Large Button</Btn></div></div>',
-	methods: {
-		action: action("clicked")
-	},
-	data() {
-		return {
-			small: "small",
-			medium: "medium",
-			large: "large",
-			status: "",
-			iconBoolean: false
 		};
 	},
 	description: btnDescription
@@ -186,26 +182,6 @@ export const success = () => ({
 	},
 	description: btnDescription
 });
-export const secondary = () => ({
-	components: {
-		Btn
-	},
-	template: templateBasic,
-	methods: {
-		action: action("clicked")
-	},
-	data() {
-		return {
-			small: "small",
-			medium: "medium",
-			large: "large",
-			status: "secondary",
-			iconBoolean: false
-		};
-	},
-	description: btnDescription
-});
-
 export const isActivatable = () => ({
 	components: {
 		Btn
@@ -224,6 +200,47 @@ export const isActivatable = () => ({
 			status: "primary",
 			iconBoolean: false,
 			isActivatableBoolean: true
+		};
+	},
+	description: btnDescription
+});
+export const toggle = () => ({
+	components: {
+		BtnToggle
+	},
+	template:
+		'<section><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>Active</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :defaultActiveState="true" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>On By Defualt</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean"  :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div></section>',
+	methods: {
+		click: action("clicked"),
+		clickActive: action("active"),
+		clickNotActive: action("not active")
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "warning",
+			iconBoolean: true
+		};
+	}
+});
+export const radius = () => ({
+	components: {
+		Btn
+	},
+	template:
+		'<div class="flex p-y_3"><div class="flex_shrink p-x_3"><Btn class="br_radius" @click="action" :icon="iconBoolean" :size="small" :state="status">Small Button</Btn></div><div class="flex_shrink p-x_3"><Btn class="br_radius" @click="action" :icon="iconBoolean" :size="medium" :state="status">Medium Button</Btn></div><div class="flex_shrink p-x_3"><Btn class="br_radius" @click="action" :icon="iconBoolean" :size="large" :state="status">Large Button</Btn></div></div>',
+	methods: {
+		action: action("clicked")
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "",
+			iconBoolean: false
 		};
 	},
 	description: btnDescription
