@@ -1,53 +1,33 @@
-<br /><br /><strong>Matt Watier 3:31 PM</strong>
-<br />
-do you have any notes on the docs I have sent over? I am attempting to help you
-all stay on track with timelines
-
-<br /><br /><strong>Michelle Poblete 3:34 PM</strong>
-<br />
-Hi Matt, actually we got stuck on reordering the topics and have updated our
-list. I am having a hard time visualizing the flow and think it would help for
-us to walk through it. And I was thinking about whether consuming news is the
-same as a tool, and I don't think it really is. But I was hoping others would
-chime in.
-
-<br /><br /><strong>Matt Watier 3:38 PM</strong>
-<br />
-do you want to setup a meeting tomorrow to facilitate this conversation? or you
-do you think you can do it via email. I only ask because if we do meetings every
-2 weeks we will never meet the deadlines for the outlined milestones. I am
-around to help you visualize this
-
-<br /><br /><strong>Michelle Poblete 3:39 PM</strong>
-<br />
-That would be super helpful! I only hesitate because setting a time for the
-whole group to gather is tough.
-
-<br /><br /><strong>Michelle Poblete 3:41 PM</strong>
-<br />
-It's true that I haven
-
-<br /><br /><strong>Matt Watier 3:41 PM</strong>
-<br />
-can we pair it down to have a focus "champions" group to build out an answer
-which can be propagated to the greater team?
-
-<br /><br /><strong>Michelle Poblete 3:42 PM</strong>
-<br />
-t even had enough time with MaryAnne. Some things that are clear to her are
-still muddled in my brain. Yes. I'll do that. I guess I can schedule a time and
-let everyone know even if all can't make it. I'll schedule something for
-tomorrow a.m.
-
-<br /><br /><strong>Matt Watier 3:43 PM</strong>
-<br />
-ok
-
-<br /><br /><strong>Michelle Poblete 3:43 PM</strong>
-<br />
-Thank you!!
-
-<br /><br /><strong>Matt Watier 3:43 PM</strong>
-<br />
-No problem. I am here as a consultant so please feel free to hit me up. I can
-help you in more then just making things pretty.
+<table class="w_100 m_5">
+	<thead>
+		<tr class="text_left">
+			<th class="p_2">Seat</th>
+			<th class="p_2">Status</th>
+			<th class="p2">User</th>
+			<th class="p2">Group</th>
+			<th class="p_2">Invite Sent</th>
+			<th class="p_2">Accpeted On</th>
+			<th class="p_2">Seat Locked Till</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr
+			v-bind="seatAllocationData"
+			v-for="(data, index) in seatAllocationData"
+			:key="'seat_'+ data.seat_number"
+		>
+			<td class="p_2">{{ data.seat_number }}</td>
+			<td class="p_2">{{ data.status }}</td>
+			<td class="p_2">
+				<div class="br_" v-for="user in data.user" :key="user.id">
+					{{ user.name }} | {{ user.email }}
+				</div>
+			</td>
+			<td class="p_2">{{ data.group.name }}</td>
+			<td class="p_2">{{ data.invite_date }}</td>
+			<td class="p_2">{{ data.accpetance_date }}</td>
+			<td class="p_2">{{ data.lock_date }}</td>
+			<td class="p_2"></td>
+		</tr>
+	</tbody>
+</table>

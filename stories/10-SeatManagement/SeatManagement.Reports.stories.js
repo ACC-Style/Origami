@@ -7,7 +7,7 @@ export default {
 		notes: true,
 		info: true
 	},
-	excludeStories: ["consumptionData", "methods"]
+    excludeStories: ["consumptionData", "methods", "seatAllocationData"]
 };
 export const methods = {};
 export const consumptionData = [
