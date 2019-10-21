@@ -1,5 +1,5 @@
 <template>
-	<ul class="ul_none m-b_4 lh_4">
+	<ul class="ul_none m-b_4 lh_4 ">
 		<li
 			class="flex flex_row flex_nowrap"
 			v-for="(credit, index) in creditTypes"
