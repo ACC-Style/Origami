@@ -1,4 +1,6 @@
-import { action } from "@storybook/addon-actions";
+import {
+	action
+} from "@storybook/addon-actions";
 import CreditLegend from "../../src/components/Transcript/Transcript.CreditLegend.vue";
 
 export default {
@@ -11,16 +13,19 @@ export default {
 };
 
 export const legend = () => {
-	const creditTypes = [
-		{
-			shortName: "COP",
-			fullName: "Certificate of Participation",
-			styleCode: "COP"
+	const creditTypes = [ {
+			shortName: "CME",
+			fullName: "Continuing Medical Education",
+			styleCode: "CME"
 		},
 		{
 			shortName: "ABP",
 			fullName: "American Board of Pediatrics",
 			styleCode: "ABP"
+		}, {
+			shortName: "COP",
+			fullName: "Certificate of Participation",
+			styleCode: "COP"
 		},
 		{
 			shortName: "CE",
@@ -57,10 +62,16 @@ export const legend = () => {
 			fullName: "Continuing Pharamacy Education",
 			styleCode: "CPE"
 		},
+
 		{
-			shortName: "CME",
-			fullName: "Continuing Medical Education",
-			styleCode: "CME"
+			shortName: "AAPA",
+			fullName: "American Academy of Physician Assistants (AAPA) Category 1 CME Credit",
+			styleCode: "AAPA"
+		},
+		{
+			shortName: "AT CEU",
+			fullName: "Athletic Trainer Continuing Education Unit",
+			styleCode: "ATCEU"
 		}
 	];
 	return {
@@ -69,11 +80,11 @@ export const legend = () => {
 		},
 		template: '<CreditLegend :creditTypes="creditTypes"></CreditLegend>',
 		methods: {
-			action: action("clicked")
+			action: action( "clicked" )
 		},
-		data: () => ({
+		data: () => ( {
 			creditTypes
-		})
+		} )
 	};
 };
 legend.story = {
