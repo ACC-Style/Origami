@@ -1,7 +1,9 @@
 import { action } from "@storybook/addon-actions";
+import gChart from "../../src/components/BasicChart/googleChart";
 
 export default {
-	title: "SeatManagement/Reports",
+    title: "SeatManagement/Charts",
+    components: gChart,
 	parameters: {
 		componentSubtitle: "The Owner of the Contract",
 		notes: true,
@@ -1801,131 +1803,27 @@ export const seatAllocationData = [
         }
     }
 ];
-export const contractRaw = () => {
-	return {
-		template: `
-    <div>
-        <h1>Contract</h1>
-        <table class="w_100">
-            <thead>
-                <tr class="text_left">
-                    <th class="p_2">Contract ID</th>
-                    <th class="p_2">Institution</th>
-                    <th class="p_2">Purchaser</th>
-                    <th class="p_2">Status</th>
-                    <th class="p_2">Seat Count</th>
-                    <th class="p_2">Term</th>
-                    <th class="p_2">Amount</th>
-                    <th class="p_2">Payment Date</th>
-                    <th class="p_2">Last Payment Date</th>
-                    <th class="p_2">Expiration Date</th>
-                    <th class="p_2">Purchase Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr
-                    v-bind="contractData"
-                    v-for="(data, index) in contractData"
-                    key="data.result_id"
-                >
-                    <td class="p_2">{{ data.id }}</td>
-                    <td class="p_2"><a v-bind:href="data.institution.id" class="">{{ data.institution.name }}</a></td>
-                    <td class="p_2"><a v-bind:href="data.institution.purchaser.id" class="">{{ data.institution.purchaser.name }}</a><a class="link email block font_n2" :href="'mailto:'+data.institution.purchaser.email">email user</a></td>
-                    <td class="p_2">{{ data.status }}</td>
-                    <td class="p_2">{{ data.seat_count }}</td>
-                    <td class="p_2">{{ data.term }}</td>
-                    <td class="p_2">{{ data.amount }}</td>
-                    <td class="p_2">{{ data.date_payment }}</td>
-                    <td class="p_2">{{ data.date_lastPayment }}</td>
-                    <td class="p_2">{{ data.date_expiration }}</td>
-                    <td class="p_2">{{ data.date_purchase }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    `,
-    data: () => ({
-        contractData
-    })
-    };
-};
 
-export const hoursAndCreditsRaw = () => {
-	return {
-		template: `
-        <div>
-            <h1>Usage Hours and Credits</h1>
-            <table class="w_100">
-            <thead>
-                <tr class="text_left">
-                    <th class="p_2">User</th>
-                    <th class="p_2">Bundle</th>
-                    <th class="p_2">Product</th>
-                    <th class="p_2">Hours Spent</th>
-                    <th class="p_2">Credits Earned</th>
-                    <th class="p_2">Date Started</th>
-                    <th class="p_2">Date Completed</th>
-                    <th class="p_2">Date Claimed</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-bind="consumptionData" v-for="(data, index) in consumptionData" key="data.result_id">
-                    <td class="p_2"><a href="" v-bind:href="data.user.id" class="">{{ data.user.name }}</a><a class="link email block font_n2" :href="'mailto:'+data.user.email">email user</a></td>
-                    <td class="p_2">{{data.product.parent_bundle}}</td>
-                    <td class="p_2">{{data.product.name}}</td>
-                    <td class="p_2">{{data.hours_spent}}</td>
-                    <td class="p_2">{{data.credits_earned}}</td>
-                    <td class="p_2">{{data.date_started}}</td>
-                    <td class="p_2">{{data.date_completed}}</td>
-                    <td class="p_2">{{data.date_claimed}}</td>
-                </tr>
-            </tbody>
-        </table>  
-    </div>
-    `,
-		data: () => ({
-			consumptionData
-		})
-	};
-};
-
-export const seatallocationRaw = () => {
+export const pieChart = () => {
     return {
-        template: `
-        <div>
-            <h1>Seat Allocattion</h1>
-            <table class="w_100 m_5">
-    <thead>
-        <tr class="text_left">
-            <th class="p_2">Seat</th>
-            <th class="p_2">Status</th>
-            <th class="p2">User</th>
-            <th class="p2">Group</th>
-            <th class="p_2">Invite Sent</th>
-            <th class="p_2">Accpeted On</th>
-            <th class="p_2">Seat Locked Till</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr  v-bind="seatAllocationData" v-for="(data, index) in seatAllocationData" :key="'seat_'+ data.seat_number">
-            <td class="p_2">{{data.seat_number}}</td>
-            <td class="p_2">{{data.seat_status}}</td>
-            <td class="p_2">
-                <div class="br_" v-for="user in data.user" :key="user.id">
-                    {{user.name}} | {{user.email}}
-                </div>
-            </td>
-            <td class="p_2">{{data.group.name}}</td>
-            <td class="p_2">{{data.invite_date}}</td>
-            <td class="p_2">{{data.acceptance_date}}</td>
-            <td class="p_2">{{data.lock_date}}</td>
-        </tr>
-    </tbody>
-</table>  
-    </div>
-    `,
+        components: {
+            gChart
+        },
+        template: "<gChart :chartData='chartData'/>",
+        methods: methods,
         data: () => ({
-            seatAllocationData
-        })
+            consumptionData
+        }),
+        computed: {
+            chartData() {
+                return [
+                    ["Year", "Sales"],
+                    ["2014", 5000],
+                    ["2015", 1170],
+                    ["2016", 660],
+                    ["2017", 1030]
+                ] 
+            },
+        },
     };
 };
