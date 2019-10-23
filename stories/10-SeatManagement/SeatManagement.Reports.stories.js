@@ -7,7 +7,7 @@ export default {
 		notes: true,
 		info: true
 	},
-    excludeStories: ["consumptionData", "methods", "seatAllocationData"]
+    excludeStories: ["consumptionData", "methods", "seatAllocationData", "contractData"]
 };
 export const methods = {};
 export const consumptionData = [
@@ -332,1076 +332,1529 @@ export const consumptionData = [
 		}
 	}
 ];
-export const seatAllocationData = [{
-    "seat_number": 1,
-    "seat_status": "unused",
-    "invite_date": "2019-07-23 14:06:42 UTC",
-    "acceptance_date": "2019-07-31 14:06:42 UTC",
-    "lock_date": "2020-07-31 14:06:42 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "7949729070",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "8631952993"
-    },
-    "group": {
-        "id": "0208076109",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 2,
-    "seat_status": "unused",
-    "invite_date": "2019-05-01 05:01:42 UTC",
-    "acceptance_date": "2019-05-29 05:01:42 UTC",
-    "lock_date": "2020-05-29 05:01:42 UTC",
-    "user": [
-        {
-            "name": "Miltie Paull",
-            "id": "2360817256",
-            "email": "mpaull0@geocities.jp"
+export const contractData = [
+    {
+    "id": "7981190141",
+    "status": "completed",
+    "seat_count": 75,
+    "term": 5,
+    "amount": "$17336.62",
+    "date_payment": "11/19/2019",
+    "date_lastPayment": "10/4/2019",
+    "date_expiration": "10/12/2019",
+    "date_purchase": "9/20/2019",
+    "institution": {
+        "name": "Bamity",
+        "id": "0275637602",
+        "purchaser": {
+            "id": "2420190162",
+            "name": "Lyssa Foresight",
+            "email": "lforesight0@blogtalkradio.com"
         }
-    ],
-    "bundle": {
-        "id": "1112918685",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "4034388405"
-    },
-    "group": {
-        "id": "4154497339",
-        "name": "default"
     }
 }, {
-    "seat_number": 3,
-    "seat_status": "filled",
-    "invite_date": "2019-04-04 00:10:37 UTC",
-    "acceptance_date": "2019-04-15 00:10:37 UTC",
-    "lock_date": "2020-04-15 00:10:37 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "6372755902",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "8178440141"
-    },
-    "group": {
-        "id": "0319002553",
-        "name": "hospital_southern"
-    }
-}, {
-    "seat_number": 4,
-    "seat_status": "empty",
-    "invite_date": "2019-02-22 06:15:12 UTC",
-    "acceptance_date": "2019-03-19 06:15:12 UTC",
-    "lock_date": "2020-03-19 06:15:12 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "0537522326",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "8582720592"
-    },
-    "group": {
-        "id": "1877196098",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 5,
-    "seat_status": "unused",
-    "invite_date": "2019-08-08 20:39:49 UTC",
-    "acceptance_date": "2019-08-30 20:39:49 UTC",
-    "lock_date": "2020-08-30 20:39:49 UTC",
-    "user": [
-        {
-            "name": "Rainer Liston",
-            "id": "3989514385",
-            "email": "rliston0@patch.com"
+    "id": "3662297709",
+    "status": "active",
+    "seat_count": 53,
+    "term": 4,
+    "amount": "$18006.99",
+    "date_payment": "1/10/2020",
+    "date_lastPayment": "2/1/2019",
+    "date_expiration": "3/22/2019",
+    "date_purchase": "5/20/2019",
+    "institution": {
+        "name": "Biodex",
+        "id": "2091817548",
+        "purchaser": {
+            "id": "6411856468",
+            "name": "Yancy O'Hickee",
+            "email": "yohickee1@symantec.com"
         }
-    ],
-    "bundle": {
-        "id": "4880590213",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "3498660870"
-    },
-    "group": {
-        "id": "4591145932",
-        "name": "hospital_southern"
     }
 }, {
-    "seat_number": 6,
-    "seat_status": "unused",
-    "invite_date": "2018-11-15 13:29:00 UTC",
-    "acceptance_date": "2018-12-11 13:29:00 UTC",
-    "lock_date": "2019-12-11 13:29:00 UTC",
-    "user": null,
-    "bundle": {
-        "id": "9521706127",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "3371302303"
-    },
-    "group": {
-        "id": "8187846218",
-        "name": "hospital_eastcoast"
-    }
-}, {
-    "seat_number": 7,
-    "seat_status": "empty",
-    "invite_date": "2018-11-22 16:09:56 UTC",
-    "acceptance_date": "2018-12-21 16:09:56 UTC",
-    "lock_date": "2019-12-21 16:09:56 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "3686341273",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "6866462484"
-    },
-    "group": {
-        "id": "9999956469",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 8,
-    "seat_status": "empty",
-    "invite_date": "2019-07-01 08:25:07 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "5971595237",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "3933512175"
-    },
-    "group": {
-        "id": "8636687971",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 9,
-    "seat_status": "filled",
-    "invite_date": "2019-08-20 03:42:17 UTC",
-    "acceptance_date": "2019-08-23 03:42:17 UTC",
-    "lock_date": "2020-08-23 03:42:17 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "4550516968",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "3585793146"
-    },
-    "group": {
-        "id": "8926207674",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 10,
-    "seat_status": "unused",
-    "invite_date": "2019-06-19 10:46:42 UTC",
-    "acceptance_date": "2019-06-23 10:46:42 UTC",
-    "lock_date": "2020-06-23 10:46:42 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "7000450535",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "7114020111"
-    },
-    "group": {
-        "id": "2689980406",
-        "name": "default"
-    }
-}, {
-    "seat_number": 11,
-    "seat_status": "filled",
-    "invite_date": "2018-11-03 20:11:28 UTC",
-    "acceptance_date": "2018-11-30 20:11:28 UTC",
-    "lock_date": "2019-11-30 20:11:28 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "0737838235",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "8675520535"
-    },
-    "group": {
-        "id": "0609937183",
-        "name": "hospitals_midwest"
-    }
-}, {
-    "seat_number": 12,
-    "seat_status": "unused",
-    "invite_date": "2019-06-22 10:16:10 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "4502345539",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "7120345319"
-    },
-    "group": {
-        "id": "9556276694",
-        "name": "hospital_eastcoast"
-    }
-}, {
-    "seat_number": 13,
-    "seat_status": "filled",
-    "invite_date": "2019-09-16 00:04:03 UTC",
-    "acceptance_date": "2019-10-07 00:04:03 UTC",
-    "lock_date": "2020-10-07 00:04:03 UTC",
-    "user": null,
-    "bundle": {
-        "id": "7255974535",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "3553798892"
-    },
-    "group": {
-        "id": "4973061044",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 14,
-    "seat_status": "empty",
-    "invite_date": "2019-06-19 05:51:20 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "7321237677",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "4161566294"
-    },
-    "group": {
-        "id": "2953826524",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 15,
-    "seat_status": "filled",
-    "invite_date": "2019-10-12 03:20:57 UTC",
-    "acceptance_date": "2019-11-11 03:20:57 UTC",
-    "lock_date": "2020-11-11 03:20:57 UTC",
-    "user": [
-        {
-            "name": "Horton Palek",
-            "id": "6328652084",
-            "email": "hpalek0@japanpost.jp"
+    "id": "0746884948",
+    "status": "completed",
+    "seat_count": 74,
+    "term": 5,
+    "amount": "$12275.98",
+    "date_payment": "12/24/2019",
+    "date_lastPayment": "4/22/2019",
+    "date_expiration": "8/9/2019",
+    "date_purchase": "1/24/2019",
+    "institution": {
+        "name": "Ventosanzap",
+        "id": "8729440564",
+        "purchaser": {
+            "id": "8494690814",
+            "name": "Rosemaria Dulany",
+            "email": "rdulany2@google.es"
         }
-    ],
-    "bundle": {
-        "id": "9585000835",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "2386666720"
-    },
-    "group": {
-        "id": "8162901100",
-        "name": "hospitals_midwest"
     }
 }, {
-    "seat_number": 16,
-    "seat_status": "requested",
-    "invite_date": "2019-07-23 13:31:03 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "1904721742",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "0607258489"
-    },
-    "group": {
-        "id": "1862728659",
-        "name": "default"
-    }
-}, {
-    "seat_number": 17,
-    "seat_status": "empty",
-    "invite_date": "2019-09-02 05:36:12 UTC",
-    "acceptance_date": "2019-09-19 05:36:12 UTC",
-    "lock_date": "2020-09-19 05:36:12 UTC",
-    "user": [
-        {
-            "name": "Casey Everex",
-            "id": "0641418580",
-            "email": "ceverex0@economist.com"
+    "id": "5292985735",
+    "status": "active",
+    "seat_count": 99,
+    "term": 1,
+    "amount": "$19861.75",
+    "date_payment": "9/24/2020",
+    "date_lastPayment": "8/31/2019",
+    "date_expiration": "10/3/2019",
+    "date_purchase": "3/13/2019",
+    "institution": {
+        "name": "Flowdesk",
+        "id": "8341296726",
+        "purchaser": {
+            "id": "6462756860",
+            "name": "Garvin Goves",
+            "email": "ggoves3@yellowbook.com"
         }
-    ],
-    "bundle": {
-        "id": "7076507558",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "7520934417"
-    },
-    "group": {
-        "id": "0950698928",
-        "name": "hospital_southern"
     }
 }, {
-    "seat_number": 18,
-    "seat_status": "requested",
-    "invite_date": "2018-11-28 10:31:56 UTC",
-    "acceptance_date": "2018-12-26 10:31:56 UTC",
-    "lock_date": "2019-12-26 10:31:56 UTC",
-    "user": [
-        {
-            "name": "Egor Moreing",
-            "id": "3692408139",
-            "email": "emoreing0@g.co"
+    "id": "4599924048",
+    "status": "not paid",
+    "seat_count": 65,
+    "term": 1,
+    "amount": "$12874.57",
+    "date_payment": "4/13/2020",
+    "date_lastPayment": "10/29/2018",
+    "date_expiration": "9/3/2019",
+    "date_purchase": "5/2/2019",
+    "institution": {
+        "name": "Veribet",
+        "id": "2398139691",
+        "purchaser": {
+            "id": "1421684623",
+            "name": "Celesta Frankham",
+            "email": "cfrankham4@ameblo.jp"
         }
-    ],
-    "bundle": {
-        "id": "3008366631",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "1120555017"
-    },
-    "group": {
-        "id": "9587923414",
-        "name": "hospitals_midwest"
     }
 }, {
-    "seat_number": 19,
-    "seat_status": "empty",
-    "invite_date": "2019-08-28 06:43:26 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "1094736657",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "3175475636"
-    },
-    "group": {
-        "id": "1025216406",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 20,
-    "seat_status": "filled",
-    "invite_date": "2019-07-28 04:10:38 UTC",
-    "acceptance_date": "2019-08-11 04:10:38 UTC",
-    "lock_date": "2020-08-11 04:10:38 UTC",
-    "user": [
-        {
-            "name": "Baxy Tissell",
-            "id": "0545371774",
-            "email": "btissell0@unicef.org"
+    "id": "3983673227",
+    "status": "completed",
+    "seat_count": 93,
+    "term": 4,
+    "amount": "$19912.41",
+    "date_payment": "7/10/2020",
+    "date_lastPayment": "5/12/2019",
+    "date_expiration": "9/3/2019",
+    "date_purchase": "10/9/2019",
+    "institution": {
+        "name": "Veribet",
+        "id": "7074294815",
+        "purchaser": {
+            "id": "7758791019",
+            "name": "Sisely Kienzle",
+            "email": "skienzle5@nih.gov"
         }
-    ],
-    "bundle": {
-        "id": "7594771119",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "2615545760"
-    },
-    "group": {
-        "id": "5197590203",
-        "name": "hospital_southern"
     }
 }, {
-    "seat_number": 21,
-    "seat_status": "requested",
-    "invite_date": "2019-09-10 05:55:12 UTC",
-    "acceptance_date": "2019-09-13 05:55:12 UTC",
-    "lock_date": "2020-09-13 05:55:12 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "7542051242",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "5853919822"
-    },
-    "group": {
-        "id": "8144847893",
-        "name": "hospital_eastcoast"
-    }
-}, {
-    "seat_number": 22,
-    "seat_status": "requested",
-    "invite_date": "2019-07-28 08:56:57 UTC",
-    "acceptance_date": "2019-08-23 08:56:57 UTC",
-    "lock_date": "2020-08-23 08:56:57 UTC",
-    "user": [
-        {
-            "name": "Klara Coller",
-            "id": "8478797376",
-            "email": "kcoller0@skyrock.com"
+    "id": "3919472473",
+    "status": "active",
+    "seat_count": 99,
+    "term": 3,
+    "amount": "$11887.48",
+    "date_payment": "5/14/2020",
+    "date_lastPayment": "6/11/2019",
+    "date_expiration": "12/23/2018",
+    "date_purchase": "10/26/2018",
+    "institution": {
+        "name": "Zamit",
+        "id": "2722239241",
+        "purchaser": {
+            "id": "9524975556",
+            "name": "Upton Westoff",
+            "email": "uwestoff6@4shared.com"
         }
-    ],
-    "bundle": {
-        "id": "0752212015",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "1929915219"
-    },
-    "group": {
-        "id": "5008668851",
-        "name": "hospitals_midwest"
     }
 }, {
-    "seat_number": 23,
-    "seat_status": "requested",
-    "invite_date": "2019-05-26 16:49:58 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "1330203816",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "4518722276"
-    },
-    "group": {
-        "id": "9612771799",
-        "name": "hospital_eastcoast"
-    }
-}, {
-    "seat_number": 24,
-    "seat_status": "unused",
-    "invite_date": "2019-05-23 12:27:32 UTC",
-    "acceptance_date": "2019-05-24 12:27:32 UTC",
-    "lock_date": "2020-05-24 12:27:32 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "8562200056",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "0327679335"
-    },
-    "group": {
-        "id": "3005296950",
-        "name": "hospital_eastcoast"
-    }
-}, {
-    "seat_number": 25,
-    "seat_status": "empty",
-    "invite_date": "2018-10-31 20:25:24 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "8247334996",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "9480339822"
-    },
-    "group": {
-        "id": "2946903126",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 26,
-    "seat_status": "empty",
-    "invite_date": "2019-01-07 21:02:08 UTC",
-    "acceptance_date": "2019-01-18 21:02:08 UTC",
-    "lock_date": "2020-01-18 21:02:08 UTC",
-    "user": [
-        {
-            "name": "Elvis Domenico",
-            "id": "2521424727",
-            "email": "edomenico0@sfgate.com"
+    "id": "3030404970",
+    "status": "not paid",
+    "seat_count": 100,
+    "term": 4,
+    "amount": "$18187.37",
+    "date_payment": "8/28/2020",
+    "date_lastPayment": "6/28/2019",
+    "date_expiration": "3/26/2019",
+    "date_purchase": "2/7/2019",
+    "institution": {
+        "name": "Fix San",
+        "id": "3261433711",
+        "purchaser": {
+            "id": "5473047150",
+            "name": "Allister Ricciardelli",
+            "email": "aricciardelli7@studiopress.com"
         }
-    ],
-    "bundle": {
-        "id": "2886194054",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "7714968050"
-    },
-    "group": {
-        "id": "1764782157",
-        "name": "hospitals_midwest"
     }
 }, {
-    "seat_number": 27,
-    "seat_status": "empty",
-    "invite_date": "2019-09-01 20:28:33 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "2115459372",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "8734079684"
-    },
-    "group": {
-        "id": "0793338728",
-        "name": "hospital_southern"
-    }
-}, {
-    "seat_number": 28,
-    "seat_status": "empty",
-    "invite_date": "2019-09-02 03:22:23 UTC",
-    "acceptance_date": "2019-09-19 03:22:23 UTC",
-    "lock_date": "2020-09-19 03:22:23 UTC",
-    "user": [
-        {
-            "name": "Bethany Tolhurst",
-            "id": "6757348813",
-            "email": "btolhurst0@ted.com"
+    "id": "4734118660",
+    "status": "active",
+    "seat_count": 90,
+    "term": 3,
+    "amount": "$6631.45",
+    "date_payment": "7/9/2020",
+    "date_lastPayment": "4/12/2019",
+    "date_expiration": "2/24/2019",
+    "date_purchase": "4/5/2019",
+    "institution": {
+        "name": "Fixflex",
+        "id": "7211552760",
+        "purchaser": {
+            "id": "9987240010",
+            "name": "Blondell Itscowicz",
+            "email": "bitscowicz8@is.gd"
         }
-    ],
-    "bundle": {
-        "id": "3028383165",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "8386380986"
-    },
-    "group": {
-        "id": "0677050597",
-        "name": "hospitals_westcoast"
     }
 }, {
-    "seat_number": 29,
-    "seat_status": "filled",
-    "invite_date": "2018-11-28 19:52:30 UTC",
-    "acceptance_date": "2018-12-24 19:52:30 UTC",
-    "lock_date": "2019-12-24 19:52:30 UTC",
-    "user": [
-        {
-            "name": "Janet Paolozzi",
-            "id": "6181711036",
-            "email": "jpaolozzi0@wordpress.org"
+    "id": "8865506572",
+    "status": "not paid",
+    "seat_count": 82,
+    "term": 4,
+    "amount": "$11524.15",
+    "date_payment": "3/22/2020",
+    "date_lastPayment": "12/10/2018",
+    "date_expiration": "5/12/2019",
+    "date_purchase": "7/8/2019",
+    "institution": {
+        "name": "Quo Lux",
+        "id": "0195683765",
+        "purchaser": {
+            "id": "0124455489",
+            "name": "Merry Yakunkin",
+            "email": "myakunkin9@dell.com"
         }
-    ],
-    "bundle": {
-        "id": "1946710738",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "9918773604"
-    },
-    "group": {
-        "id": "3998421161",
-        "name": "hospital_southern"
     }
 }, {
-    "seat_number": 30,
-    "seat_status": "filled",
-    "invite_date": "2018-10-26 12:09:47 UTC",
-    "acceptance_date": "2018-11-18 12:09:47 UTC",
-    "lock_date": "2019-11-18 12:09:47 UTC",
-    "user": null,
-    "bundle": {
-        "id": "5704975216",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "6677691325"
-    },
-    "group": {
-        "id": "2270916718",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 31,
-    "seat_status": "requested",
-    "invite_date": "2018-10-21 02:26:28 UTC",
-    "acceptance_date": "2018-11-03 02:26:28 UTC",
-    "lock_date": "2019-11-03 02:26:28 UTC",
-    "user": null,
-    "bundle": {
-        "id": "7776921410",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "3907465962"
-    },
-    "group": {
-        "id": "3926615326",
-        "name": "default"
-    }
-}, {
-    "seat_number": 32,
-    "seat_status": "requested",
-    "invite_date": "2019-10-12 17:09:12 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "8770409697",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "6336318694"
-    },
-    "group": {
-        "id": "6388478876",
-        "name": "hospital_southern"
-    }
-}, {
-    "seat_number": 33,
-    "seat_status": "unused",
-    "invite_date": "2018-12-31 20:28:25 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "4865314919",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "8090394504"
-    },
-    "group": {
-        "id": "5086262821",
-        "name": "hospital_southern"
-    }
-}, {
-    "seat_number": 34,
-    "seat_status": "requested",
-    "invite_date": "2019-07-05 20:50:37 UTC",
-    "acceptance_date": "2019-07-08 20:50:37 UTC",
-    "lock_date": "2020-07-08 20:50:37 UTC",
-    "user": null,
-    "bundle": {
-        "id": "1509463978",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "6734006025"
-    },
-    "group": {
-        "id": "6607447555",
-        "name": "hospital_eastcoast"
-    }
-}, {
-    "seat_number": 35,
-    "seat_status": "filled",
-    "invite_date": "2018-11-11 22:32:22 UTC",
-    "acceptance_date": "2018-11-21 22:32:22 UTC",
-    "lock_date": "2019-11-21 22:32:22 UTC",
-    "user": null,
-    "bundle": {
-        "id": "4092995739",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "1151410688"
-    },
-    "group": {
-        "id": "6119754116",
-        "name": "hospital_eastcoast"
-    }
-}, {
-    "seat_number": 36,
-    "seat_status": "unused",
-    "invite_date": "2019-03-07 05:43:30 UTC",
-    "acceptance_date": "2019-03-30 05:43:30 UTC",
-    "lock_date": "2020-03-30 05:43:30 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "6633783714",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "7377018797"
-    },
-    "group": {
-        "id": "5208180089",
-        "name": "default"
-    }
-}, {
-    "seat_number": 37,
-    "seat_status": "requested",
-    "invite_date": "2019-08-06 22:16:16 UTC",
-    "acceptance_date": "2019-08-30 22:16:16 UTC",
-    "lock_date": "2020-08-30 22:16:16 UTC",
-    "user": [
-        {
-            "name": "Jordain Soltan",
-            "id": "9563469561",
-            "email": "jsoltan0@people.com.cn"
+    "id": "2153134642",
+    "status": "completed",
+    "seat_count": 76,
+    "term": 2,
+    "amount": "$7497.81",
+    "date_payment": "12/25/2019",
+    "date_lastPayment": "2/19/2019",
+    "date_expiration": "11/29/2018",
+    "date_purchase": "10/24/2018",
+    "institution": {
+        "name": "Tampflex",
+        "id": "6169281437",
+        "purchaser": {
+            "id": "3234925429",
+            "name": "Alice Menezes",
+            "email": "amenezesa@1und1.de"
         }
-    ],
-    "bundle": {
-        "id": "5200514942",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "8520741382"
-    },
-    "group": {
-        "id": "4066210941",
-        "name": "hospitals_midwest"
     }
 }, {
-    "seat_number": 38,
-    "seat_status": "requested",
-    "invite_date": "2019-03-31 11:14:17 UTC",
-    "acceptance_date": "2019-04-29 11:14:17 UTC",
-    "lock_date": "2020-04-29 11:14:17 UTC",
-    "user": [
-        {
-            "name": "Darby Nollet",
-            "id": "6313271527",
-            "email": "dnollet0@jigsy.com"
+    "id": "0250654767",
+    "status": "not paid",
+    "seat_count": 70,
+    "term": 4,
+    "amount": "$8148.50",
+    "date_payment": "11/29/2019",
+    "date_lastPayment": "8/21/2019",
+    "date_expiration": "2/9/2019",
+    "date_purchase": "10/22/2019",
+    "institution": {
+        "name": "Kanlam",
+        "id": "3468757572",
+        "purchaser": {
+            "id": "1540980388",
+            "name": "Deedee Peddowe",
+            "email": "dpeddoweb@google.co.jp"
         }
-    ],
-    "bundle": {
-        "id": "6755625146",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "2394845503"
-    },
-    "group": {
-        "id": "0087774625",
-        "name": "hospital_eastcoast"
     }
 }, {
-    "seat_number": 39,
-    "seat_status": "requested",
-    "invite_date": "2019-09-26 13:02:51 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "4467145196",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "8533145406"
-    },
-    "group": {
-        "id": "3704009285",
-        "name": "hospital_southern"
-    }
-}, {
-    "seat_number": 40,
-    "seat_status": "requested",
-    "invite_date": "2019-04-07 10:28:13 UTC",
-    "acceptance_date": "2019-05-02 10:28:13 UTC",
-    "lock_date": "2020-05-02 10:28:13 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "1111789791",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "0121373694"
-    },
-    "group": {
-        "id": "0295418639",
-        "name": "hospitals_westcoast"
-    }
-}, {
-    "seat_number": 41,
-    "seat_status": "filled",
-    "invite_date": "2019-05-11 02:47:53 UTC",
-    "acceptance_date": "2019-06-09 02:47:53 UTC",
-    "lock_date": "2020-06-09 02:47:53 UTC",
-    "user": [
-        {
-            "name": "Cullie Tyson",
-            "id": "9636886774",
-            "email": "ctyson0@ycombinator.com"
+    "id": "0790179336",
+    "status": "not paid",
+    "seat_count": 67,
+    "term": 1,
+    "amount": "$15737.18",
+    "date_payment": "2/26/2020",
+    "date_lastPayment": "2/7/2019",
+    "date_expiration": "3/15/2019",
+    "date_purchase": "5/1/2019",
+    "institution": {
+        "name": "Lotlux",
+        "id": "4480400390",
+        "purchaser": {
+            "id": "7499727600",
+            "name": "Katharine Fishlock",
+            "email": "kfishlockc@weibo.com"
         }
-    ],
-    "bundle": {
-        "id": "9596762201",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "9647900524"
-    },
-    "group": {
-        "id": "2427527559",
-        "name": "hospital_eastcoast"
     }
 }, {
-    "seat_number": 42,
-    "seat_status": "empty",
-    "invite_date": "2019-06-19 18:41:06 UTC",
-    "acceptance_date": "2019-07-14 18:41:06 UTC",
-    "lock_date": "2020-07-14 18:41:06 UTC",
-    "user": [
-        {
-            "name": "Ilysa Breche",
-            "id": "7563606153",
-            "email": "ibreche0@domainmarket.com"
+    "id": "6817653831",
+    "status": "active",
+    "seat_count": 85,
+    "term": 5,
+    "amount": "$14825.10",
+    "date_payment": "10/30/2019",
+    "date_lastPayment": "6/14/2019",
+    "date_expiration": "9/21/2019",
+    "date_purchase": "10/29/2018",
+    "institution": {
+        "name": "Prodder",
+        "id": "5134929790",
+        "purchaser": {
+            "id": "4470942011",
+            "name": "Graham Wytchard",
+            "email": "gwytchardd@nyu.edu"
         }
-    ],
-    "bundle": {
-        "id": "7524742034",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "3831571313"
-    },
-    "group": {
-        "id": "5797733466",
-        "name": "hospitals_westcoast"
     }
 }, {
-    "seat_number": 43,
-    "seat_status": "requested",
-    "invite_date": "2018-12-12 16:58:42 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "5370091420",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "5629182542"
-    },
-    "group": {
-        "id": "1386419465",
-        "name": "hospitals_midwest"
-    }
-}, {
-    "seat_number": 44,
-    "seat_status": "empty",
-    "invite_date": "2019-07-29 11:42:31 UTC",
-    "acceptance_date": "2019-08-24 11:42:31 UTC",
-    "lock_date": "2020-08-24 11:42:31 UTC",
-    "user": [
-        {
-            "name": "Valli Coytes",
-            "id": "5828004156",
-            "email": "vcoytes0@ihg.com"
+    "id": "8352656939",
+    "status": "completed",
+    "seat_count": 81,
+    "term": 1,
+    "amount": "$11799.62",
+    "date_payment": "9/8/2020",
+    "date_lastPayment": "10/26/2018",
+    "date_expiration": "9/22/2019",
+    "date_purchase": "5/8/2019",
+    "institution": {
+        "name": "Stronghold",
+        "id": "7633649317",
+        "purchaser": {
+            "id": "7971489468",
+            "name": "Sammy Tyzack",
+            "email": "styzacke@sakura.ne.jp"
         }
-    ],
-    "bundle": {
-        "id": "3828262093",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "6744190211"
-    },
-    "group": {
-        "id": "0408962164",
-        "name": "hospital_southern"
     }
 }, {
-    "seat_number": 45,
-    "seat_status": "filled",
-    "invite_date": "2019-02-15 02:15:02 UTC",
-    "acceptance_date": null,
-    "lock_date": null,
-    "user": null,
-    "bundle": {
-        "id": "7513159694",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "3220243010"
-    },
-    "group": {
-        "id": "9243630466",
-        "name": "hospital_southern"
-    }
-}, {
-    "seat_number": 46,
-    "seat_status": "unused",
-    "invite_date": "2019-10-15 03:03:30 UTC",
-    "acceptance_date": "2019-10-25 03:03:30 UTC",
-    "lock_date": "2020-10-25 03:03:30 UTC",
-    "user": [
-
-    ],
-    "bundle": {
-        "id": "2792607014",
-        "name": "Cardio+"
-    },
-    "contract": {
-        "id": "1698590997"
-    },
-    "group": {
-        "id": "1323264319",
-        "name": "default"
-    }
-}, {
-    "seat_number": 47,
-    "seat_status": "unused",
-    "invite_date": "2019-02-01 20:17:32 UTC",
-    "acceptance_date": "2019-02-11 20:17:32 UTC",
-    "lock_date": "2020-02-11 20:17:32 UTC",
-    "user": [
-        {
-            "name": "Suzanna Gatch",
-            "id": "4253438275",
-            "email": "sgatch0@pcworld.com"
+    "id": "1082127129",
+    "status": "completed",
+    "seat_count": 95,
+    "term": 5,
+    "amount": "$5235.09",
+    "date_payment": "3/28/2020",
+    "date_lastPayment": "7/1/2019",
+    "date_expiration": "6/19/2019",
+    "date_purchase": "1/26/2019",
+    "institution": {
+        "name": "Sonsing",
+        "id": "4137467238",
+        "purchaser": {
+            "id": "1820049388",
+            "name": "Freddi Carbin",
+            "email": "fcarbinf@myspace.com"
         }
-    ],
-    "bundle": {
-        "id": "1590863014",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "4059141675"
-    },
-    "group": {
-        "id": "2444103878",
-        "name": "hospitals_midwest"
     }
 }, {
-    "seat_number": 48,
-    "seat_status": "empty",
-    "invite_date": "2019-02-03 11:15:35 UTC",
-    "acceptance_date": "2019-02-04 11:15:35 UTC",
-    "lock_date": "2020-02-04 11:15:35 UTC",
-    "user": [
-        {
-            "name": "Yardley Grishkov",
-            "id": "9543477759",
-            "email": "ygrishkov0@cyberchimps.com"
+    "id": "4510460397",
+    "status": "not paid",
+    "seat_count": 53,
+    "term": 2,
+    "amount": "$5636.52",
+    "date_payment": "10/5/2020",
+    "date_lastPayment": "5/14/2019",
+    "date_expiration": "7/9/2019",
+    "date_purchase": "8/25/2019",
+    "institution": {
+        "name": "Otcom",
+        "id": "7737814647",
+        "purchaser": {
+            "id": "1023548555",
+            "name": "Denny Comrie",
+            "email": "dcomrieg@joomla.org"
         }
-    ],
-    "bundle": {
-        "id": "9734371811",
-        "name": "Acred360"
-    },
-    "contract": {
-        "id": "1247692450"
-    },
-    "group": {
-        "id": "7285891448",
-        "name": "hospitals_westcoast"
     }
 }, {
-    "seat_number": 49,
-    "seat_status": "requested",
-    "invite_date": "2018-12-24 18:02:58 UTC",
-    "acceptance_date": "2019-01-02 18:02:58 UTC",
-    "lock_date": "2020-01-02 18:02:58 UTC",
-    "user": [
-        {
-            "name": "Manda Wisby",
-            "id": "9999952805",
-            "email": "mwisby0@nba.com"
+    "id": "7836602278",
+    "status": "completed",
+    "seat_count": 58,
+    "term": 4,
+    "amount": "$17419.57",
+    "date_payment": "3/5/2020",
+    "date_lastPayment": "6/13/2019",
+    "date_expiration": "11/11/2018",
+    "date_purchase": "11/6/2018",
+    "institution": {
+        "name": "Zoolab",
+        "id": "8982469548",
+        "purchaser": {
+            "id": "9739763504",
+            "name": "Tore Schwandermann",
+            "email": "tschwandermannh@ustream.tv"
         }
-    ],
-    "bundle": {
-        "id": "5394092908",
-        "name": "HeartSymphony"
-    },
-    "contract": {
-        "id": "0310406110"
-    },
-    "group": {
-        "id": "4923143655",
-        "name": "default"
     }
 }, {
-    "seat_number": 50,
-    "seat_status": "filled",
-    "invite_date": "2019-06-05 14:25:17 UTC",
-    "acceptance_date": "2019-06-21 14:25:17 UTC",
-    "lock_date": "2020-06-21 14:25:17 UTC",
-    "user": [
-        {
-            "name": "Debee Dalby",
-            "id": "7739483995",
-            "email": "ddalby0@virginia.edu"
+    "id": "8497408055",
+    "status": "completed",
+    "seat_count": 100,
+    "term": 2,
+    "amount": "$3423.24",
+    "date_payment": "5/1/2020",
+    "date_lastPayment": "8/24/2019",
+    "date_expiration": "11/29/2018",
+    "date_purchase": "3/10/2019",
+    "institution": {
+        "name": "Zoolab",
+        "id": "6371676969",
+        "purchaser": {
+            "id": "5740524418",
+            "name": "Shurwood Clines",
+            "email": "sclinesi@ftc.gov"
         }
-    ],
-    "bundle": {
-        "id": "2489435148",
-        "name": "OmegaSap"
-    },
-    "contract": {
-        "id": "3032288077"
-    },
-    "group": {
-        "id": "6336062546",
-        "name": "hospitals_midwest"
+    }
+}, {
+    "id": "8743006481",
+    "status": "active",
+    "seat_count": 90,
+    "term": 5,
+    "amount": "$15544.15",
+    "date_payment": "7/8/2020",
+    "date_lastPayment": "10/3/2019",
+    "date_expiration": "8/19/2019",
+    "date_purchase": "6/30/2019",
+    "institution": {
+        "name": "Duobam",
+        "id": "3597368758",
+        "purchaser": {
+            "id": "1325990715",
+            "name": "Quentin Patinkin",
+            "email": "qpatinkinj@hc360.com"
+        }
+    }
+}, {
+    "id": "8103997573",
+    "status": "not paid",
+    "seat_count": 60,
+    "term": 2,
+    "amount": "$4163.41",
+    "date_payment": "3/13/2020",
+    "date_lastPayment": "12/3/2018",
+    "date_expiration": "10/9/2019",
+    "date_purchase": "11/26/2018",
+    "institution": {
+        "name": "Fixflex",
+        "id": "3899385163",
+        "purchaser": {
+            "id": "1993182660",
+            "name": "Joane Blatchford",
+            "email": "jblatchfordk@google.es"
+        }
+    }
+}, {
+    "id": "4692617647",
+    "status": "completed",
+    "seat_count": 76,
+    "term": 4,
+    "amount": "$9931.67",
+    "date_payment": "4/6/2020",
+    "date_lastPayment": "5/30/2019",
+    "date_expiration": "5/28/2019",
+    "date_purchase": "6/23/2019",
+    "institution": {
+        "name": "Biodex",
+        "id": "8262803329",
+        "purchaser": {
+            "id": "9180385380",
+            "name": "Valida Thomel",
+            "email": "vthomell@noaa.gov"
+        }
+    }
+}, {
+    "id": "5221433531",
+    "status": "not paid",
+    "seat_count": 87,
+    "term": 1,
+    "amount": "$5371.57",
+    "date_payment": "1/2/2020",
+    "date_lastPayment": "4/3/2019",
+    "date_expiration": "2/13/2019",
+    "date_purchase": "1/24/2019",
+    "institution": {
+        "name": "Cardify",
+        "id": "1072402867",
+        "purchaser": {
+            "id": "2540584485",
+            "name": "Mikel Kier",
+            "email": "mkierm@bigcartel.com"
+        }
+    }
+}, {
+    "id": "2962182021",
+    "status": "completed",
+    "seat_count": 99,
+    "term": 1,
+    "amount": "$17468.29",
+    "date_payment": "1/23/2020",
+    "date_lastPayment": "1/25/2019",
+    "date_expiration": "7/22/2019",
+    "date_purchase": "5/3/2019",
+    "institution": {
+        "name": "Ventosanzap",
+        "id": "3419607010",
+        "purchaser": {
+            "id": "9185626115",
+            "name": "Harriett Shellsheere",
+            "email": "hshellsheeren@blogger.com"
+        }
+    }
+}, {
+    "id": "2471899847",
+    "status": "not paid",
+    "seat_count": 50,
+    "term": 3,
+    "amount": "$17513.90",
+    "date_payment": "2/7/2020",
+    "date_lastPayment": "1/17/2019",
+    "date_expiration": "1/20/2019",
+    "date_purchase": "5/30/2019",
+    "institution": {
+        "name": "Hatity",
+        "id": "0524631968",
+        "purchaser": {
+            "id": "1707944422",
+            "name": "Eldon Maciocia",
+            "email": "emaciociao@amazonaws.com"
+        }
     }
 }
 ];
-export const contract = () => {
+export const seatAllocationData = [
+    {
+        "seat_number": 1,
+        "seat_status": "requested",
+        "invite_date": "2019-01-25 03:26:24 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "0097387580",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "9616514343"
+        },
+        "group": {
+            "id": "6230072135",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 2,
+        "seat_status": "unused",
+        "invite_date": "2019-02-23 07:24:50 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "6272507800",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "2477031545"
+        },
+        "group": {
+            "id": "9504484466",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 3,
+        "seat_status": "locked",
+        "invite_date": "2019-05-20 13:47:58 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Stanwood Cawdell",
+                "id": "9214254843",
+                "email": "scawdell0@shop-pro.jp"
+            }
+        ],
+        "bundle": {
+            "id": "7884167169",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "4365768246"
+        },
+        "group": {
+            "id": "3495770672",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 4,
+        "seat_status": "locked",
+        "invite_date": "2019-02-06 05:27:24 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "8493338199",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "3201912103"
+        },
+        "group": {
+            "id": "5529018869",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 5,
+        "seat_status": "filled",
+        "invite_date": "2019-05-16 02:45:15 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "5268626519",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "8103930036"
+        },
+        "group": {
+            "id": "8510539332",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 6,
+        "seat_status": "unused",
+        "invite_date": "2019-05-03 10:09:47 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "2290636673",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "3370961199"
+        },
+        "group": {
+            "id": "5521744629",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 7,
+        "seat_status": "unused",
+        "invite_date": "2019-09-14 17:38:41 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "8533752510",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "7384844139"
+        },
+        "group": {
+            "id": "2319082390",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 8,
+        "seat_status": "locked",
+        "invite_date": "2019-07-22 18:13:00 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "7340875447",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "1801956870"
+        },
+        "group": {
+            "id": "1856796380",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 9,
+        "seat_status": "filled",
+        "invite_date": "2019-08-06 02:18:05 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "9180171607",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "3213198981"
+        },
+        "group": {
+            "id": "7793560567",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 10,
+        "seat_status": "unused",
+        "invite_date": "2019-05-02 16:50:07 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "4784483870",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "7214264255"
+        },
+        "group": {
+            "id": "0315114579",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 11,
+        "seat_status": "locked",
+        "invite_date": "2018-12-18 08:21:55 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Desi Kettleson",
+                "id": "6482776177",
+                "email": "dkettleson0@webmd.com"
+            }
+        ],
+        "bundle": {
+            "id": "5512994924",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "5544527924"
+        },
+        "group": {
+            "id": "0484067875",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 12,
+        "seat_status": "requested",
+        "invite_date": "2018-11-01 05:17:17 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "3342963750",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "0153274412"
+        },
+        "group": {
+            "id": "1008414963",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 13,
+        "seat_status": "requested",
+        "invite_date": "2019-01-07 20:27:40 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "2706798266",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "6047200444"
+        },
+        "group": {
+            "id": "9691532690",
+            "name": "hospitals_midwest"
+        }
+    }, {
+        "seat_number": 14,
+        "seat_status": "locked",
+        "invite_date": "2019-09-25 02:57:01 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "2845473773",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "6809911345"
+        },
+        "group": {
+            "id": "4178527224",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 15,
+        "seat_status": "filled",
+        "invite_date": "2019-05-09 19:59:15 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "5672974307",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "1036480344"
+        },
+        "group": {
+            "id": "8850507942",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 16,
+        "seat_status": "requested",
+        "invite_date": "2019-10-15 16:54:27 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "3580995989",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "8684668891"
+        },
+        "group": {
+            "id": "6119449074",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 17,
+        "seat_status": "unused",
+        "invite_date": "2019-08-27 09:09:43 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "8822341937",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "2331161151"
+        },
+        "group": {
+            "id": "5140478969",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 18,
+        "seat_status": "locked",
+        "invite_date": "2019-07-23 13:04:31 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Stormy Chimienti",
+                "id": "8902659011",
+                "email": "schimienti0@sfgate.com"
+            }
+        ],
+        "bundle": {
+            "id": "8759212314",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "0248663036"
+        },
+        "group": {
+            "id": "2248481123",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 19,
+        "seat_status": "requested",
+        "invite_date": "2019-07-30 21:58:59 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "8988027609",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "9505810650"
+        },
+        "group": {
+            "id": "1856261899",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 20,
+        "seat_status": "locked",
+        "invite_date": "2019-03-14 14:49:47 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "4567381146",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "1150507011"
+        },
+        "group": {
+            "id": "8427312855",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 21,
+        "seat_status": "filled",
+        "invite_date": "2019-08-31 23:41:46 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "6296034111",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "7219189655"
+        },
+        "group": {
+            "id": "3975945860",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 22,
+        "seat_status": "requested",
+        "invite_date": "2019-08-17 11:44:55 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "4246073866",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "8620984257"
+        },
+        "group": {
+            "id": "5900848861",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 23,
+        "seat_status": "locked",
+        "invite_date": "2019-02-23 10:45:25 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Ellette Argo",
+                "id": "0183873447",
+                "email": "eargo0@cafepress.com"
+            }
+        ],
+        "bundle": {
+            "id": "9210959270",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "6194218145"
+        },
+        "group": {
+            "id": "5237261231",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 24,
+        "seat_status": "filled",
+        "invite_date": "2019-09-26 22:16:42 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "3621434416",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "3542755084"
+        },
+        "group": {
+            "id": "2199811732",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 25,
+        "seat_status": "unused",
+        "invite_date": "2019-02-19 12:31:47 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "0350217580",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "1767813563"
+        },
+        "group": {
+            "id": "9846183893",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 26,
+        "seat_status": "locked",
+        "invite_date": "2019-03-12 13:15:21 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "4451430922",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "1063174633"
+        },
+        "group": {
+            "id": "2338699590",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 27,
+        "seat_status": "unused",
+        "invite_date": "2019-08-18 21:55:24 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "5901092483",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "7338612697"
+        },
+        "group": {
+            "id": "6880580590",
+            "name": "hospitals_midwest"
+        }
+    }, {
+        "seat_number": 28,
+        "seat_status": "unused",
+        "invite_date": "2018-12-29 23:45:46 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "4550472923",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "3406490290"
+        },
+        "group": {
+            "id": "4838504442",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 29,
+        "seat_status": "requested",
+        "invite_date": "2019-05-01 16:48:27 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "4526316046",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "1928859734"
+        },
+        "group": {
+            "id": "4188362263",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 30,
+        "seat_status": "filled",
+        "invite_date": "2019-09-15 00:21:00 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "0993775628",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "4521198285"
+        },
+        "group": {
+            "id": "0389749509",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 31,
+        "seat_status": "locked",
+        "invite_date": "2019-06-07 20:18:31 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Zak Stoving",
+                "id": "6494792976",
+                "email": "zstoving0@acquirethisname.com"
+            }
+        ],
+        "bundle": {
+            "id": "3209687177",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "9734494218"
+        },
+        "group": {
+            "id": "7423531500",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 32,
+        "seat_status": "unused",
+        "invite_date": "2019-09-30 20:30:10 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "0225902354",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "2475460598"
+        },
+        "group": {
+            "id": "6604446879",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 33,
+        "seat_status": "unused",
+        "invite_date": "2019-04-26 23:07:08 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "1437050358",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "0155404574"
+        },
+        "group": {
+            "id": "0961246831",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 34,
+        "seat_status": "locked",
+        "invite_date": "2019-09-17 06:09:13 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": null,
+        "bundle": {
+            "id": "6414292387",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "7749945929"
+        },
+        "group": {
+            "id": "6734647085",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 35,
+        "seat_status": "requested",
+        "invite_date": "2019-04-28 22:29:13 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "6926130351",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "3233222642"
+        },
+        "group": {
+            "id": "2510081507",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 36,
+        "seat_status": "requested",
+        "invite_date": "2019-08-07 05:05:34 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "5061482200",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "5174158693"
+        },
+        "group": {
+            "id": "5761729867",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 37,
+        "seat_status": "locked",
+        "invite_date": "2019-03-26 11:01:23 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Seth Nairn",
+                "id": "1052733919",
+                "email": "snairn0@histats.com"
+            }
+        ],
+        "bundle": {
+            "id": "5367617897",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "2639174196"
+        },
+        "group": {
+            "id": "3605744914",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 38,
+        "seat_status": "unused",
+        "invite_date": "2019-03-23 02:36:15 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "9193247514",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "6196465198"
+        },
+        "group": {
+            "id": "2182055722",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 39,
+        "seat_status": "locked",
+        "invite_date": "2019-04-26 19:17:29 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "7181422426",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "6266616787"
+        },
+        "group": {
+            "id": "6718029199",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 40,
+        "seat_status": "unused",
+        "invite_date": "2019-09-18 13:06:09 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Ruthie Glantz",
+                "id": "6369532554",
+                "email": "rglantz0@netlog.com"
+            }
+        ],
+        "bundle": {
+            "id": "3229721867",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "5977294066"
+        },
+        "group": {
+            "id": "3324025848",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 41,
+        "seat_status": "requested",
+        "invite_date": "2019-07-30 16:01:33 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Mandi Portail",
+                "id": "3405968292",
+                "email": "mportail0@4shared.com"
+            }
+        ],
+        "bundle": {
+            "id": "8012668866",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "3530351321"
+        },
+        "group": {
+            "id": "5509752608",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 42,
+        "seat_status": "filled",
+        "invite_date": "2019-03-04 17:02:11 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Carce Boatwright",
+                "id": "4918679883",
+                "email": "cboatwright0@canalblog.com"
+            }
+        ],
+        "bundle": {
+            "id": "3173718752",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "9771711362"
+        },
+        "group": {
+            "id": "3839921585",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 43,
+        "seat_status": "locked",
+        "invite_date": "2019-03-15 00:17:03 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "6206672298",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "4750350792"
+        },
+        "group": {
+            "id": "6684078488",
+            "name": "hospitals_midwest"
+        }
+    }, {
+        "seat_number": 44,
+        "seat_status": "requested",
+        "invite_date": "2019-07-11 20:35:43 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+            {
+                "name": "Sigismondo Shorthill",
+                "id": "0924426452",
+                "email": "sshorthill0@zimbio.com"
+            }
+        ],
+        "bundle": {
+            "id": "9388088820",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "7189891414"
+        },
+        "group": {
+            "id": "7151568205",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 45,
+        "seat_status": "requested",
+        "invite_date": "2019-04-23 18:52:20 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "6206423801",
+            "name": "OmegaSap"
+        },
+        "contract": {
+            "id": "9390461057"
+        },
+        "group": {
+            "id": "8984613496",
+            "name": "default"
+        }
+    }, {
+        "seat_number": 46,
+        "seat_status": "filled",
+        "invite_date": "2018-12-17 08:16:21 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "3825241355",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "3603257613"
+        },
+        "group": {
+            "id": "8203234944",
+            "name": "hospitals_westcoast"
+        }
+    }, {
+        "seat_number": 47,
+        "seat_status": "filled",
+        "invite_date": "2019-04-14 10:46:37 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "4974002710",
+            "name": "Cardio+"
+        },
+        "contract": {
+            "id": "2928578784"
+        },
+        "group": {
+            "id": "4385325258",
+            "name": "hospital_southern"
+        }
+    }, {
+        "seat_number": 48,
+        "seat_status": "unused",
+        "invite_date": "2019-09-03 20:50:01 UTC",
+        "acceptance_date": "error: Field 'inviation_date' not found",
+        "lock_date": "error: no implicit conversion of ActiveSupport::Duration into String",
+        "user": [
+
+        ],
+        "bundle": {
+            "id": "2909700853",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "1593161630"
+        },
+        "group": {
+            "id": "9505313512",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 49,
+        "seat_status": "unused",
+        "invite_date": "2019-03-11 09:47:55 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "3817017095",
+            "name": "HeartSymphony"
+        },
+        "contract": {
+            "id": "1144023399"
+        },
+        "group": {
+            "id": "1377222097",
+            "name": "hospital_eastcoast"
+        }
+    }, {
+        "seat_number": 50,
+        "seat_status": "locked",
+        "invite_date": "2019-07-29 23:28:44 UTC",
+        "acceptance_date": null,
+        "lock_date": null,
+        "user": null,
+        "bundle": {
+            "id": "5846637732",
+            "name": "Acred360"
+        },
+        "contract": {
+            "id": "0719519789"
+        },
+        "group": {
+            "id": "3228541626",
+            "name": "hospital_eastcoast"
+        }
+    }
+];
+export const contractRaw = () => {
 	return {
 		template: `
-        <div>
-            <h1>Contract Information Report</h1>
-            <ul> 
-                <li>Institution Names </li>
-                <li>Primary Purchaser Name </li>
-                <li>Purchaser email  </li>
-                <li>Bundle Purchased (Seats) | Bundle Purchased (Seats) – showing all bundles and <li>seats </li>
-                <li>Status (active, not paid, completed) </li>
-                <li>Purchase Date </li>
-                <li>Term of Contract (i.e. 1 year, 2 year, 5 year) </li>
-                <li>Expiration Date </li>
-                <li>Subscription Payment Date  </li>
-                <li>Contractual Dollar Amount </li>
-            </ul>
-            <ul>
-                <li>Remove</li>
-            </ul>
-        </div>
-      `
-	};
+    <div>
+        <h1>Contract</h1>
+        <table class="w_100">
+            <thead>
+                <tr class="text_left">
+                    <th class="p_2">Contract ID</th>
+                    <th class="p_2">Institution</th>
+                    <th class="p_2">Purchaser</th>
+                    <th class="p_2">Status</th>
+                    <th class="p_2">Seat Count</th>
+                    <th class="p_2">Term</th>
+                    <th class="p_2">Amount</th>
+                    <th class="p_2">Payment Date</th>
+                    <th class="p_2">Last Payment Date</th>
+                    <th class="p_2">Expiration Date</th>
+                    <th class="p_2">Purchase Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    v-bind="contractData"
+                    v-for="(data, index) in contractData"
+                    key="data.result_id"
+                >
+                    <td class="p_2">{{ data.id }}</td>
+                    <td class="p_2"><a v-bind:href="data.institution.id" class="">{{ data.institution.name }}</a></td>
+                    <td class="p_2"><a v-bind:href="data.institution.purchaser.id" class="">{{ data.institution.purchaser.name }}</a><a class="link email block font_n2" :href="'mailto:'+data.institution.purchaser.email">email user</a></td>
+                    <td class="p_2">{{ data.status }}</td>
+                    <td class="p_2">{{ data.seat_count }}</td>
+                    <td class="p_2">{{ data.term }}</td>
+                    <td class="p_2">{{ data.amount }}</td>
+                    <td class="p_2">{{ data.date_payment }}</td>
+                    <td class="p_2">{{ data.date_lastPayment }}</td>
+                    <td class="p_2">{{ data.date_expiration }}</td>
+                    <td class="p_2">{{ data.date_purchase }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    `,
+    data: () => ({
+        contractData
+    })
+    };
 };
 
-export const hoursContractRaw = () => {
+export const userUsageAndCreditsRaw = () => {
 	return {
 		template: `
         <div>
-            <h1>Hours From Contract</h1>
+            <h1>Usage Hours and Credits</h1>
             <table class="w_100">
             <thead>
                 <tr class="text_left">
@@ -1466,7 +1919,6 @@ export const seatBundleRaw = () => {
             <td class="p_2">{{data.invite_date}}</td>
             <td class="p_2">{{data.acceptance_date}}</td>
             <td class="p_2">{{data.lock_date}}</td>
-            <td class="p_2"></td>
         </tr>
     </tbody>
 </table>  
@@ -1477,3 +1929,4 @@ export const seatBundleRaw = () => {
         })
     };
 };
+ 
