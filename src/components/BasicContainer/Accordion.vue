@@ -1,12 +1,28 @@
 <template>
-	<section>
-		<header data-attr="accordion-header" @click="toggle" :class="{'active':expanded}">
-			<i class="fas fa-fw icon-toggle_caret-circle-right-down"></i>
-			<slot name="header"></slot>
+	<section class="bg_white font_ui">
+		<header
+			data-attr="accordion-header"
+			@click="toggle"
+			:class="{'is-active':!expanded}"
+			class="br_black-3 br_solid br_1 bg_black-1 p_3 p-x_2 font_1"
+		>
+			<i class="fas fa-fw icon-toggle_caret-circle-right-down p-r_2 p-l_2 a:c_shade-n5 c_primary-n1"></i>
+			<slot name="header">No Content Passed</slot>
 		</header>
-		<article data-attr="accordion-content" v-if="expanded">
-			<slot name="content"></slot>
-		</article>
+		<transition name="slide-down" mode=""
+			enter-active-class="ease_in"
+			leave-active-class="ease_out"
+			enter-class="opacity_0 scale_Y-0"
+			enter-to-class="opacity_none scale_Y-100"
+			leave-class="opacity_none scale_Y-100"
+			leave-to-class="opacity_0 scale_Y-0"
+			:duration="1000"
+		>
+			<article  v-if="expanded" data-attr="accordion-content" class="br_black-3 br_solid br_1 p_4 font_0 br-t_0 transition_2 origin_tl">
+				<slot name="content">No Content Passed</slot>
+			</article>
+		</transition>
+		
 	</section>
 </template>
 
@@ -14,7 +30,7 @@
 export default {
 	data() {
 		return {
-			expanded: true
+			expanded: false
 		};
 	},
 	methods: {
@@ -25,5 +41,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+.scale_Y-50{
+	transform:scaleY(.5);
+}
 </style>

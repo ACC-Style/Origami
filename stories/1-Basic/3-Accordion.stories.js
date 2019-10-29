@@ -4,25 +4,21 @@ import Accordion from "../../src/components/BasicContainer/Accordion.vue";
 export default {
 	title: "Basic/Accordion",
 	component: Accordion,
-	excludeStories: ["address"]
+	excludeStories: []
 };
-export const address = {
-	institution: "American College of Cardiology",
-	street_1: "1000 Beacher Street",
-	street_2: "Apt 543",
-	city: "Washington",
-	state: "DC",
-	zip: "20006"
-};
-export const defualt = () => ({
+
+export const basic = () => ({
 	components: {
 		Accordion
 	},
-	template: "<Accordion v-bind='address' />",
+	template: `
+					<Accordion>
+						<template v-slot:header>Toggle Headline</template>
+						<template v-slot:content>Content to be hidden<br/>Content to be hidden<br/>Content to be hidden<br/>Content to be hidden<br/>Content to be hidden<br/>Content to be hidden<br/>Content to be hidden<br/>Content to be hidden</template>
+					</Accordion>
+					`,
 	methods: {
 		action: action("clicked")
 	},
-	data: () => ({
-		address
-	})
+	data: () => ({})
 });

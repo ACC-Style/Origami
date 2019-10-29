@@ -208,8 +208,49 @@ export const toggle = () => ({
 	components: {
 		BtnToggle
 	},
-	template:
-		'<section><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>Active</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div><div class="flex p-y_3"><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean" :defaultActiveState="true" :iconActive="\'fa-dot-circle\'" :iconNotActive="\'fa-circle\'" :state="\'secondary\'" :size="medium" ><template v-slot:activeText>On By Defualt</template><template v-slot:notActiveText>Not Active</template></BtnToggle></div><div class="flex_shrink p-x_3"><BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive"  @clickNotActive="clickNotActive" :icon="iconBoolean"  :iconActive="\'fa-sign-out-alt\'" :iconNotActive="\'fa-sign-in-alt\'" :size="medium" ><template v-slot:activeText>Log Out</template><template v-slot:notActiveText>Log In</template></BtnToggle></div></div></section>',
+	template: `
+	<section>
+      <div class="flex p-y_3">
+         <div class="flex_shrink p-x_3">
+            <BtnToggle class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle>
+         </div>
+         <div class="flex_shrink p-x_3">
+            <BtnToggle class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="'fa-dot-circle'" :iconNotActive="'fa-circle'" :state="'secondary'" :size="medium"><template v-slot:activeText>Active</template>
+               <template v-slot:notActiveText>Not Active
+               </template>
+            </BtnToggle>
+         </div>
+         <div class="flex_shrink p-x_3">
+				<BtnToggle class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="'fa-sign-out-alt'" :iconNotActive="'fa-sign-in-alt'" :size="medium">
+				<template v-slot:activeText>Log Out
+               </template>
+               <template v-slot:notActiveText>Log In
+               </template>
+            </BtnToggle>
+         </div>
+      </div>
+      <div class="flex p-y_3">
+         <div class="flex_shrink p-x_3">
+            <BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status">
+            </BtnToggle>
+         </div>
+         <div class="flex_shrink p-x_3">
+            <BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :defaultActiveState="true" :iconActive="'fa-dot-circle'" :iconNotActive="'fa-circle'" :state="'secondary'" :size="medium"><template v-slot:activeText>On By Defual
+                  t</template>
+               <template v-slot:notActiveText>Not Active
+               </template>
+            </BtnToggle>
+         </div>
+         <div class="flex_shrink p-x_3">
+            <BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="'fa-sign-out-alt'" :iconNotActive="'fa-sign-in-alt'" :size="medium"><template v-slot:activeText>Log Out
+               </template>
+               <template v-slot:notActiveText>Log In
+               </template>
+            </BtnToggle>
+         </div>
+      </div>
+	</section>
+	`,
 	methods: {
 		click: action("clicked"),
 		clickActive: action("active"),
