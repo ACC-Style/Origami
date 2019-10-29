@@ -1,6 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import gChart from "../../src/components/BasicChart/googleChart";
 import gSankeyChart from "../../src/components/SeatManagement/Charts/googleSankeyChart.bundleToGroup";
+import tableChart from "../../src/components/SeatManagement/Charts/Table.bundleToGroup";
 
 export default {
 	title: "SeatManagement/Charts/BundleToGroup",
@@ -34,7 +35,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "3423109910" },
-		group: { id: "0202839887", name: "hospitals_westcoast" }
+		group: { id: "0202839887", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 2,
@@ -60,7 +61,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "2222222222-p", name: "HeartSymphony" },
 		contract: { id: "2821805508" },
-		group: { id: "4227008724", name: "hospitals_westcoast" }
+		group: { id: "4227008724", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 4,
@@ -71,7 +72,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "0050830410" },
-		group: { id: "2880857081", name: "hospitals_midwest" }
+		group: { id: "2880857081", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 5,
@@ -112,7 +113,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "9505997372" },
-		group: { id: "9664546516", name: "hospitals_midwest" }
+		group: { id: "9664546516", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 8,
@@ -164,7 +165,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "5095762826" },
-		group: { id: "9903295380", name: "hospitals_midwest" }
+		group: { id: "9903295380", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 12,
@@ -179,7 +180,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "5908774745" },
-		group: { id: "3284619899", name: "hospitals_midwest" }
+		group: { id: "3284619899", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 13,
@@ -205,7 +206,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "1436237347" },
-		group: { id: "8947066668", name: "hospitals_westcoast" }
+		group: { id: "8947066668", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 15,
@@ -235,7 +236,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "9768077687" },
-		group: { id: "7775479662", name: "hospitals_midwest" }
+		group: { id: "7775479662", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 17,
@@ -250,7 +251,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "2222222222-p", name: "HeartSymphony" },
 		contract: { id: "9788891974" },
-		group: { id: "1949610642", name: "hospitals_midwest" }
+		group: { id: "1949610642", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 18,
@@ -265,7 +266,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "3846683919" },
-		group: { id: "6821940251", name: "hospitals_westcoast" }
+		group: { id: "6821940251", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 19,
@@ -280,7 +281,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "6179527723" },
-		group: { id: "7200561738", name: "hospitals_westcoast" }
+		group: { id: "7200561738", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 20,
@@ -317,7 +318,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "6837469329" },
-		group: { id: "5694246310", name: "hospitals_midwest" }
+		group: { id: "5694246310", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 23,
@@ -347,7 +348,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "7838887245" },
-		group: { id: "1496140991", name: "hospitals_westcoast" }
+		group: { id: "1496140991", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 25,
@@ -392,7 +393,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "0241345093" },
-		group: { id: "6389558873", name: "hospitals_westcoast" }
+		group: { id: "6389558873", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 28,
@@ -422,7 +423,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "5921189617" },
-		group: { id: "9288969280", name: "hospitals_midwest" }
+		group: { id: "9288969280", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 30,
@@ -437,7 +438,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "2434802936" },
-		group: { id: "1295291576", name: "hospitals_midwest" }
+		group: { id: "1295291576", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 31,
@@ -508,7 +509,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "1790754117" },
-		group: { id: "9104058254", name: "hospitals_westcoast" }
+		group: { id: "9104058254", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 36,
@@ -523,7 +524,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "8610184553" },
-		group: { id: "6901546985", name: "hospitals_westcoast" }
+		group: { id: "6901546985", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 37,
@@ -538,7 +539,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "0350869153" },
-		group: { id: "6029627487", name: "hospitals_midwest" }
+		group: { id: "6029627487", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 38,
@@ -583,7 +584,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "1332495386" },
-		group: { id: "5319263756", name: "hospitals_midwest" }
+		group: { id: "5319263756", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 41,
@@ -598,7 +599,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "7467769214" },
-		group: { id: "7796391486", name: "hospitals_midwest" }
+		group: { id: "7796391486", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 42,
@@ -665,7 +666,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "1409696732" },
-		group: { id: "2763563666", name: "hospitals_midwest" }
+		group: { id: "2763563666", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 47,
@@ -680,7 +681,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "3201022126" },
-		group: { id: "2289595407", name: "hospitals_midwest" }
+		group: { id: "2289595407", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 48,
@@ -732,7 +733,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "3642043511" },
-		group: { id: "6000286308", name: "hospitals_westcoast" }
+		group: { id: "6000286308", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 52,
@@ -747,7 +748,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "9700112974" },
-		group: { id: "1892658838", name: "hospitals_westcoast" }
+		group: { id: "1892658838", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 53,
@@ -758,7 +759,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "6190694926" },
-		group: { id: "8418230062", name: "hospitals_westcoast" }
+		group: { id: "8418230062", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 54,
@@ -769,7 +770,7 @@ export const seatAllocationData = [
 		user: { name: null, id: "7156882594", email: "jcolton1h@ed.gov" },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "3330741395" },
-		group: { id: "0776918371", name: "hospitals_midwest" }
+		group: { id: "0776918371", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 55,
@@ -810,7 +811,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "8381837528" },
-		group: { id: "0254881939", name: "hospitals_westcoast" }
+		group: { id: "0254881939", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 58,
@@ -911,7 +912,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "0545398675" },
-		group: { id: "3901726914", name: "hospitals_midwest" }
+		group: { id: "3901726914", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 65,
@@ -956,7 +957,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "6425414356" },
-		group: { id: "4557578355", name: "hospitals_westcoast" }
+		group: { id: "4557578355", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 68,
@@ -971,7 +972,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "4752273952" },
-		group: { id: "8419080424", name: "hospitals_midwest" }
+		group: { id: "8419080424", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 69,
@@ -1015,7 +1016,7 @@ export const seatAllocationData = [
 		user: { name: null, id: "9925516120", email: "fmanion1z@ucoz.ru" },
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "7505451815" },
-		group: { id: "1406208428", name: "hospitals_midwest" }
+		group: { id: "1406208428", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 73,
@@ -1026,7 +1027,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "0832078536" },
-		group: { id: "4260700386", name: "hospitals_midwest" }
+		group: { id: "4260700386", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 74,
@@ -1037,7 +1038,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "5150804001" },
-		group: { id: "2525997252", name: "hospitals_westcoast" }
+		group: { id: "2525997252", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 75,
@@ -1067,7 +1068,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "2222222222-p", name: "HeartSymphony" },
 		contract: { id: "2900340365" },
-		group: { id: "2973676121", name: "hospitals_midwest" }
+		group: { id: "2973676121", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 77,
@@ -1093,7 +1094,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "0542583715" },
-		group: { id: "0763686666", name: "hospitals_westcoast" }
+		group: { id: "0763686666", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 79,
@@ -1104,7 +1105,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "4090914004" },
-		group: { id: "4384033582", name: "hospitals_midwest" }
+		group: { id: "4384033582", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 80,
@@ -1119,7 +1120,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "5015057547" },
-		group: { id: "5907249658", name: "hospitals_midwest" }
+		group: { id: "5907249658", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 81,
@@ -1175,7 +1176,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "8463047696" },
-		group: { id: "5268337487", name: "hospitals_midwest" }
+		group: { id: "5268337487", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 85,
@@ -1201,7 +1202,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "9251648597" },
-		group: { id: "2101292508", name: "hospitals_midwest" }
+		group: { id: "2101292508", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 87,
@@ -1216,7 +1217,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "4221760745" },
-		group: { id: "1163994150", name: "hospitals_westcoast" }
+		group: { id: "1163994150", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 88,
@@ -1246,7 +1247,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "8539052107" },
-		group: { id: "8856293812", name: "hospitals_westcoast" }
+		group: { id: "8856293812", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 90,
@@ -1261,7 +1262,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "3862286226" },
-		group: { id: "3383956675", name: "hospitals_midwest" }
+		group: { id: "3383956675", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 91,
@@ -1291,7 +1292,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "4647786076" },
-		group: { id: "1233489713", name: "hospitals_westcoast" }
+		group: { id: "1233489713", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 93,
@@ -1350,7 +1351,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "7326955514" },
-		group: { id: "0687355313", name: "hospitals_westcoast" }
+		group: { id: "0687355313", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 98,
@@ -1365,7 +1366,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "6411382935" },
-		group: { id: "7560307718", name: "hospitals_westcoast" }
+		group: { id: "7560307718", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 99,
@@ -1380,7 +1381,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "5267490713" },
-		group: { id: "8694167122", name: "hospitals_midwest" }
+		group: { id: "8694167122", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 100,
@@ -1395,7 +1396,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "7562512943" },
-		group: { id: "6738393869", name: "hospitals_midwest" }
+		group: { id: "6738393869", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 101,
@@ -1417,7 +1418,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "4027539423" },
-		group: { id: "5836445791", name: "hospitals_midwest" }
+		group: { id: "5836445791", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 103,
@@ -1432,7 +1433,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "2766085269" },
-		group: { id: "9494531635", name: "hospitals_westcoast" }
+		group: { id: "9494531635", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 104,
@@ -1447,7 +1448,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "6094551821" },
-		group: { id: "4398159605", name: "hospitals_midwest" }
+		group: { id: "4398159605", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 105,
@@ -1477,7 +1478,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "7844656471" },
-		group: { id: "5474271537", name: "hospitals_westcoast" }
+		group: { id: "5474271537", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 107,
@@ -1492,7 +1493,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "5554004592" },
-		group: { id: "1419337023", name: "hospitals_westcoast" }
+		group: { id: "1419337023", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 108,
@@ -1548,7 +1549,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "5428173095" },
-		group: { id: "5725233409", name: "hospitals_westcoast" }
+		group: { id: "5725233409", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 112,
@@ -1604,7 +1605,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "8337708933" },
-		group: { id: "2788998719", name: "hospitals_midwest" }
+		group: { id: "2788998719", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 116,
@@ -1656,7 +1657,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "5448319057" },
-		group: { id: "9946404322", name: "hospitals_midwest" }
+		group: { id: "9946404322", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 120,
@@ -1701,7 +1702,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "3658818904" },
-		group: { id: "4349598929", name: "hospitals_midwest" }
+		group: { id: "4349598929", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 123,
@@ -1731,7 +1732,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "7209529692" },
-		group: { id: "3650725572", name: "hospitals_westcoast" }
+		group: { id: "3650725572", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 125,
@@ -1772,7 +1773,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "5069905587" },
-		group: { id: "0910884491", name: "hospitals_midwest" }
+		group: { id: "0910884491", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 128,
@@ -1787,7 +1788,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "9569588065" },
-		group: { id: "8442213596", name: "hospitals_westcoast" }
+		group: { id: "8442213596", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 129,
@@ -1832,7 +1833,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "3322347834" },
-		group: { id: "5187557484", name: "hospitals_westcoast" }
+		group: { id: "5187557484", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 132,
@@ -1940,7 +1941,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "7545445019" },
-		group: { id: "7842979382", name: "hospitals_midwest" }
+		group: { id: "7842979382", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 140,
@@ -1955,7 +1956,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "6797955672" },
-		group: { id: "1947994208", name: "hospitals_westcoast" }
+		group: { id: "1947994208", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 141,
@@ -2026,7 +2027,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "0659032459" },
-		group: { id: "6498503615", name: "hospitals_midwest" }
+		group: { id: "6498503615", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 146,
@@ -2052,7 +2053,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "2222222222-p", name: "HeartSymphony" },
 		contract: { id: "0458160759" },
-		group: { id: "6687550529", name: "hospitals_westcoast" }
+		group: { id: "6687550529", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 148,
@@ -2067,7 +2068,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "9997703683" },
-		group: { id: "3283684887", name: "hospitals_midwest" }
+		group: { id: "3283684887", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 149,
@@ -2145,7 +2146,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "5364170935" },
-		group: { id: "6551107478", name: "hospitals_westcoast" }
+		group: { id: "6551107478", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 155,
@@ -2156,7 +2157,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "0753302608" },
-		group: { id: "3026891937", name: "hospitals_midwest" }
+		group: { id: "3026891937", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 156,
@@ -2171,7 +2172,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "9971096482" },
-		group: { id: "0616919219", name: "hospitals_westcoast" }
+		group: { id: "0616919219", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 157,
@@ -2186,7 +2187,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "1882597583" },
-		group: { id: "2382248358", name: "hospitals_westcoast" }
+		group: { id: "2382248358", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 158,
@@ -2197,7 +2198,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "3047437798" },
-		group: { id: "8126093710", name: "hospitals_midwest" }
+		group: { id: "8126093710", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 159,
@@ -2212,7 +2213,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "1682983691" },
-		group: { id: "5682087037", name: "hospitals_midwest" }
+		group: { id: "5682087037", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 160,
@@ -2227,7 +2228,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "1035769234" },
-		group: { id: "0305234608", name: "hospitals_midwest" }
+		group: { id: "0305234608", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 161,
@@ -2242,7 +2243,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "1699783679" },
-		group: { id: "9795481961", name: "hospitals_midwest" }
+		group: { id: "9795481961", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 162,
@@ -2313,7 +2314,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "6459986823" },
-		group: { id: "6614065357", name: "hospitals_midwest" }
+		group: { id: "6614065357", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 167,
@@ -2354,7 +2355,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "3383409485" },
-		group: { id: "0374816683", name: "hospitals_westcoast" }
+		group: { id: "0374816683", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 170,
@@ -2395,7 +2396,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "4081409833" },
-		group: { id: "8369772962", name: "hospitals_midwest" }
+		group: { id: "8369772962", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 173,
@@ -2406,7 +2407,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "8781988212" },
-		group: { id: "4849572707", name: "hospitals_westcoast" }
+		group: { id: "4849572707", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 174,
@@ -2432,7 +2433,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "0749434521" },
-		group: { id: "7199087828", name: "hospitals_westcoast" }
+		group: { id: "7199087828", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 176,
@@ -2447,7 +2448,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "2060284929" },
-		group: { id: "1033640280", name: "hospitals_midwest" }
+		group: { id: "1033640280", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 177,
@@ -2462,7 +2463,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "6990708380" },
-		group: { id: "7774987102", name: "hospitals_midwest" }
+		group: { id: "7774987102", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 178,
@@ -2529,7 +2530,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "9549425796" },
-		group: { id: "4495342580", name: "hospitals_midwest" }
+		group: { id: "4495342580", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 183,
@@ -2540,7 +2541,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "2222222222-p", name: "HeartSymphony" },
 		contract: { id: "9119785475" },
-		group: { id: "2614516457", name: "hospitals_midwest" }
+		group: { id: "2614516457", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 184,
@@ -2607,7 +2608,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "7447116920" },
-		group: { id: "9782631444", name: "hospitals_midwest" }
+		group: { id: "9782631444", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 189,
@@ -2622,7 +2623,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "3468408451" },
-		group: { id: "5644311157", name: "hospitals_midwest" }
+		group: { id: "5644311157", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 190,
@@ -2637,7 +2638,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "1111111111-p", name: "Cardio+" },
 		contract: { id: "7791464350" },
-		group: { id: "8413001308", name: "hospitals_midwest" }
+		group: { id: "8413001308", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 191,
@@ -2652,7 +2653,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "2222222222-p", name: "HeartSymphony" },
 		contract: { id: "1758506908" },
-		group: { id: "7906514188", name: "hospitals_midwest" }
+		group: { id: "7906514188", name: "hospital_midwest" }
 	},
 	{
 		seat_number: 192,
@@ -2741,7 +2742,7 @@ export const seatAllocationData = [
 		},
 		bundle: { id: "3333333333-p", name: "OmegaSap" },
 		contract: { id: "2455880358" },
-		group: { id: "7755313068", name: "hospitals_westcoast" }
+		group: { id: "7755313068", name: "hospital_westcoast" }
 	},
 	{
 		seat_number: 199,
@@ -2763,7 +2764,7 @@ export const seatAllocationData = [
 		user: { name: null, id: null, email: null },
 		bundle: { id: "000000000-p", name: "Acred360" },
 		contract: { id: "2182609560" },
-		group: { id: "8745121700", name: "hospitals_midwest" }
+		group: { id: "8745121700", name: "hospital_midwest" }
 	}
 ];
 export const seatAllocationDataSingleGroup = [
@@ -5523,20 +5524,20 @@ export const seatAllocationDataSingleBundle = [
 { "seat_number": 4, "seat_status": "unused", "date_invite": "2019-04-16 07:01:26 UTC", "date_accepted": "2019-05-03 07:01:26 UTC", "date_lockedTill": "2020-05-03 07:01:26 UTC", "user": { "name": "Zed Josuweit", "id": "5008425468", "email": "zjosuweit3@nbcnews.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "5563431358" }, "group": { "id": "5019391363", "name": "hospital_eastcoast" } },
 { "seat_number": 5, "seat_status": "filled", "date_invite": "2019-09-18 18:31:38 UTC", "date_accepted": "2019-10-11 18:31:38 UTC", "date_lockedTill": "2020-10-11 18:31:38 UTC", "user": { "name": "Loleta Meininking", "id": "7181466979", "email": "lmeininking4@bloglovin.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7874118164" }, "group": { "id": "5264002557", "name": "default" } },
 { "seat_number": 6, "seat_status": "filled", "date_invite": "2019-03-12 20:37:47 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "8989071230" }, "group": { "id": "2307704211", "name": "default" } },
-{ "seat_number": 7, "seat_status": "requested", "date_invite": "2019-02-17 13:32:41 UTC", "date_accepted": "2019-03-19 13:32:41 UTC", "date_lockedTill": "2020-03-19 13:32:41 UTC", "user": { "name": null, "id": "1630251649", "email": "ddast6@army.mil" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7741529114" }, "group": { "id": "1969640229", "name": "hospitals_westcoast" } },
-{ "seat_number": 8, "seat_status": "requested", "date_invite": "2019-02-21 19:27:27 UTC", "date_accepted": "2019-02-26 19:27:27 UTC", "date_lockedTill": "2020-02-26 19:27:27 UTC", "user": { "name": "Corrinne Speak", "id": "5149003015", "email": "cspeak7@businesswire.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "6124388427" }, "group": { "id": "9130524325", "name": "hospitals_westcoast" } },
+{ "seat_number": 7, "seat_status": "requested", "date_invite": "2019-02-17 13:32:41 UTC", "date_accepted": "2019-03-19 13:32:41 UTC", "date_lockedTill": "2020-03-19 13:32:41 UTC", "user": { "name": null, "id": "1630251649", "email": "ddast6@army.mil" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7741529114" }, "group": { "id": "1969640229", "name": "hospital_westcoast" } },
+{ "seat_number": 8, "seat_status": "requested", "date_invite": "2019-02-21 19:27:27 UTC", "date_accepted": "2019-02-26 19:27:27 UTC", "date_lockedTill": "2020-02-26 19:27:27 UTC", "user": { "name": "Corrinne Speak", "id": "5149003015", "email": "cspeak7@businesswire.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "6124388427" }, "group": { "id": "9130524325", "name": "hospital_westcoast" } },
 { "seat_number": 9, "seat_status": "requested", "date_invite": "2019-03-25 00:09:49 UTC", "date_accepted": "2019-04-07 00:09:49 UTC", "date_lockedTill": "2020-04-07 00:09:49 UTC", "user": { "name": null, "id": "0521869914", "email": "tpenketh8@phpbb.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "1767101188" }, "group": { "id": "1768241141", "name": "default" } },
 { "seat_number": 10, "seat_status": "unused", "date_invite": "2019-07-02 07:22:40 UTC", "date_accepted": "2019-07-07 07:22:40 UTC", "date_lockedTill": "2020-07-07 07:22:40 UTC", "user": { "name": "Maurise Czaja", "id": "5695994725", "email": "mczaja9@bloglovin.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "6127328713" }, "group": { "id": "9455347823", "name": "default" } },
 { "seat_number": 11, "seat_status": "filled", "date_invite": "2018-10-25 20:12:27 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "1009412954" }, "group": { "id": "2971692964", "name": "default" } },
-{ "seat_number": 12, "seat_status": "unused", "date_invite": "2019-07-19 18:47:39 UTC", "date_accepted": "2019-08-10 18:47:39 UTC", "date_lockedTill": "2020-08-10 18:47:39 UTC", "user": { "name": "Marla Costin", "id": "9106569904", "email": "mcostinb@discovery.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "6489374324" }, "group": { "id": "9379976760", "name": "hospitals_westcoast" } },
+{ "seat_number": 12, "seat_status": "unused", "date_invite": "2019-07-19 18:47:39 UTC", "date_accepted": "2019-08-10 18:47:39 UTC", "date_lockedTill": "2020-08-10 18:47:39 UTC", "user": { "name": "Marla Costin", "id": "9106569904", "email": "mcostinb@discovery.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "6489374324" }, "group": { "id": "9379976760", "name": "hospital_westcoast" } },
 { "seat_number": 13, "seat_status": "unused", "date_invite": "2019-09-01 04:39:36 UTC", "date_accepted": "2019-09-28 04:39:36 UTC", "date_lockedTill": "2020-09-28 04:39:36 UTC", "user": { "name": "Mata Filochov", "id": "2218248814", "email": "mfilochovc@home.pl" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "1906913918" }, "group": { "id": "0169398098", "name": "hospital_southern" } },
 { "seat_number": 14, "seat_status": "filled", "date_invite": "2019-03-20 15:15:38 UTC", "date_accepted": "2019-04-01 15:15:38 UTC", "date_lockedTill": "2020-04-01 15:15:38 UTC", "user": { "name": null, "id": "0695711732", "email": "rlaideld@wiley.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "0268735780" }, "group": { "id": "9727578317", "name": "default" } },
-{ "seat_number": 15, "seat_status": "unused", "date_invite": "2019-05-29 16:14:54 UTC", "date_accepted": "2019-06-21 16:14:54 UTC", "date_lockedTill": "2020-06-21 16:14:54 UTC", "user": { "name": null, "id": "3583330930", "email": "kdevinee@unesco.org" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "3691729604" }, "group": { "id": "2392186318", "name": "hospitals_midwest" } },
-{ "seat_number": 16, "seat_status": "locked", "date_invite": "2019-08-17 16:29:32 UTC", "date_accepted": "2019-08-19 16:29:32 UTC", "date_lockedTill": "2020-08-19 16:29:32 UTC", "user": { "name": "Aili MacArd", "id": "6251803724", "email": "amacardf@go.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "3201420201" }, "group": { "id": "0943122410", "name": "hospitals_westcoast" } },
-{ "seat_number": 17, "seat_status": "locked", "date_invite": "2019-07-22 17:17:51 UTC", "date_accepted": "2019-08-19 17:17:51 UTC", "date_lockedTill": "2020-08-19 17:17:51 UTC", "user": { "name": "Corri Hellens", "id": "8823450064", "email": "chellensg@toplist.cz" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "5347864151" }, "group": { "id": "5413051667", "name": "hospitals_midwest" } },
+{ "seat_number": 15, "seat_status": "unused", "date_invite": "2019-05-29 16:14:54 UTC", "date_accepted": "2019-06-21 16:14:54 UTC", "date_lockedTill": "2020-06-21 16:14:54 UTC", "user": { "name": null, "id": "3583330930", "email": "kdevinee@unesco.org" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "3691729604" }, "group": { "id": "2392186318", "name": "hospital_midwest" } },
+{ "seat_number": 16, "seat_status": "locked", "date_invite": "2019-08-17 16:29:32 UTC", "date_accepted": "2019-08-19 16:29:32 UTC", "date_lockedTill": "2020-08-19 16:29:32 UTC", "user": { "name": "Aili MacArd", "id": "6251803724", "email": "amacardf@go.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "3201420201" }, "group": { "id": "0943122410", "name": "hospital_westcoast" } },
+{ "seat_number": 17, "seat_status": "locked", "date_invite": "2019-07-22 17:17:51 UTC", "date_accepted": "2019-08-19 17:17:51 UTC", "date_lockedTill": "2020-08-19 17:17:51 UTC", "user": { "name": "Corri Hellens", "id": "8823450064", "email": "chellensg@toplist.cz" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "5347864151" }, "group": { "id": "5413051667", "name": "hospital_midwest" } },
 { "seat_number": 18, "seat_status": "filled", "date_invite": "2019-02-04 08:39:02 UTC", "date_accepted": "2019-02-27 08:39:02 UTC", "date_lockedTill": "2020-02-27 08:39:02 UTC", "user": { "name": null, "id": "3714410296", "email": "crumkeh@webmd.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "2359224344" }, "group": { "id": "7515505443", "name": "hospital_eastcoast" } },
 { "seat_number": 19, "seat_status": "filled", "date_invite": "2019-02-05 21:08:44 UTC", "date_accepted": "2019-03-02 21:08:44 UTC", "date_lockedTill": "2020-03-02 21:08:44 UTC", "user": { "name": "Golda Petriello", "id": "6130183562", "email": "gpetrielloi@sfgate.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "4551496786" }, "group": { "id": "4918993011", "name": "hospital_southern" } },
-{ "seat_number": 20, "seat_status": "locked", "date_invite": "2019-08-08 16:12:15 UTC", "date_accepted": "2019-08-09 16:12:15 UTC", "date_lockedTill": "2020-08-09 16:12:15 UTC", "user": { "name": "Berkley Skipworth", "id": "3462913864", "email": "bskipworthj@webeden.co.uk" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "9612793419" }, "group": { "id": "9135798500", "name": "hospitals_westcoast" } },
+{ "seat_number": 20, "seat_status": "locked", "date_invite": "2019-08-08 16:12:15 UTC", "date_accepted": "2019-08-09 16:12:15 UTC", "date_lockedTill": "2020-08-09 16:12:15 UTC", "user": { "name": "Berkley Skipworth", "id": "3462913864", "email": "bskipworthj@webeden.co.uk" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "9612793419" }, "group": { "id": "9135798500", "name": "hospital_westcoast" } },
 { "seat_number": 21, "seat_status": "filled", "date_invite": "2019-09-13 01:48:27 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "0860872749" }, "group": { "id": "6934668107", "name": "hospital_southern" } },
 { "seat_number": 22, "seat_status": "requested", "date_invite": "2018-12-29 18:58:43 UTC", "date_accepted": "2019-01-01 18:58:43 UTC", "date_lockedTill": "2020-01-01 18:58:43 UTC", "user": { "name": null, "id": "8783406985", "email": "fwilsonel@ifeng.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "0794525078" }, "group": { "id": "2134598612", "name": "default" } },
 { "seat_number": 23, "seat_status": "requested", "date_invite": "2019-08-17 17:19:30 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "0656006334" }, "group": { "id": "1068011862", "name": "hospital_eastcoast" } },
@@ -5544,10 +5545,10 @@ export const seatAllocationDataSingleBundle = [
 { "seat_number": 25, "seat_status": "unused", "date_invite": "2018-11-18 09:17:59 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "8632446178" }, "group": { "id": "2184789982", "name": "hospital_southern" } },
 { "seat_number": 26, "seat_status": "filled", "date_invite": "2019-06-06 18:33:22 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "2222222222-p", "name": "Cardio+" }, "contract": { "id": "3981639053" }, "group": { "id": "1470516899", "name": "default" } },
 { "seat_number": 27, "seat_status": "requested", "date_invite": "2019-05-12 01:24:46 UTC", "date_accepted": "2019-05-25 01:24:46 UTC", "date_lockedTill": "2020-05-25 01:24:46 UTC", "user": { "name": "Pascale Lessmare", "id": "9949523396", "email": "plessmareq@cbsnews.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "4699437847" }, "group": { "id": "4966632309", "name": "default" } },
-{ "seat_number": 28, "seat_status": "requested", "date_invite": "2019-06-17 01:49:05 UTC", "date_accepted": "2019-06-22 01:49:05 UTC", "date_lockedTill": "2020-06-22 01:49:05 UTC", "user": { "name": "Valentine Shurey", "id": "4553478145", "email": "vshureyr@princeton.edu" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "8504687268" }, "group": { "id": "9479896225", "name": "hospitals_westcoast" } },
+{ "seat_number": 28, "seat_status": "requested", "date_invite": "2019-06-17 01:49:05 UTC", "date_accepted": "2019-06-22 01:49:05 UTC", "date_lockedTill": "2020-06-22 01:49:05 UTC", "user": { "name": "Valentine Shurey", "id": "4553478145", "email": "vshureyr@princeton.edu" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "8504687268" }, "group": { "id": "9479896225", "name": "hospital_westcoast" } },
 { "seat_number": 29, "seat_status": "locked", "date_invite": "2019-06-12 19:21:17 UTC", "date_accepted": "2019-07-08 19:21:17 UTC", "date_lockedTill": "2020-07-08 19:21:17 UTC", "user": { "name": "Robby Darnbrook", "id": "1839278760", "email": "rdarnbrooks@vimeo.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7492379772" }, "group": { "id": "5497389676", "name": "hospital_southern" } },
-{ "seat_number": 30, "seat_status": "locked", "date_invite": "2019-09-28 23:55:08 UTC", "date_accepted": "2019-10-02 23:55:08 UTC", "date_lockedTill": "2020-10-02 23:55:08 UTC", "user": { "name": null, "id": "2140584812", "email": "rrosariot@sogou.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "1525029226" }, "group": { "id": "7055228705", "name": "hospitals_midwest" } },
-{ "seat_number": 31, "seat_status": "locked", "date_invite": "2019-09-24 08:05:55 UTC", "date_accepted": "2019-10-24 08:05:55 UTC", "date_lockedTill": "2020-10-24 08:05:55 UTC", "user": { "name": "Zola Escofier", "id": "8316792651", "email": "zescofieru@barnesandnoble.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "6170144059" }, "group": { "id": "6497574259", "name": "hospitals_westcoast" } },
+{ "seat_number": 30, "seat_status": "locked", "date_invite": "2019-09-28 23:55:08 UTC", "date_accepted": "2019-10-02 23:55:08 UTC", "date_lockedTill": "2020-10-02 23:55:08 UTC", "user": { "name": null, "id": "2140584812", "email": "rrosariot@sogou.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "1525029226" }, "group": { "id": "7055228705", "name": "hospital_midwest" } },
+{ "seat_number": 31, "seat_status": "locked", "date_invite": "2019-09-24 08:05:55 UTC", "date_accepted": "2019-10-24 08:05:55 UTC", "date_lockedTill": "2020-10-24 08:05:55 UTC", "user": { "name": "Zola Escofier", "id": "8316792651", "email": "zescofieru@barnesandnoble.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "6170144059" }, "group": { "id": "6497574259", "name": "hospital_westcoast" } },
 { "seat_number": 32, "seat_status": "unused", "date_invite": "2018-12-11 19:41:28 UTC", "date_accepted": "2019-01-07 19:41:28 UTC", "date_lockedTill": "2020-01-07 19:41:28 UTC", "user": { "name": "Putnem Kippen", "id": "3264195056", "email": "pkippenv@merriam-webster.com" }, "bundle": { "id": "2222222222-p", "name": "Cardio+" }, "contract": { "id": "0432878138" }, "group": { "id": "0127338380", "name": "hospital_southern" } },
 { "seat_number": 33, "seat_status": "filled", "date_invite": "2019-09-17 11:44:03 UTC", "date_accepted": "2019-10-07 11:44:03 UTC", "date_lockedTill": "2020-10-07 11:44:03 UTC", "user": { "name": "Hildagard Dake", "id": "7763156898", "email": "hdakew@com.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "0620119514" }, "group": { "id": "7994133392", "name": "hospital_southern" } },
 { "seat_number": 34, "seat_status": "filled", "date_invite": "2019-04-12 18:07:48 UTC", "date_accepted": "2019-05-09 18:07:48 UTC", "date_lockedTill": "2020-05-09 18:07:48 UTC", "user": { "name": "Hasty Enrrico", "id": "1837740859", "email": "henrricox@geocities.com" }, "bundle": { "id": "2222222222-p", "name": "Cardio+" }, "contract": { "id": "0195262431" }, "group": { "id": "0795123138", "name": "hospital_southern" } },
@@ -5555,16 +5556,16 @@ export const seatAllocationDataSingleBundle = [
 { "seat_number": 36, "seat_status": "filled", "date_invite": "2019-01-28 07:22:33 UTC", "date_accepted": "2019-02-06 07:22:33 UTC", "date_lockedTill": "2020-02-06 07:22:33 UTC", "user": { "name": "Frederigo Whorf", "id": "1597535740", "email": "fwhorfz@shareasale.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "9447641085" }, "group": { "id": "2685195748", "name": "default" } },
 { "seat_number": 37, "seat_status": "requested", "date_invite": "2019-04-06 10:56:58 UTC", "date_accepted": "2019-04-07 10:56:58 UTC", "date_lockedTill": "2020-04-07 10:56:58 UTC", "user": { "name": "Petunia Lampens", "id": "5249495624", "email": "plampens10@t-online.de" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "0318027112" }, "group": { "id": "5124020291", "name": "hospital_eastcoast" } },
 { "seat_number": 38, "seat_status": "unused", "date_invite": "2019-09-30 08:18:43 UTC", "date_accepted": "2019-10-24 08:18:43 UTC", "date_lockedTill": "2020-10-24 08:18:43 UTC", "user": { "name": "Abram Luscombe", "id": "7268994144", "email": "aluscombe11@ft.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "9529165571" }, "group": { "id": "6853310768", "name": "default" } },
-{ "seat_number": 39, "seat_status": "requested", "date_invite": "2019-06-30 10:51:55 UTC", "date_accepted": "2019-07-06 10:51:55 UTC", "date_lockedTill": "2020-07-06 10:51:55 UTC", "user": { "name": "Darda Kilcullen", "id": "6698452961", "email": "dkilcullen12@simplemachines.org" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7317916543" }, "group": { "id": "7957868954", "name": "hospitals_midwest" } },
+{ "seat_number": 39, "seat_status": "requested", "date_invite": "2019-06-30 10:51:55 UTC", "date_accepted": "2019-07-06 10:51:55 UTC", "date_lockedTill": "2020-07-06 10:51:55 UTC", "user": { "name": "Darda Kilcullen", "id": "6698452961", "email": "dkilcullen12@simplemachines.org" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7317916543" }, "group": { "id": "7957868954", "name": "hospital_midwest" } },
 { "seat_number": 40, "seat_status": "locked", "date_invite": "2019-08-31 05:54:51 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "8120391213" }, "group": { "id": "2283455189", "name": "hospital_eastcoast" } },
 { "seat_number": 41, "seat_status": "filled", "date_invite": "2019-05-29 08:55:58 UTC", "date_accepted": "2019-06-25 08:55:58 UTC", "date_lockedTill": "2020-06-25 08:55:58 UTC", "user": { "name": "Elvira Haggish", "id": "4832980633", "email": "ehaggish14@fc2.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "2189781478" }, "group": { "id": "1381384357", "name": "default" } },
 { "seat_number": 42, "seat_status": "unused", "date_invite": "2019-01-25 15:06:47 UTC", "date_accepted": "2019-01-31 15:06:47 UTC", "date_lockedTill": "2020-01-31 15:06:47 UTC", "user": { "name": "Kaja Lillford", "id": "5248325028", "email": "klillford15@topsy.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "4279506721" }, "group": { "id": "5212356609", "name": "hospital_southern" } },
 { "seat_number": 43, "seat_status": "requested", "date_invite": "2018-11-17 10:11:04 UTC", "date_accepted": "2018-12-17 10:11:04 UTC", "date_lockedTill": "2019-12-17 10:11:04 UTC", "user": { "name": null, "id": "6907736134", "email": "ndibsdale16@miitbeian.gov.cn" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "0590269817" }, "group": { "id": "5316231336", "name": "default" } },
 { "seat_number": 44, "seat_status": "filled", "date_invite": "2018-11-14 12:33:38 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "7936645367" }, "group": { "id": "8004133560", "name": "hospital_eastcoast" } },
 { "seat_number": 45, "seat_status": "requested", "date_invite": "2019-04-14 06:52:54 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "2066365218" }, "group": { "id": "5126199690", "name": "hospital_southern" } },
-{ "seat_number": 46, "seat_status": "unused", "date_invite": "2019-08-19 17:22:43 UTC", "date_accepted": "2019-09-02 17:22:43 UTC", "date_lockedTill": "2020-09-02 17:22:43 UTC", "user": { "name": null, "id": "7934414852", "email": "rverson19@moonfruit.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "3376607533" }, "group": { "id": "6131859041", "name": "hospitals_westcoast" } },
+{ "seat_number": 46, "seat_status": "unused", "date_invite": "2019-08-19 17:22:43 UTC", "date_accepted": "2019-09-02 17:22:43 UTC", "date_lockedTill": "2020-09-02 17:22:43 UTC", "user": { "name": null, "id": "7934414852", "email": "rverson19@moonfruit.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "3376607533" }, "group": { "id": "6131859041", "name": "hospital_westcoast" } },
 { "seat_number": 47, "seat_status": "unused", "date_invite": "2018-12-27 02:26:37 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "3595975016" }, "group": { "id": "9094862704", "name": "hospital_eastcoast" } },
-{ "seat_number": 48, "seat_status": "requested", "date_invite": "2019-02-25 04:01:04 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "6385396491" }, "group": { "id": "0148369595", "name": "hospitals_westcoast" } },
+{ "seat_number": 48, "seat_status": "requested", "date_invite": "2019-02-25 04:01:04 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "6385396491" }, "group": { "id": "0148369595", "name": "hospital_westcoast" } },
 { "seat_number": 49, "seat_status": "filled", "date_invite": "2019-05-23 10:28:34 UTC", "date_accepted": "2019-05-28 10:28:34 UTC", "date_lockedTill": "2020-05-28 10:28:34 UTC", "user": { "name": "Shaughn Karlolczak", "id": "5888130266", "email": "skarlolczak1c@gravatar.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "3305721258" }, "group": { "id": "3214147577", "name": "hospital_eastcoast" } },
 { "seat_number": 50, "seat_status": "unused", "date_invite": "2018-11-03 05:47:18 UTC", "date_accepted": "2018-11-26 05:47:18 UTC", "date_lockedTill": "2019-11-26 05:47:18 UTC", "user": { "name": "Letitia Brailsford", "id": "5997167557", "email": "lbrailsford1d@infoseek.co.jp" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "9617600056" }, "group": { "id": "8787290191", "name": "hospital_southern" } },
 { "seat_number": 51, "seat_status": "requested", "date_invite": "2019-01-06 15:49:23 UTC", "date_accepted": "2019-02-01 15:49:23 UTC", "date_lockedTill": "2020-02-01 15:49:23 UTC", "user": { "name": null, "id": "3542121700", "email": "mcapper1e@xing.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "5414347495" }, "group": { "id": "4601225888", "name": "hospital_southern" } },
@@ -5573,24 +5574,24 @@ export const seatAllocationDataSingleBundle = [
 { "seat_number": 54, "seat_status": "filled", "date_invite": "2018-12-27 13:46:54 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "0435402253" }, "group": { "id": "3434704251", "name": "default" } },
 { "seat_number": 55, "seat_status": "requested", "date_invite": "2019-08-29 05:32:15 UTC", "date_accepted": "2019-09-23 05:32:15 UTC", "date_lockedTill": "2020-09-23 05:32:15 UTC", "user": { "name": "Brit Barrand", "id": "7517470908", "email": "bbarrand1i@goo.ne.jp" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "4392964053" }, "group": { "id": "4083927046", "name": "hospital_southern" } },
 { "seat_number": 56, "seat_status": "filled", "date_invite": "2019-05-16 14:05:35 UTC", "date_accepted": "2019-06-03 14:05:35 UTC", "date_lockedTill": "2020-06-03 14:05:35 UTC", "user": { "name": "Carry Andrejs", "id": "2790255026", "email": "candrejs1j@shop-pro.jp" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "6612938552" }, "group": { "id": "4440169727", "name": "default" } },
-{ "seat_number": 57, "seat_status": "locked", "date_invite": "2019-07-08 04:38:45 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "1866588999" }, "group": { "id": "3516315505", "name": "hospitals_westcoast" } },
+{ "seat_number": 57, "seat_status": "locked", "date_invite": "2019-07-08 04:38:45 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "1866588999" }, "group": { "id": "3516315505", "name": "hospital_westcoast" } },
 { "seat_number": 58, "seat_status": "locked", "date_invite": "2019-07-06 11:43:56 UTC", "date_accepted": "2019-07-20 11:43:56 UTC", "date_lockedTill": "2020-07-20 11:43:56 UTC", "user": { "name": "Miof mela Wilkinson", "id": "8168976024", "email": "mmela1l@lycos.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "0438580047" }, "group": { "id": "0497875502", "name": "hospital_southern" } },
 { "seat_number": 59, "seat_status": "filled", "date_invite": "2019-02-02 10:47:53 UTC", "date_accepted": "2019-02-14 10:47:53 UTC", "date_lockedTill": "2020-02-14 10:47:53 UTC", "user": { "name": "Kettie Olding", "id": "6434445974", "email": "kolding1m@google.ru" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "8663283880" }, "group": { "id": "0314198147", "name": "hospital_eastcoast" } },
-{ "seat_number": 60, "seat_status": "unused", "date_invite": "2019-05-18 11:07:52 UTC", "date_accepted": "2019-06-02 11:07:52 UTC", "date_lockedTill": "2020-06-02 11:07:52 UTC", "user": { "name": "Arnold Baddiley", "id": "6272406949", "email": "abaddiley1n@odnoklassniki.ru" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7538116496" }, "group": { "id": "3127991789", "name": "hospitals_midwest" } },
+{ "seat_number": 60, "seat_status": "unused", "date_invite": "2019-05-18 11:07:52 UTC", "date_accepted": "2019-06-02 11:07:52 UTC", "date_lockedTill": "2020-06-02 11:07:52 UTC", "user": { "name": "Arnold Baddiley", "id": "6272406949", "email": "abaddiley1n@odnoklassniki.ru" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7538116496" }, "group": { "id": "3127991789", "name": "hospital_midwest" } },
 { "seat_number": 61, "seat_status": "filled", "date_invite": "2019-05-15 07:14:29 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "2733578572" }, "group": { "id": "8559184819", "name": "hospital_eastcoast" } },
 { "seat_number": 62, "seat_status": "unused", "date_invite": "2019-10-09 20:35:39 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "2222222222-p", "name": "Cardio+" }, "contract": { "id": "3815961297" }, "group": { "id": "4413305101", "name": "hospital_southern" } },
 { "seat_number": 63, "seat_status": "requested", "date_invite": "2019-04-01 23:26:43 UTC", "date_accepted": "2019-04-08 23:26:43 UTC", "date_lockedTill": "2020-04-08 23:26:43 UTC", "user": { "name": "Finlay Vennard", "id": "2747342242", "email": "fvennard1q@indiatimes.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "3742890936" }, "group": { "id": "3275962602", "name": "hospital_eastcoast" } },
-{ "seat_number": 64, "seat_status": "requested", "date_invite": "2019-03-07 01:34:56 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "9482437508" }, "group": { "id": "2952857828", "name": "hospitals_midwest" } },
-{ "seat_number": 65, "seat_status": "unused", "date_invite": "2018-12-20 05:49:47 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "3623412793" }, "group": { "id": "6263737360", "name": "hospitals_midwest" } },
+{ "seat_number": 64, "seat_status": "requested", "date_invite": "2019-03-07 01:34:56 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "9482437508" }, "group": { "id": "2952857828", "name": "hospital_midwest" } },
+{ "seat_number": 65, "seat_status": "unused", "date_invite": "2018-12-20 05:49:47 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "3623412793" }, "group": { "id": "6263737360", "name": "hospital_midwest" } },
 { "seat_number": 66, "seat_status": "unused", "date_invite": "2018-12-27 12:21:23 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "8561637524" }, "group": { "id": "0476388131", "name": "default" } },
 { "seat_number": 67, "seat_status": "unused", "date_invite": "2018-12-20 17:22:41 UTC", "date_accepted": "2018-12-29 17:22:41 UTC", "date_lockedTill": "2019-12-29 17:22:41 UTC", "user": { "name": "Nicky Marrows", "id": "3547612799", "email": "nmarrows1u@sun.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "9884241456" }, "group": { "id": "4089959489", "name": "hospital_eastcoast" } },
-{ "seat_number": 68, "seat_status": "unused", "date_invite": "2019-09-29 00:30:59 UTC", "date_accepted": "2019-09-30 00:30:59 UTC", "date_lockedTill": "2020-09-30 00:30:59 UTC", "user": { "name": "Paul Conachie", "id": "8826345160", "email": "pconachie1v@irs.gov" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "1961363281" }, "group": { "id": "7588893749", "name": "hospitals_midwest" } },
-{ "seat_number": 69, "seat_status": "unused", "date_invite": "2019-05-31 05:38:42 UTC", "date_accepted": "2019-06-10 05:38:42 UTC", "date_lockedTill": "2020-06-10 05:38:42 UTC", "user": { "name": "Gusty Surridge", "id": "7814119017", "email": "gsurridge1w@ft.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "9969943082" }, "group": { "id": "0113572658", "name": "hospitals_westcoast" } },
-{ "seat_number": 70, "seat_status": "unused", "date_invite": "2019-08-02 03:57:24 UTC", "date_accepted": "2019-08-23 03:57:24 UTC", "date_lockedTill": "2020-08-23 03:57:24 UTC", "user": { "name": "Martita Livard", "id": "5235474403", "email": "mlivard1x@usatoday.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "3090163037" }, "group": { "id": "0723250400", "name": "hospitals_midwest" } },
-{ "seat_number": 71, "seat_status": "unused", "date_invite": "2018-11-16 03:09:32 UTC", "date_accepted": "2018-11-20 03:09:32 UTC", "date_lockedTill": "2019-11-20 03:09:32 UTC", "user": { "name": "Imogen Player", "id": "7398156933", "email": "iplayer1y@rediff.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "0544397744" }, "group": { "id": "6257304107", "name": "hospitals_midwest" } },
+{ "seat_number": 68, "seat_status": "unused", "date_invite": "2019-09-29 00:30:59 UTC", "date_accepted": "2019-09-30 00:30:59 UTC", "date_lockedTill": "2020-09-30 00:30:59 UTC", "user": { "name": "Paul Conachie", "id": "8826345160", "email": "pconachie1v@irs.gov" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "1961363281" }, "group": { "id": "7588893749", "name": "hospital_midwest" } },
+{ "seat_number": 69, "seat_status": "unused", "date_invite": "2019-05-31 05:38:42 UTC", "date_accepted": "2019-06-10 05:38:42 UTC", "date_lockedTill": "2020-06-10 05:38:42 UTC", "user": { "name": "Gusty Surridge", "id": "7814119017", "email": "gsurridge1w@ft.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "9969943082" }, "group": { "id": "0113572658", "name": "hospital_westcoast" } },
+{ "seat_number": 70, "seat_status": "unused", "date_invite": "2019-08-02 03:57:24 UTC", "date_accepted": "2019-08-23 03:57:24 UTC", "date_lockedTill": "2020-08-23 03:57:24 UTC", "user": { "name": "Martita Livard", "id": "5235474403", "email": "mlivard1x@usatoday.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "3090163037" }, "group": { "id": "0723250400", "name": "hospital_midwest" } },
+{ "seat_number": 71, "seat_status": "unused", "date_invite": "2018-11-16 03:09:32 UTC", "date_accepted": "2018-11-20 03:09:32 UTC", "date_lockedTill": "2019-11-20 03:09:32 UTC", "user": { "name": "Imogen Player", "id": "7398156933", "email": "iplayer1y@rediff.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "0544397744" }, "group": { "id": "6257304107", "name": "hospital_midwest" } },
 { "seat_number": 72, "seat_status": "requested", "date_invite": "2019-05-12 04:14:09 UTC", "date_accepted": "2019-05-23 04:14:09 UTC", "date_lockedTill": "2020-05-23 04:14:09 UTC", "user": { "name": "Tripp Naisbit", "id": "9337324969", "email": "tnaisbit1z@4shared.com" }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "9912749783" }, "group": { "id": "6235927209", "name": "hospital_southern" } },
-{ "seat_number": 73, "seat_status": "locked", "date_invite": "2018-11-29 04:06:21 UTC", "date_accepted": "2018-12-02 04:06:21 UTC", "date_lockedTill": "2019-12-02 04:06:21 UTC", "user": { "name": "Etheline McConachie", "id": "6158005391", "email": "emcconachie20@so-net.ne.jp" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7733708986" }, "group": { "id": "5116209329", "name": "hospitals_westcoast" } },
-{ "seat_number": 74, "seat_status": "locked", "date_invite": "2019-01-15 01:33:49 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "2061301242" }, "group": { "id": "0784161898", "name": "hospitals_westcoast" } },
+{ "seat_number": 73, "seat_status": "locked", "date_invite": "2018-11-29 04:06:21 UTC", "date_accepted": "2018-12-02 04:06:21 UTC", "date_lockedTill": "2019-12-02 04:06:21 UTC", "user": { "name": "Etheline McConachie", "id": "6158005391", "email": "emcconachie20@so-net.ne.jp" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7733708986" }, "group": { "id": "5116209329", "name": "hospital_westcoast" } },
+{ "seat_number": 74, "seat_status": "locked", "date_invite": "2019-01-15 01:33:49 UTC", "date_accepted": null, "date_lockedTill": null, "user": { "name": null, "id": null, "email": null }, "bundle": { "id": "3333333333-p", "name": "Cardio+" }, "contract": { "id": "2061301242" }, "group": { "id": "0784161898", "name": "hospital_westcoast" } },
 { "seat_number": 75, "seat_status": "unused", "date_invite": "2019-08-22 19:34:32 UTC", "date_accepted": "2019-09-17 19:34:32 UTC", "date_lockedTill": "2020-09-17 19:34:32 UTC", "user": { "name": "Lawrence McComiskey", "id": "2406910283", "email": "lmccomiskey22@reddit.com" }, "bundle": { "id": "000000000-p", "name": "Cardio+" }, "contract": { "id": "2431652845" }, "group": { "id": "6332699484", "name": "hospitals_westcoast" } },
 { "seat_number": 76, "seat_status": "requested", "date_invite": "2019-09-15 21:54:57 UTC", "date_accepted": "2019-09-21 21:54:57 UTC", "date_lockedTill": "2020-09-21 21:54:57 UTC", "user": { "name": "Travers Holbarrow", "id": "3621916504", "email": "tholbarrow23@drupal.org" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "5571012743" }, "group": { "id": "1454203729", "name": "hospital_eastcoast" } },
 { "seat_number": 77, "seat_status": "unused", "date_invite": "2019-09-17 19:05:26 UTC", "date_accepted": "2019-10-01 19:05:26 UTC", "date_lockedTill": "2020-10-01 19:05:26 UTC", "user": { "name": "Barnabe Leavey", "id": "0246609483", "email": "bleavey24@foxnews.com" }, "bundle": { "id": "1111111111-p", "name": "Cardio+" }, "contract": { "id": "7879681311" }, "group": { "id": "7539944610", "name": "hospitals_midwest" } },
@@ -5706,8 +5707,24 @@ export const singleGroup = () => {
 		})
 	};
 };
-
-export const manyGroups = () => {
+export const singleGroupTable = () => {
+	return {
+		components: {
+			tableChart
+		},
+		template: `<div class="m_auto"><h1 class="font_display font_regular">Bundles To Groups by Seats (Data)</h1>
+            <tableChart class="" :arrayRaw="arrayRaw"  :colors="colors" />
+            </div>`,
+		computed: {},
+		methods: methods,
+		data: () => ({
+			seatAllocationDataSingleGroup,
+			arrayRaw: seatAllocationDataSingleGroup,
+			colors
+		})
+	};
+};
+export const manyGroupsAndBundle = () => {
 	return {
 		components: {
 			gSankeyChart
@@ -5725,12 +5742,29 @@ export const manyGroups = () => {
 		})
 	};
 };
-export const singleBundle = () => {
+export const manyBundleAndGroupTable = () => {
+	return {
+		components: {
+			tableChart
+		},
+		template: `<div class="m_auto"><h1 class="font_display font_regular">Bundles To Groups by Seats (Data)</h1>
+            <tableChart class="" :arrayRaw="arrayRaw"  :colors="colors" />
+            </div>`,
+		computed: {},
+		methods: methods,
+		data: () => ({
+			seatAllocationData,
+			arrayRaw: seatAllocationData,
+			colors
+		})
+	};
+};
+export const singleBundleAndManyGroup = () => {
     return {
         components: {
             gSankeyChart
         },
-        template: `<div class="p_4"><h1 class="font_display font_regular">Bundles To Groups by Seats</h1>
+        template: `<div class="p_4 max-w_2"><h1 class="font_display font_regular">Bundles To Groups by Seats</h1>
             <div class="flex font_1 font_bold c_black-7 font_ui"><div class="flex_auto text_left">Bundles</div><div class="flex_auto text_right">Groups</div></div>
             <gSankeyChart class="" :arrayRaw="arrayRaw" :colors="colors" />
             </div>`,
@@ -5742,4 +5776,21 @@ export const singleBundle = () => {
             colors
         })
     };
+};
+export const singleBundleAndManyGroupTable = () => {
+	return {
+		components: {
+			tableChart
+		},
+		template: `<div class="m_auto"><h1 class="font_display font_regular">Bundles To Groups by Seats (Data)</h1>
+            <tableChart class="" :arrayRaw="arrayRaw"  :colors="colors" />
+            </div>`,
+		computed: {},
+		methods: methods,
+		data: () => ({
+			seatAllocationDataSingleBundle,
+			arrayRaw: seatAllocationDataSingleBundle,
+			colors
+		})
+	};
 };
