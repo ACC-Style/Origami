@@ -1,4 +1,5 @@
 import { action } from "@storybook/addon-actions";
+import StatefullIcon from "../../src/components/subComponents/StatefullIcon.vue";
 
 export default {
 	title: "SeatManagement/Containers",
@@ -14,21 +15,43 @@ export const purchaserData = {};
 
 export const contract = () => {
 	return {
+		components: {
+			StatefullIcon
+		},
 		template: `
-         <div>
-               <h1>contract</h1>
-               <ul> 
-                  <li>Bundles</li>
-                  <li>Purchase Date</li>
-                  <li>Experation Date</li>                 
-                  <li>Seat Capacity</li>
-                  <li>Associated Groups</li>
-               </ul>
-               <ul> 
-                  <li>Manage Bundles</li>
-
-               </ul>
-         </div>
+      <div>
+      <h1>Contract Container</h1>
+      <div class="flex br_solid br_1 br_black-3 font_ui">
+	<div class="flex_shrink"><StatefullIcon class="font_3" :state="'success'" style="width:100px;height:100%"/></div>
+	<div class="flex_auto flex flex_column p-x_4 p-y_3 font_1">
+      <div class="flex_shrink c_primary-n1 font_2"><strong>Contract ID:</strong>[ ID ]</div>      
+      <div class="flex_shrink">
+         <ul class="ul_none font_0">
+            <li class="p-r_2 p-y_2 inline"><strong>Bundles:</strong></li>
+            <li class="p-r_2 p-y_2 inline">[Bundle Name]</li>
+            <li class="p-r_2 p-y_2 inline">[Bundle Name]</li>
+         </ul>
+      </div>
+		<div class="flex_shrink font_0"><strong>Term:</strong>[ Term ]</div>
+		<div class="flex_shrink font_0"><strong>Amount:</strong>[ Amount ]</div>
+		<div class="flex_shrink font_0">
+			<strong>Purchased:</strong>[ Purchase_Date ]
+      </div>
+	</div>
+	<div class="flex_auto flex flex_column font_n1 p_3">
+   <div class="flex_shrink font_1">
+      <strong>Next Payment:</strong>[ Purchase_Date ]
+   </div>
+		<div class="flex_shrink">
+			<strong>Last Payment:</strong>[ Purchase_Date ]
+		</div>
+		<div class="flex_shrink"><strong>Expires:</strong>[ Purchase_Date ]</div>
+	</div>
+	<div class="flex_auto">
+		
+	</div>
+</div>
+</div>
     `
 	};
 };
