@@ -108,7 +108,7 @@ export default {
 		ValueIcon
 	},
 	methods: {
-		onChange: function(value) {
+		onChange: function (value) {
 			console.log(value);
 			if (value == "") {
 				this.inpusttState = "error";
