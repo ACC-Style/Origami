@@ -12,9 +12,9 @@ export default {
 	}
 };
 export const templateGenric = `
-    <toggleSwitch  :icon="icon" :state="state" :size="size" :isDisabled="isDisabled" :switchID="switchID">
-     This is something
-    </toggleSwitch>
+	<toggleSwitch  :icon="icon" :state="state" :size="size" :isDisabled="isDisabled" :switchID="switchID">
+   	This is something
+	</toggleSwitch>
   `;
 
 export const switchDiscription = {
@@ -38,7 +38,7 @@ export const switchDiscription = {
 	}
 };
 
-export const basic = () => ({
+export const standard = () => ({
 	components: {
 		toggleSwitch
 	},
@@ -50,6 +50,25 @@ export const basic = () => ({
 		return {
 			icon: false,
 			state: "primary",
+			size: "medium",
+			isDisabled: false,
+			label: "Feature Name",
+			switchID: "smallSwitch"
+		};
+	}
+});
+export const smallShaded = () => ({
+	components: {
+		toggleSwitch
+	},
+	template: templateGenric,
+	methods: {
+		action: action("clicked")
+	},
+	data() {
+		return {
+			icon: false,
+			state: "shade",
 			size: "small",
 			isDisabled: false,
 			label: "Feature Name",

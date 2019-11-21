@@ -1,11 +1,13 @@
 <template>
-	<div class="switch">
+	<div class="switch flex font_ui" :class="[switchSize,{'is-active':checked}]">
 		<input class="switch-input" type="checkbox" name="exampleSwitch" v-model="checked" id="switchID" />
-		<label class="switch-paddle br_radius" for="switchID">
+		<label class="switch-paddle br_round flex_shrink" for="switchID" :class="[paddleStyles]">
 			<span class="display_none">Small Portions Only</span>
 		</label>
-		<label for="switchID" class="c_black inline-block">
-			<slot></slot>
+		<label for="switchID" class="inline-block flex_auto flex flex_row" :class="[labelStyle]">
+			<span class="flex_auto self_center">
+				<slot></slot>
+			</span>
 		</label>
 	</div>
 </template>
@@ -23,12 +25,13 @@ export default {
 			type: String,
 			default: "primary"
 		},
-		isDisabled: { type: Boolean, default: false }
+		isDisabled: { type: Boolean, default: false },
+		isChecked: { type: Boolean, default: true }
 	},
 	data() {
 		return {
 			isActive: false,
-			checked: false
+			checked: this.isChecked
 		};
 	},
 	methods: {
@@ -62,30 +65,74 @@ export default {
 			}
 			return classes;
 		},
-		buttonStyles() {
+		switchSize() {
 			let size = "";
 			switch (this.size) {
 				case "tiny":
-					size = "p-y_2 p-x_2 font_n3 font_n3:md";
+					size = "tiny";
 					break;
 				case "small":
-					size = "p-y_2 p-x_3 font_n2 font_n2:md";
+					size = "small";
 					break;
 				case "medium":
-					size = "p-y_2 p-x_3 font_n1 font_0:md";
+					size = "";
 					break;
 				case "large":
-					size = "p-y_3 p-x_4 font_1 font_2:md";
+					size = "large";
 					break;
 				default:
-					size = "p-y_2 p-x_3 font_n1 font_0:md";
+					size = "large";
+					break;
+			}
+			return size;
+		},
+		labelStyle() {
+			let size = "";
+			switch (this.size) {
+				case "tiny":
+					size = "font_n1 p-l_3";
+					break;
+				case "small":
+					size = "font_0 p-l_3";
+					break;
+				case "large":
+					size = "font_2 p-l_3";
+					break;
+				default:
+					size = "font_1 p-l_3";
 					break;
 			}
 			let stateStyle = "";
 			switch (this.state) {
 				case "error":
-					stateStyle =
-						"c_white h:c_white bg_alert-n1 h:bg_alert-n3 a:bg_alert-n4 br_alert-n3";
+					stateStyle = "";
+					break;
+				case "warning":
+					stateStyle = "";
+					break;
+				case "success":
+					stateStyle = "";
+					break;
+				case "shade":
+					stateStyle = "c_black";
+					break;
+				case "secondary":
+					stateStyle = "";
+					break;
+				default:
+					stateStyle = "c_black";
+					break;
+			}
+			if (this.isDisabled) {
+				stateStyle += "disabled opacity_3";
+			}
+			return stateStyle + " " + size;
+		},
+		paddleStyles() {
+			let stateStyle = "";
+			switch (this.state) {
+				case "error":
+					stateStyle = "";
 					if (this.isDisabled) stateStyle = "bg_alert-4";
 					break;
 				case "warning":
@@ -122,7 +169,7 @@ export default {
 			if (this.isDisabled) {
 				stateStyle += " c_black-3 disabled";
 			}
-			return size + " " + stateStyle;
+			return stateStyle;
 		}
 	}
 };
