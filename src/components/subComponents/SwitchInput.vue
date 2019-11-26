@@ -1,10 +1,34 @@
 <template>
 	<div class="switch flex font_ui" :class="[switchSize,{'is-active':checked}]">
-		<input class="switch-input" type="checkbox" name="exampleSwitch" v-model="checked" id="switchID" />
-		<label class="switch-paddle br_round flex_shrink" for="switchID" :class="[paddleStyles]">
-			<span class="display_none">Small Portions Only</span>
+		<input
+			class="switch-input"
+			type="checkbox"
+			name="exampleSwitch"
+			:disabled="isDisabled"
+			v-model="checked"
+			:id="'switch_'+switchID"
+			v-on:change="onClick"
+		/>
+		<label
+			class="switch-paddle br_round flex_shrink transition_1"
+			:for="'switch_'+switchID"
+			:disabled="isDisabled"
+			:class="paddleStyles"
+		>
+			<span class="display_none">Do you like me?</span>
+			<span v-if="icon" class="switch-active" aria-hidden="true">
+				<i class="fas" :class="iconStylesActive"></i>
+			</span>
+			<span v-if="icon" class="switch-inactive" aria-hidden="true">
+				<i class="fas" :class="iconStylesInActive"></i>
+			</span>
 		</label>
-		<label for="switchID" class="inline-block flex_auto flex flex_row" :class="[labelStyle]">
+		<label
+			:for="'switch_'+switchID"
+			class="inline-block flex_auto flex flex_row"
+			:disabled="isDisabled"
+			:class="labelStyle"
+		>
 			<span class="flex_auto self_center">
 				<slot></slot>
 			</span>
@@ -14,7 +38,7 @@
 
 <script>
 export default {
-	name: "toggleSwitch",
+	name: "SwitchInput",
 	props: {
 		size: {
 			type: String,
@@ -26,7 +50,8 @@ export default {
 			default: "primary"
 		},
 		isDisabled: { type: Boolean, default: false },
-		isChecked: { type: Boolean, default: true }
+		isChecked: { type: Boolean, default: true },
+		switchID: { default: "default" }
 	},
 	data() {
 		return {
@@ -37,7 +62,8 @@ export default {
 	methods: {
 		onClick() {
 			if (!this.isDisabled) {
-				this.$emit("click", this.checked);
+
+				this.$emit("onClick", this.checked);
 			}
 		}
 	},
@@ -45,20 +71,34 @@ export default {
 		hasSlotData() {
 			return this.$slots.default;
 		},
-		iconStyles() {
+		iconStylesActive() {
 			let classes = "";
 			switch (this.state) {
-				case "add":
-					classes = "fa-plus m-t_1";
-					break;
 				case "error":
-					classes = "fa-times m-t_1";
+					classes = "fa-times";
 					break;
 				case "success":
-					classes = "fa-check m-t_1";
+					classes = "fa-check";
 					break;
 				case "warning":
-					classes = "fa-exclamation-triangle m-t_1";
+					classes = "fa-exclamation-triangle";
+					break;
+				default:
+					break;
+			}
+			return classes;
+		},
+		iconStylesInActive() {
+			let classes = "";
+			switch (this.state) {
+				case "error":
+					classes = "";
+					break;
+				case "success":
+					classes = "";
+					break;
+				case "warning":
+					classes = "";
 					break;
 				default:
 					break;
@@ -93,7 +133,7 @@ export default {
 					size = "font_n1 p-l_3";
 					break;
 				case "small":
-					size = "font_0 p-l_3";
+					size = "font_n1 p-l_3";
 					break;
 				case "large":
 					size = "font_2 p-l_3";
@@ -105,19 +145,19 @@ export default {
 			let stateStyle = "";
 			switch (this.state) {
 				case "error":
-					stateStyle = "";
+					stateStyle = "c_black";
 					break;
 				case "warning":
-					stateStyle = "";
+					stateStyle = "c_black";
 					break;
 				case "success":
-					stateStyle = "";
+					stateStyle = "c_black";
 					break;
 				case "shade":
 					stateStyle = "c_black";
 					break;
 				case "secondary":
-					stateStyle = "";
+					stateStyle = "c_black";
 					break;
 				default:
 					stateStyle = "c_black";
@@ -129,47 +169,42 @@ export default {
 			return stateStyle + " " + size;
 		},
 		paddleStyles() {
-			let stateStyle = "";
+			let paddleInActiveStyle = "bg_shade-3 c_black h:bg_shade-1";
+			let paddleActiveStyle = "";
 			switch (this.state) {
 				case "error":
-					stateStyle = "";
-					if (this.isDisabled) stateStyle = "bg_alert-4";
+					paddleActiveStyle = " a:bg_alert-n1";
+					if (this.isDisabled) paddleActiveStyle = "bg_alert-4 opacity-4";
 					break;
 				case "warning":
-					stateStyle =
-						"c_white h:c_white bg_warning-n1 h:bg_warning-n3 a:bg_warning-n4 br_warning-n3";
-					if (this.isDisabled) stateStyle = "bg_warning-4";
+					paddleActiveStyle =
+						"h:c_white a:bg_warning-n4 br_warning-n3";
+					if (this.isDisabled) paddleActiveStyle = "bg_warning-4";
 					break;
 				case "success":
-					stateStyle =
-						"c_white h:c_white bg_success-n1 h:bg_success-n3 a:bg_success-n4 br_success-n3";
-					if (this.isDisabled) stateStyle = "bg_success-4";
+					paddleActiveStyle =
+						"h:c_white a:bg_success br_success-n3";
+					if (this.isDisabled) paddleActiveStyle = "bg_success-4";
 					break;
 				case "shade":
-					stateStyle =
-						"c_black bg_shade-3 h:bg_shade-1 h:c_white a:c_shade-4 a:bg_shade-n3";
-					if (this.isDisabled) stateStyle = "bg_shade-4";
+					paddleActiveStyle =
+						"h:bg_shade-1 h:c_white a:c_shade-4 a:bg_shade-n3";
+					if (this.isDisabled) paddleActiveStyle = "bg_shade-4";
 					break;
 				case "secondary":
-					stateStyle =
-						"c_black bg_secondary-3 h:bg_secondary-1 h:c_white a:c_secondary-4 a:bg_secondary-n3";
-					if (this.isDisabled) stateStyle = "bg_secondary-4";
+					paddleActiveStyle = "h:bg_secondary-1 h:c_white a:c_secondary-4 a:bg_secondary-n3";
+					if (this.isDisabled) paddleActiveStyle = "bg_secondary-4";
 					break;
-				case "none":
-					stateStyle = this.isDisabled
+				default:
+					paddleActiveStyle = this.isDisabled
 						? "c_shade bg_tansparent"
 						: "undecorated h:underline c_black-7 h:c_black bg_tansparent";
 					break;
-				default:
-					stateStyle =
-						"c_white h:c_white bg_primary h:bg_primary-n2 a:bg_primary-n4";
-					if (this.isDisabled) stateStyle = "bg_primary-4";
-					break;
 			}
 			if (this.isDisabled) {
-				stateStyle += " c_black-3 disabled";
+				paddleActiveStyle += " c_black-3 disabled";
 			}
-			return stateStyle;
+			return paddleActiveStyle + " " + paddleInActiveStyle;
 		}
 	}
 };
@@ -177,10 +212,7 @@ export default {
 <style scoped>
 .switch {
 	position: relative;
-	height: 32px;
 	height: 2rem;
-	margin-bottom: 16px;
-	margin-bottom: 1rem;
 	outline: 0;
 	color: white;
 	font-size: 14px;
@@ -201,15 +233,13 @@ export default {
 .switch-paddle {
 	display: block;
 	position: relative;
-	width: 64px;
 	width: 4rem;
-	height: 32px;
 	height: 2rem;
 	background: #cacaca;
 	color: inherit;
 	font-weight: inherit;
 	cursor: pointer;
-	transition: all 0.25s ease-out;
+	transition: all 0.125s ease-out;
 }
 input + .switch-paddle {
 	margin: 0;
@@ -217,18 +247,13 @@ input + .switch-paddle {
 .switch-paddle::after {
 	display: block;
 	position: absolute;
-	top: 4px;
 	top: 0.25rem;
-	left: 4px;
 	left: 0.25rem;
-	width: 24px;
-	width: 1.5rem;
-	height: 24px;
 	height: 1.5rem;
 	transform: translate3d(0, 0, 0);
 	background: white;
 	content: "";
-	transition: all 0.25s ease-out;
+	transition: all 0.125s ease-out;
 	border-radius: inherit;
 }
 input:checked ~ .switch-paddle {
@@ -265,28 +290,22 @@ input:checked + label > .switch-inactive {
 }
 .switch.tiny,
 .switch.tiny .switch-paddle {
-	height: 24px;
-	height: 1.5rem;
+	height: 1rem;
 }
 .switch.tiny .switch-paddle {
-	width: 48px;
-	width: 3rem;
-	font-size: 10px;
-	font-size: 0.625rem;
+	width: 2rem;
+	font-size: 0.5rem;
 }
 .switch.tiny .switch-paddle::after {
 	top: 4px;
-	top: 0.25rem;
+	top: 0.125rem;
 	left: 4px;
-	left: 0.25rem;
-	width: 16px;
-	width: 1rem;
-	height: 16px;
-	height: 1rem;
+	left: 0.125rem;
+	width: 0.75rem;
+	height: 0.75rem;
 }
 .switch.tiny input:checked ~ .switch-paddle::after {
-	left: 28px;
-	left: 1.75rem;
+	left: 1.125rem;
 }
 .switch.small,
 .switch.small .switch-paddle {

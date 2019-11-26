@@ -1,9 +1,9 @@
 import { action } from "@storybook/addon-actions";
-import toggleSwitch from "../../src/components/subComponents/Switch.vue";
+import SwitchInput from "../../src/components/subComponents/SwitchInput.vue";
 
 export default {
-	title: "Basic/toggleSwitch",
-	component: toggleSwitch,
+	title: "Basic/Switch",
+	component: SwitchInput,
 	excludeStories: ["templateGenric", "switchDiscription"],
 	parameters: {
 		notes:
@@ -12,9 +12,9 @@ export default {
 	}
 };
 export const templateGenric = `
-	<toggleSwitch  :icon="icon" :state="state" :size="size" :isDisabled="isDisabled" :switchID="switchID">
+	<SwitchInput  :icon="icon" :state="state" :size="size" :isDisabled="isDisabled" :switchID="switchID">
    	This is something
-	</toggleSwitch>
+	</SwitchInput>
   `;
 
 export const switchDiscription = {
@@ -25,7 +25,8 @@ export const switchDiscription = {
 			state: "primary,secondary,add,error,warning,success",
 			icon: "Whether icon is visible or not",
 			isDisabled: "Boolean for toggling the look and click event",
-			label: "The Label is the text content that shows up next to a switch"
+			label:
+				"The Label is the text content that shows up next to a switch"
 		},
 		events: {
 			click: "Event for user clicking the component",
@@ -40,7 +41,7 @@ export const switchDiscription = {
 
 export const standard = () => ({
 	components: {
-		toggleSwitch
+		SwitchInput
 	},
 	template: templateGenric,
 	methods: {
@@ -49,9 +50,9 @@ export const standard = () => ({
 	data() {
 		return {
 			icon: false,
-			state: "primary",
+			state: "error",
 			size: "medium",
-			isDisabled: false,
+			isDisabled: true,
 			label: "Feature Name",
 			switchID: "smallSwitch"
 		};
@@ -59,7 +60,7 @@ export const standard = () => ({
 });
 export const smallShaded = () => ({
 	components: {
-		toggleSwitch
+		SwitchInput
 	},
 	template: templateGenric,
 	methods: {
@@ -68,7 +69,7 @@ export const smallShaded = () => ({
 	data() {
 		return {
 			icon: false,
-			state: "shade",
+			state: "success",
 			size: "small",
 			isDisabled: false,
 			label: "Feature Name",

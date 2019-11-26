@@ -21,22 +21,22 @@ export const userDataFound = {
 	products: [
 		{
 			product: 1234567890,
-			access: true,
+			hasAccess: false,
 			name: "Gold Pass"
 		},
 		{
 			product: 4567890123,
-			access: false,
+			hasAccess: false,
 			name: "Silver Pass"
 		},
 		{
 			product: 7894561230,
-			access: true,
+			hasAccess: false,
 			name: "Bronze Pass"
 		},
 		{
 			product: 123456789,
-			access: true,
+			hasAccess: false,
 			name: "iScience"
 		}
 	]
