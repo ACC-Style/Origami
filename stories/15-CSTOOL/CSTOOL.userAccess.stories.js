@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import user from "../../src/components/CSTOOL/cstool.userAccess.vue";
 
 export default {
-	title: "CSTOOL/Users",
+	title: "CSTOOL/Access",
 	components: {
 		user
 	},
