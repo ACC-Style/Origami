@@ -1,6 +1,6 @@
 module.exports = [
 	{
-		name: "@storybook/addon-docs/vue/preset",
+		name: "@storybook/addon-docs/preset",
 		options: {
 			configureJSX: true,
 			babelOptions: {},

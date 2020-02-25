@@ -1,10 +1,10 @@
 <template>
 	<label
-		class="value-space br_solid br-w_1 p_3 texture_light"
+		class="value-space br_solid br_1 p_3 texture_light c_black-6"
 		v-bind:class="areaStyle"
 		:for="inputNameTarget"
 	>
-		<i class="fal" v-bind:class="icon"></i>
+		<i class="fas" v-bind:class="icon"></i>
 	</label>
 </template>
 
@@ -21,26 +21,26 @@ export default {
 			let styles = "";
 			switch (this.state) {
 				case "error":
-					styles += " bg_alert-4 br_alert c_alert ";
+					styles += " bg_alert-4 br_alert";
 					break;
 				case "warning":
-					styles += " bg_warning-4 br_warning c_warning ";
+					styles += " bg_warning-4 br_warning";
 					break;
 				case "success":
-					styles += " bg_sucess-4 br_sucess c_sucess ";
-					break;
-				case "shade":
-					styles += " c_black bg_shade-3 ";
+					styles += " bg_sucess-4 br_sucess";
 					break;
 				case "info":
-					styles += " bg_info-4 br_info c_info ";
+					styles += " bg_info-4 br_info";
 					break;
 				case "accent":
-					styles += " c_black bg_accent-n2 ";
+					styles += "bg_accent-n2 ";
 					break;
 					return styles;
+				case "shade":
+					styles += "bg_black-3 ";
+					break;
 				default:
-					styles += " c_black bg_shade-3 br_shade-2";
+					styles += "bg_black-2 br_black-3";
 					break;
 			}
 			return styles;

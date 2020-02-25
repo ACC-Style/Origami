@@ -15,7 +15,7 @@ export default {
 export const templateEmail = `
     <InputEmail :icon="icon" :required="required">{{label}}</InputEmail>
 `;
-export const basic = () => {
+export const email = () => {
 	return {
 		components: { InputEmail },
 		template: templateEmail,
@@ -34,7 +34,8 @@ export const username = () => {
 		data: () => ({
 			label: "User Name",
 			icon: "fa-user",
-			required: false
+			required: false,
+			errorMessage: "Usernames are emails and this doesn't seem to be an email."
 		})
 	};
 };

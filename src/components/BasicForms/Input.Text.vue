@@ -12,26 +12,28 @@
 				<i class="fas fa-asterisk c_warning font_n3 vertical-align_top"></i>
 			</span>
 		</label>
-		<div class="input-holder flex self_end">
-			<ValueIcon class="flex_shrink" :state="inputState" :icon="icon" inputNameTarget="'email'" />
-			<!-- <div class="flex_shrink">
-				<stateIcon :state="inputState"></stateIcon>
-			</div>-->
-
+		<div class="input-holder flex self_end shadow_overlap-light">
+			<ValueIcon
+				v-if="icon"
+				class="flex_shrink"
+				:state="inputState"
+				:icon="icon"
+				inputNameTarget="'text'"
+			/>
 			<input
-				id="email"
-				name="email"
-				v-on:change="onChange(username)"
-				class="br_0 br-b_1 p-y_2 br_solid flex_auto p-x_4 lh_3"
+				id="text"
+				name="text"
+				v-on:change="onChange(text)"
+				class="br_1 p-y_2 br_solid flex_auto p-x_4 lh_3"
 				type="text"
-				v-model="username"
-				placeholder="youremail@acc.org"
+				v-model="text"
 				required="required"
 				:class="{
 						'br_alert-n1': inputState == 'error',
 						'br_warning-n1': inputState == 'warning',
 						'br_info-n1': inputState == 'info',
-						'br_success-n1': inputState == 'success',' br_shade ': inputState == ''
+                  'br_success-n1': inputState == 'success',
+                  'br_black-2 ': inputState == ''
           }"
 			/>
 			<div
@@ -47,8 +49,7 @@
 				<small>optional</small>
 			</div>
 		</div>
-
-		<messageHolder :state="inputState">{{UIMessage}}</messageHolder>
+		<messageHolder :state="inputState">{{stateMessage}}</messageHolder>
 	</div>
 </template>
 
@@ -61,16 +62,15 @@ export default {
 	name: "inputEmail",
 	props: {
 		value: { type: String, default: "" },
-		icon: { type: String, default: "fa-user" },
+		icon: { type: String, default: "" },
 		required: { type: Boolean, default: true },
-		state: { type: String, default: "" },
-		errorMessage: { type: String, default: "" }
+		state: { type: String, default: "" }
 	},
 	data() {
 		return {
-			username: this.value,
+			text: this.value,
 			inputState: this.state,
-			UIMessage: ""
+			stateMessage: ""
 		};
 	},
 	computed: {
@@ -113,17 +113,15 @@ export default {
 			console.log(value);
 			if (value == "") {
 				this.inpusttState = "error";
-				this.UIMessage = "You didn't seem to type anything.";
-				this.$emit("update:username", "");
+				this.stateMessage = "You didn't seem to type anything.";
+				this.$emit("update:text", "");
 			} else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
 				this.inputState = "";
-				this.$emit("update:username", value);
+				this.$emit("update:text", value);
 			} else {
 				this.inputState = "error";
-				this.errorMessage === ""
-					? (this.UIMessage = "This is not an email.")
-					: (this.UIMessage = this.errorMessage);
-				this.$emit("update:username", "");
+				this.stateMessage = "This is not an email.";
+				this.$emit("update:text", "");
 			}
 		}
 	}

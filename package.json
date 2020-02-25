@@ -1,42 +1,42 @@
 {
-	"name": "origamistorybook",
-	"version": "0.1.0",
-	"private": false,
-	"scripts": {
-		"storybook": "start-storybook -p 6006 -c .storybook ",
-		"build-storybook": "build-storybook -o docs"
-	},
-	"description": "component library for ACC",
-	"main": "index.js",
-	"directories": {
-		"doc": "docs"
-	},
-	"dependencies": {
-		"@storybook/cli": "^5.2.5",
-		"vue": "^2.6.10",
-		"vue-google-charts": "^0.3.2"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.6.2",
-		"@storybook/addon-actions": "^5.2.1",
-		"@storybook/addon-docs": "^5.3.0-alpha.3",
-		"@storybook/addon-knobs": "^5.2.1",
-		"@storybook/addon-links": "^5.2.1",
-		"@storybook/addon-notes": "^5.2.1",
-		"@storybook/addons": "^5.2.1",
-		"@storybook/vue": "^5.2.1",
-		"babel-loader": "^8.0.6",
-		"babel-preset-vue": "^2.0.2",
-		"storybook-addon-vue-info": "^1.3.2",
-		"vue-docgen-api": "^3.23.1",
-		"vue-loader": "^15.7.1",
-		"vue-template-compiler": "^2.6.10"
-	},
-	"keywords": [
-		"vue",
-		"components",
-		"stories"
-	],
-	"author": "Matt Watier",
-	"license": "ISC"
+    "name": "origamistorybook",
+    "version": "0.1.0",
+    "private": false,
+    "scripts": {
+        "storybook": "start-storybook -p 6006 -c .storybook ",
+        "build-storybook": "build-storybook -o docs"
+    },
+    "description": "component library for ACC",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "dependencies": {
+        "@storybook/cli": "^5.2.5",
+        "vue": "^2.6.11",
+        "vue-google-charts": "^0.3.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.4",
+        "@storybook/addon-actions": "^5.3.14",
+        "@storybook/addon-docs": "^5.3.14",
+        "@storybook/addon-knobs": "^5.3.14",
+        "@storybook/addon-links": "^5.3.14",
+        "@storybook/addon-notes": "^5.3.14",
+        "@storybook/addons": "^5.3.14",
+        "@storybook/vue": "^5.3.14",
+        "babel-loader": "^8.0.6",
+        "babel-preset-vue": "^2.0.2",
+        "storybook-addon-vue-info": "^1.4.2",
+        "vue-docgen-api": "^3.26.0",
+        "vue-loader": "^15.9.0",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "keywords": [
+        "vue",
+        "components",
+        "stories"
+    ],
+    "author": "Matt Watier",
+    "license": "ISC"
 }
