@@ -2,8 +2,11 @@
 	<div id="inputEmail" class="question font_ui">
 		<label
 			for="email"
-			v-bind:class="{'c_alert': inputState == 'alert','c_warning': inputState == 'warning'}"
-			class="label-holder flex font_1 p-y_2"
+			v-bind:class="{
+				c_alert: inputState == 'alert',
+				c_warning: inputState == 'warning'
+			}"
+			class="label-holder flex font_0 font_bold p-y_2"
 		>
 			<span class="text cell flex_shrink">
 				<slot></slot>
@@ -29,27 +32,28 @@
 				v-model="text"
 				required="required"
 				:class="{
-						'br_alert-n1': inputState == 'error',
-						'br_warning-n1': inputState == 'warning',
-						'br_info-n1': inputState == 'info',
-                  'br_success-n1': inputState == 'success',
-                  'br_black-2 ': inputState == ''
-          }"
+					'br_alert-n1': inputState == 'error',
+					'br_warning-n1': inputState == 'warning',
+					'br_info-n1': inputState == 'info',
+					'br_success-n1': inputState == 'success',
+					'br_black-2 ': inputState == ''
+				}"
 			/>
 			<div
 				class="optional br_0 br_solid br-b_1 p-y_3 flex_shrink p-x_3 lh_3"
 				v-if="!required"
 				:class="{
-						'br_alert-n1 c_alert': inputState == 'error',
-						'br_warning-n1 c_warning': inputState == 'warning',
-						'br_info-n1 c_primary': inputState == 'info',
-						'br_success-n1 c_primary': inputState == 'success',' br_shade c_primary ': inputState == ''
-          }"
+					'br_alert-n1 c_alert': inputState == 'error',
+					'br_warning-n1 c_warning': inputState == 'warning',
+					'br_info-n1 c_primary': inputState == 'info',
+					'br_success-n1 c_primary': inputState == 'success',
+					' br_shade c_primary ': inputState == ''
+				}"
 			>
 				<small>optional</small>
 			</div>
 		</div>
-		<messageHolder :state="inputState">{{stateMessage}}</messageHolder>
+		<messageHolder :state="inputState">{{ stateMessage }}</messageHolder>
 	</div>
 </template>
 
