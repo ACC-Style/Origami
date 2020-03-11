@@ -1,7 +1,7 @@
 <template>
 	<Accordion>
 		<template v-slot:header>
-			<h2 class="font_display m_0">{{ metric.title }}</h2>
+			<h2 class="font_display m_0 font_2 lh_2">{{ metric.title }}</h2>
 		</template>
 		<template v-slot:content>
 			<div class="font_copy">

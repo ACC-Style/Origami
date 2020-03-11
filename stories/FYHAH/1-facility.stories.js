@@ -107,7 +107,8 @@ export const facilityData = {
 	},
 	metrics: [
 		{
-			title: "NCDR METRIC 1",
+			title:
+				"Diagnostic Catheterization and Percutaneous Coronary Intervention Metrics",
 			subTitle:
 				"Hospital performance for patients who have had a cardiac catheterization or PCI (angioplasty)",
 			data: [

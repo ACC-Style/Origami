@@ -4,13 +4,11 @@
 			data-attr="accordion-header"
 			@click="toggle"
 			:class="{ 'is-active': expanded }"
-			class="br_black-3 br_solid br_1 bg_black-1 p_3 p-x_2 font_1 flex"
+			class="br_black-3 br_solid br_1 bg_black-1 p_3 p-x_2 flex"
 		>
-			<div
-				class="flex_shrink flex column justify_center font-size_up p-r_2 p-l_2"
-			>
+			<div class="flex_grow flex column justify_center font-size_up p-r_2 p-l_2">
 				<i
-					class="fas fa-fw icon-toggle_plus-minus flex_auto self_center  a:c_shade-n5 c_primary-n1"
+					class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_shade-n5 c_primary-n1"
 					:class="{ 'is-active': expanded }"
 				></i>
 			</div>
