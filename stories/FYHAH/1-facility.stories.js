@@ -1,6 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import facilityProfileIdentifier from "../../src/components/FYHAH/FYHAH.facilityProfileIdentifier.vue";
 import facilityResult from "../../src/components/FYHAH/FYHAH.facilityResult.vue";
+import tableParticipation from "../../src/components/FYHAH/FYHAH.tableParticipation.vue";
 
 export default {
 	title: "FYHAH",
@@ -66,14 +67,14 @@ export const facilityData = {
 			value: "Participating",
 			associatedServices:
 				"Percutaneous Coronary Intervention for Elective and Emergency Cases & Percutaneous Coronary Intervention for Acute Myocardial Infarction",
-			helpertext: null
+			helperText: null
 		},
 		{
 			id: 281,
 			label: "CathPCI Public Reporting Status",
 			value: "Does Not Perform Services",
 			associatedServices: "Diagnostic Cardiac Catheterization",
-			helpertext:
+			helperText:
 				"Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
 		},
 		{
@@ -81,7 +82,7 @@ export const facilityData = {
 			label: "ICD Registry™",
 			value: "Participating",
 			associatedServices: "Atrial fibrillation ablation",
-			helpertext:
+			helperText:
 				"Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
 		},
 		{
@@ -89,14 +90,14 @@ export const facilityData = {
 			label: "ICD Public Reporting Status",
 			value: "Participating",
 			associatedServices: "Diagnostic Cardiac Catheterization",
-			helpertext: null
+			helperText: null
 		},
 		{
 			id: 803,
 			label: "Chest Pain - MI Registry™",
 			value: "Not Participating",
 			associatedServices: "Diagnostic Cardiac Catheterization",
-			helpertext:
+			helperText:
 				"Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
 		}
 	],
@@ -161,6 +162,20 @@ export const result = () => ({
 	data: () => ({
 		facility: facilityData.facility,
 		services: facilityData.services
+	}),
+	description: facilityDescription
+});
+export const participation = () => ({
+	title: "FYHAH/Tables/Participation",
+	components: {
+		tableParticipation
+	},
+	template: `<tableParticipation :participation='participation'/>`,
+	methods: {
+		action: action("clicked")
+	},
+	data: () => ({
+		participation: facilityData.participation
 	}),
 	description: facilityDescription
 });
