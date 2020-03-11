@@ -3,11 +3,20 @@
 		<header
 			data-attr="accordion-header"
 			@click="toggle"
-			:class="{'is-active':expanded}"
-			class="br_black-3 br_solid br_1 bg_black-1 p_3 p-x_2 font_1"
+			:class="{ 'is-active': expanded }"
+			class="br_black-3 br_solid br_1 bg_black-1 p_3 p-x_2 font_1 flex"
 		>
-			<i class="fas fa-fw icon-toggle_plus-minus p-r_2 p-l_2 a:c_shade-n5 c_primary-n1"></i>
-			<slot name="header">No Content Passed</slot>
+			<div
+				class="flex_shrink flex column justify_center font-size_up p-r_2 p-l_2"
+			>
+				<i
+					class="fas fa-fw icon-toggle_plus-minus flex_auto self_center  a:c_shade-n5 c_primary-n1"
+					:class="{ 'is-active': expanded }"
+				></i>
+			</div>
+			<div class="flex_auto">
+				<slot name="header">No Content Passed</slot>
+			</div>
 		</header>
 		<transition
 			name="slide-down"
@@ -33,6 +42,7 @@
 
 <script>
 export default {
+	name: "Accordion",
 	data() {
 		return {
 			expanded: false

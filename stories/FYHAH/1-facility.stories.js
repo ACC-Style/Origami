@@ -2,6 +2,7 @@ import { action } from "@storybook/addon-actions";
 import facilityProfileIdentifier from "../../src/components/FYHAH/FYHAH.facilityProfileIdentifier.vue";
 import facilityResult from "../../src/components/FYHAH/FYHAH.facilityResult.vue";
 import tableParticipation from "../../src/components/FYHAH/FYHAH.tableParticipation.vue";
+import tableMetric from "../../src/components/FYHAH/FYHAH.tableMetric.vue";
 
 export default {
 	title: "FYHAH",
@@ -35,99 +36,223 @@ export const facilityDescription = {
 	}
 };
 export const facilityData = {
-	id: 644,
-	Distance: 3.3,
+	id: 420,
+	Distance: 4.3,
 	facility: {
-		BrandedName: "Gigashots",
-		Address1: "3763 Linden Drive",
+		BrandedName: "Abatz",
+		Address1: "0 Sage Point",
 		Address2: null,
-		City: "Oklahoma City",
-		State: "OK",
-		Zip: "73135",
+		City: "Vero Beach",
+		State: "FL",
+		Zip: "32969",
 		WebURL: null,
-		Phone: "405-593-1519",
-		GoogleAddress: "4500+San+Pablo+Road+Jacksonville+FL+32224"
+		Phone: "772-322-5819",
+		GoogleAddress: "700+West+Ave.So.+La+Crosse+WI+54601"
 	},
 	services: [
 		"Coronary Artery Bypass Graft Surgery",
 		"Left Atrial Appendage Occlusion",
-		"Diagnostic Cardiac Catheterization",
-		"Carotid Artery Stenting",
-		"Carotid Endarterectomy",
 		"Transcatheter Valve Replacement",
-		"Cardiac Defibrillator Implantation",
 		"Acute Myocardial Infarction Treatment",
+		"Carotid Artery Stenting",
+		"Congenital Heart Defect Intervention",
+		"Pacemaker Implantation",
+		"Carotid Endarterectomy",
 		"Percutaneous Coronary Intervention for Elective and Emergency Cases",
-		"Pacemaker Implantation"
+		"Cardiac Defibrillator Implantation"
 	],
-	participation: [
-		{
-			id: 397,
-			label: "CathPCI Registry®",
-			value: "Participating",
-			associatedServices:
-				"Percutaneous Coronary Intervention for Elective and Emergency Cases & Percutaneous Coronary Intervention for Acute Myocardial Infarction",
-			helperText: null
-		},
-		{
-			id: 281,
-			label: "CathPCI Public Reporting Status",
-			value: "Does Not Perform Services",
-			associatedServices: "Diagnostic Cardiac Catheterization",
-			helperText:
-				"Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
-		},
-		{
-			id: 282,
-			label: "ICD Registry™",
-			value: "Participating",
-			associatedServices: "Atrial fibrillation ablation",
-			helperText:
-				"Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
-		},
-		{
-			id: 228,
-			label: "ICD Public Reporting Status",
-			value: "Participating",
-			associatedServices: "Diagnostic Cardiac Catheterization",
-			helperText: null
-		},
-		{
-			id: 803,
-			label: "Chest Pain - MI Registry™",
-			value: "Not Participating",
-			associatedServices: "Diagnostic Cardiac Catheterization",
-			helperText:
-				"Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
-		}
-	],
+	participation: {
+		data: [
+			{
+				id: 955,
+				label: "CathPCI Registry®",
+				value: "Not Participating",
+				associatedServices:
+					"Percutaneous Coronary Intervention for Elective and Emergency Cases & Percutaneous Coronary Intervention for Acute Myocardial Infarction",
+				helperText: null
+			},
+			{
+				id: 210,
+				label: "CathPCI Public Reporting Status",
+				value: "Ineligible: Not Participating in Registry",
+				associatedServices: "Atrial fibrillation ablation",
+				helperText: null
+			},
+			{
+				id: 871,
+				label: "ICD Registry™",
+				value: "Not Participating",
+				associatedServices: "Diagnostic Cardiac Catheterization",
+				helperText: null
+			},
+			{
+				id: 737,
+				label: "ICD Public Reporting Status",
+				value: "Does Not Perform Services",
+				associatedServices:
+					"Percutaneous Coronary Intervention for Elective and Emergency Cases & Percutaneous Coronary Intervention for Acute Myocardial Infarction",
+				helperText:
+					"Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\r\\n\\r\\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
+			},
+			{
+				id: 446,
+				label: "Chest Pain - MI Registry™",
+				value: "Ineligible: Not Participating in Registry",
+				associatedServices: "Atrial fibrillation ablation",
+				helperText: null
+			}
+		],
+		title: "Registry and Quality Program Participation.",
+		subTitle: "Registry and Quality Program Participation."
+	},
 	metrics: [
 		{
 			title: "NCDR METRIC 1",
-			subtitle:
+			subTitle:
 				"Hospital performance for patients who have had a cardiac catheterization or PCI (angioplasty)",
 			data: [
 				{
-					id: 58,
-					label: "Metric Title 5",
+					id: 87,
+					label:
+						"Use of all recommended medications (Aspirin, P2Y12 inhibitor medication, and Statin) to reduce the chance of blood clots and decrease cholesterol after PCI/angioplasty.",
 					type: "number",
-					value: 2,
-					helper:
+					value: 3,
+					helperText:
 						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
 				},
 				{
-					id: 36,
-					label: "Metric Title 6",
-					type: "star",
-					value: 4,
-					helper: null
+					id: 43,
+					label:
+						"Use of a P2Y12 inhibitor medication to reduce the chance of blood clots after PCI/angioplasty.",
+					type: "number",
+					value: 2,
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
 				},
 				{
-					id: 10,
-					label: "Metric Title 2",
+					id: 24,
+					label:
+						"Use of Aspirin to reduce the chance of blood clots after PCI/angioplasty.",
+					type: "number",
+					value: 4,
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
+				},
+				{
+					id: 59,
+					label:
+						"Use of all recommended medications (Aspirin, P2Y12 inhibitor medication, and Statin) to reduce the chance of blood clots and decrease cholesterol after PCI/angioplasty.",
+					type: "number",
+					value: 5,
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
+				},
+				{
+					id: 69,
+					label:
+						"Use of all recommended medications (Aspirin, P2Y12 inhibitor medication, and Statin) to reduce the chance of blood clots and decrease cholesterol after PCI/angioplasty.",
+					type: "star",
+					value: 5,
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
+				}
+			]
+		},
+		{
+			title: "NCDR METRIC2",
+			subTitle:
+				"Hospital performance for patients who have had a cardiac catheterization or PCI (angioplasty)",
+			data: [
+				{
+					id: 55,
+					label:
+						"Use of a Statin to decrease cholesterol after PCI/angioplasty.",
+					type: "number",
+					value: 3,
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
+				},
+				{
+					id: 93,
+					label:
+						"Use of a Statin to decrease cholesterol after PCI/angioplasty.",
+					type: "number",
+					value: 2,
+					helperText: null
+				},
+				{
+					id: 64,
+					label:
+						"Use of Aspirin to reduce the chance of blood clots after PCI/angioplasty.",
+					type: "number",
+					value: 4,
+					helperText: null
+				},
+				{
+					id: 90,
+					label:
+						"Use of a Statin to decrease cholesterol after PCI/angioplasty.",
+					type: "star",
+					value: 1,
+					helperText: null
+				},
+				{
+					id: 22,
+					label:
+						"Number of PCI/angioplasty procedures performed during the calendar year.",
+					type: "number",
+					value: 1,
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
+				}
+			]
+		},
+		{
+			title: "NCDR METRIC 3",
+			subTitle:
+				"Hospital performance for patients who have had a cardiac catheterization or PCI (angioplasty)",
+			data: [
+				{
+					id: 13,
+					label:
+						"Number of PCI/angioplasty procedures performed during the calendar year.",
+					type: "number",
+					value: 1,
+					helperText: null
+				},
+				{
+					id: 93,
+					label:
+						"Use of a Statin to decrease cholesterol after PCI/angioplasty.",
+					type: "number",
+					value: 2,
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
+				},
+				{
+					id: 49,
+					label:
+						"Use of Aspirin to reduce the chance of blood clots after PCI/angioplasty.",
 					type: "star",
 					value: 4,
-					helper:
+					helperText:
+						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
+				},
+				{
+					id: 51,
+					label:
+						"Use of all recommended medications (Aspirin, P2Y12 inhibitor medication, and Statin) to reduce the chance of blood clots and decrease cholesterol after PCI/angioplasty.",
+					type: "number",
+					value: 2,
+					helperText: null
+				},
+				{
+					id: 45,
+					label:
+						"Use of a P2Y12 inhibitor medication to reduce the chance of blood clots after PCI/angioplasty.",
+					type: "star",
+					value: 1,
+					helperText:
 						"Patients should be prescribed Aspirin to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy). This score shows how well this facility is following this guideline - higher is better. Patients who cannot take aspirin are excluded."
 				}
 			]
@@ -165,7 +290,7 @@ export const result = () => ({
 	}),
 	description: facilityDescription
 });
-export const participation = () => ({
+export const table_participation = () => ({
 	title: "FYHAH/Tables/Participation",
 	components: {
 		tableParticipation
@@ -176,6 +301,20 @@ export const participation = () => ({
 	},
 	data: () => ({
 		participation: facilityData.participation
+	}),
+	description: facilityDescription
+});
+export const table_metric = () => ({
+	title: "FYHAH/Tables/Metric",
+	components: {
+		tableMetric
+	},
+	template: `<tableMetric :metric='metric'/>`,
+	methods: {
+		action: action("clicked")
+	},
+	data: () => ({
+		metric: facilityData.metrics[0]
 	}),
 	description: facilityDescription
 });
