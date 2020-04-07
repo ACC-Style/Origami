@@ -76,7 +76,7 @@
 							<span>{{DateClaimed}}</span>
 						</div>
 					</div>
-					<div class="download font_n2 c_primary undecorated h:underline print-display_none sm_button">
+					<div v-on:click="certDownload" class="download font_n2 c_primary undecorated h:underline print-display_none sm_button">
 						<i class="fas fa-badge-check m-r_2"></i> Download Certificate
 					</div>
 				</div>
@@ -132,6 +132,9 @@ export default {
 					? "order_0 c_white bg_" +type +" br_solid br_1 print-display_block br_" +type
 					: "order_last br_shade-4 bg_shade-5  c_shade-3 br_1 br_dashed print-display_none";
 			return decorationClasses;
+		},
+		certDownload:function(id){
+			
 		}
 	}
 };
