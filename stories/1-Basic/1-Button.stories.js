@@ -1,5 +1,4 @@
 import { action } from "@storybook/addon-actions";
-import { linkTo } from "@storybook/addon-links";
 
 import Btn from "../../src/components/subComponents/Btn.vue";
 import BtnToggle from "../../src/components/subComponents/BtnToggle.vue";

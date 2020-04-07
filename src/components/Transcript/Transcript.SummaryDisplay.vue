@@ -65,6 +65,9 @@
 </template>
 
 <script>
+  /**
+   * foo bar
+   */
 export default {
     name: "SummaryDisplay",
     data() {
@@ -76,7 +79,7 @@ export default {
 	props: {
 			filterStartDate: { type: String, default: "1949-01-01" },
 			filterEndDate: { type: String, default: null },
-			filteredCreditCount: { type: Object, required:true}
+			filteredCreditCount: { type: Object, required:true, default: ()=>({"All":0})}
         
 	},
 	methods: {
@@ -89,16 +92,15 @@ export default {
         creditCounterDecoratorClass: function () {
             var count = Object.keys(this.filteredCreditCount).length - 1;
             var returnedClass = "flex_auto ";
-            if(count >= 1){
-                returnedClass +=  " p-y_3"
+            if(count >= 1){ 
+                returnedClass +=  " p-y_3";
             }else{
-                returnedClass +=  " p-y_4"
+                returnedClass +=  " p-y_4";
             }
-            if(count < 3){ returnedClass +=  " font_2";}
-            if(count == 3){ returnedClass +=  " font_1";}
+            if(count < 3){returnedClass +=  " font_2";}
+            if(count == 3){returnedClass +=  " font_1";}
             if(count == 4){returnedClass +=  " font_0";}
-            if(count >= 4)
-                    returnedClass +=  "  w_50 br_solid br_white-5 br_1 font_n1";
+            if(count >= 4){returnedClass +=  "  w_50 br_solid br_white-5 br_1 font_n1";}
             return returnedClass;
         },
         creditsOnly: function(){
@@ -107,11 +109,11 @@ export default {
             return list;
         },
         creditColumnClass: function(){
-           var count = Object.keys(this.filteredCreditCount).length - 1;
+            var count = Object.keys(this.filteredCreditCount).length - 1;
             var returnedClass = '';
             if( count >= 4 )
-            {returnedClass =  'flex_row flex_wrap' }
-            else{ returnedClass =  'flex_column'}
+            {returnedClass =  'flex_row flex_wrap'; }
+            else{ returnedClass =  'flex_column';}
             return returnedClass;
         },
         

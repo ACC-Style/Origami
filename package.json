@@ -29,7 +29,6 @@
 		"babel-loader": "^8.0.6",
 		"babel-preset-vue": "^2.0.2",
 		"storybook-addon-vue-info": "^1.4.2",
-		"vue-docgen-api": "^3.26.0",
 		"vue-loader": "^15.9.0",
 		"vue-template-compiler": "^2.6.11"
 	},
