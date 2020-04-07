@@ -4,15 +4,15 @@
 			data-attr="accordion-header"
 			@click="toggle"
 			:class="{ 'is-active': expanded }"
-			class="br_black-3 br_solid br_1 bg_black-1 p_3 p-x_2 flex"
+			class="br_black-3 br_solid br_1 bg_black-1 flex"
 		>
-			<div class="flex_grow flex column justify_center font-size_up p-r_2 p-l_2">
+			<div class="flex_grow flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4">
 				<i
 					class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_shade-n5 c_primary-n1"
 					:class="{ 'is-active': expanded }"
 				></i>
 			</div>
-			<div class="flex_auto">
+			<div class="flex_auto  p-y_3 p-x_2 p-l_3">
 				<slot name="header">No Content Passed</slot>
 			</div>
 		</header>
@@ -30,7 +30,7 @@
 			<article
 				v-if="expanded"
 				data-attr="accordion-content"
-				class="br_black-3 br_solid br_1 p_4 font_0 br-t_0 transition_2 origin_tl"
+				class="br_black-3 br_solid br_1 font_0 br-t_0 transition_2 origin_tl"
 			>
 				<slot name="content">No Content Passed</slot>
 			</article>
