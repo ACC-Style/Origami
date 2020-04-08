@@ -6,7 +6,7 @@
 		<template v-slot:content class="">
 			<div class="font_copy p_4:md">
 				<p class="c_primary m-t_0 lh_2  p-x_4 p-t_4 p-x_3:md">
-					{{ metric.subTitle }}
+					{{ metric.subtitle }}
 				</p>
 				<section
 					class="flex flex_row-reverse flex_row:md"

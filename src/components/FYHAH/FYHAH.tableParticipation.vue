@@ -4,8 +4,8 @@
 			<h2 class="font_display m_0 lh_2 font_2">{{ participation.title }}</h2>
 		</template>
 		<template v-slot:content>
-			<div class="font_copy">
-				<p class="c_primary m-t_0 lh_2 p-x_3">{{ participation.subTitle }}</p>
+			<div class="font_copy p_4:md">
+				<p class="c_primary m-t_0 lh_2  p-x_4 p-t_4 p-x_3:md">{{ participation.subtitle }}</p>
 				<div class="bg_primary c_white font_0 font_n1:md font_bold display_none flex:md">
 					<td class="flex_auto w_30:md">Registry</td>
 					<td class="flex_auto w_30:md">Participation</td>
