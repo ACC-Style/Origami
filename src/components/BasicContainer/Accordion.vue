@@ -6,7 +6,7 @@
 			:class="{ 'is-active': expanded }"
 			class="br_black-3 br_solid br_1 bg_black-1 flex"
 		>
-			<div class="flex_grow flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-3 br_solid br-r_1 ">
+			<div class="flex_grow flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-2 br_solid br-r_1 ">
 				<i
 					class="fas fa-fw icon-toggle_plus-minus flex_auto self_center a:c_primary-n4 c_primary-n1"
 					:class="{ 'is-active': expanded }"

@@ -2,8 +2,6 @@
 	<article
 		class="br_1 br_black-2 br_dashed br_radius font_0 font_ui p_4 m-b_4"
 	>
-
-
 		<header class="flex justify_between">
 			<h1 class="font_2 font_display m_0 flex_auto lorem-loader br_radius inline w_auto" v-bind:style="{maxWidth:calcMaxWidth()+30+'%'}">Company Name</h1>
 			<div class=" flex_shrink lorem-loader br_radius lorem-button br_radius"></div>
