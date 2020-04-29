@@ -5,17 +5,17 @@
 		</template>
 		<template v-slot:content class="">
 			<div class="font_copy p_4:md">
-				<p class="c_primary m-t_0 lh_2  p-x_4 p-t_4 p-x_3:md">
+				<p class="c_primary m-t_0 lh_2 p-x_4 p-t_4 p-x_3:md font_italic">
 					{{ metric.subtitle }}
 				</p>
 				<section
-					class="flex flex_row-reverse flex_row:md"
+					class="flex flex_column flex_row:md"
 					v-for="(element, index) in metric.data"
 					:key="index"
 					v-bind:class="{ 'bg_primary-5': isEven(index) }"
 				>
-					<div class="flex_auto w_60 p-x_3 font_1:md lh_3 font_0 c_black">
-						<p class="max-w_50 lh_2">
+					<div class="flex_auto p-x_3 p-l_4 font_1:md lh_3 font_0 c_black w-grid_9:md">
+						<p class="lh_2">
 							{{ element.label }}
 							<a
 								class="font_n1 vertical-align_top m-l_2 c_secondary"
@@ -27,16 +27,11 @@
 						</p>
 					</div>
 					<div
-						class="font_bold flex_auto p_3:md p-t_4:md p-x_2 font_1 font_0:md flex text_center w-grid_2 w-grid_3:md bg_black-1"
+						class="font_bold flex_auto p-l_4 p-b_4 p_3:md p-t_4:md p-x_2 font_1 font_0:md flex text_center:md w-grid_12 w-grid_3:md "
 					>
+
 						<div
-							class="font_0 font_2:md flex_auto self_center display_none:md block"
-							v-if="element.type == 'star'"
-						>
-						<span class="font_2 font_3:md flex_auto self_center">{{ element.value }}</span><br><i class="fas fa-star c_warning"></i>'s
-						</div>
-						<div
-							class="font_0 font_2:md flex_auto self_center display_none block:md"
+							class="font_2 font_1:md  flex_auto self_center"
 							v-if="element.type == 'star'"
 						>
 							<i

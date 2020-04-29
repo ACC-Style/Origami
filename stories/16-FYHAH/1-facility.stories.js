@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import facilityProfileIdentifier from "../../src/components/FYHAH/FYHAH.facilityProfileIdentifier.vue";
-import facilityResult from "../../src/components/FYHAH/FYHAH.facilityResult.vue";
 import tableParticipation from "../../src/components/FYHAH/FYHAH.tableParticipation.vue";
+import tableGroupParticipation from "../../src/components/FYHAH/FYHAH.tableGroupParticipation.vue";
 import tableMetric from "../../src/components/FYHAH/FYHAH.tableMetric.vue";
 
 export default {
@@ -85,6 +85,20 @@ export const facilityData = {
         "helperText": "Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\r\\n\\r\\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
       },
       {
+        "id": 854,
+        "label": "CathPCI Registry®",
+        "category": "Chest Pain",
+        "value": "Does Not Perform Services",
+        "associatedServices": "Electrophysiology Studies, Pacemaker Implantation & Cardiac Defibrillator Implantation",
+        "helperText": "Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\r\\n\\r\\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
+      },      {
+        "id": 854,
+        "label": "CathPCI Registry®",
+        "category": "Chest Pain",
+        "value": "Does Not Perform Services",
+        "associatedServices": "Electrophysiology Studies, Pacemaker Implantation & Cardiac Defibrillator Implantation",
+        "helperText": "Patients should be prescribed a P2Y12 inhibitor medication to reduce the risk of heart attacks caused by blood clots in new stents after having a PCI/angioplasty- unless there is a reason not to use the medicine (such as an allergy).  \\r\\n\\r\\nThis score shows how well this facility is following this guideline - higher is better. Patients who cannot take P2Y12 inhibitor medicines are excluded."
+      },      {
         "id": 854,
         "label": "CathPCI Registry®",
         "category": "Chest Pain",
@@ -211,7 +225,20 @@ export const profileIdentifier = () => ({
 	description: facilityDescription
 });
 
-
+export const grouped_participation = () => ({
+	title: "FYHAH/Tables/Participation",
+	components: {
+		tableGroupParticipation
+	},
+	template: `<tableGroupParticipation :participation='participation'/>`,
+	methods: {
+		action: action("clicked")
+	},
+	data: () => ({
+		participation: facilityData.participation
+	}),
+	description: facilityDescription
+});
 export const table_participation = () => ({
 	title: "FYHAH/Tables/Participation",
 	components: {

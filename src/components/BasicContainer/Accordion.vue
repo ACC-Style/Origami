@@ -16,17 +16,7 @@
 				<slot name="header">No Content Passed</slot>
 			</div>
 		</header>
-		<transition
-			name="slide-down"
-			mode
-			enter-active-class="ease_in"
-			leave-active-class="ease_out"
-			enter-class="opacity_0 scale_Y-0"
-			enter-to-class="opacity_none scale_Y-100"
-			leave-class="opacity_none scale_Y-100"
-			leave-to-class="opacity_0 scale_Y-0"
-			:duration="1000"
-		>
+		<transitionExpand>
 			<article
 				v-if="expanded"
 				data-attr="accordion-content"
@@ -34,11 +24,13 @@
 			>
 				<slot name="content">No Content Passed</slot>
 			</article>
-		</transition>
+		</transitionExpand>
 	</section>
 </template>
 
 <script>
+import transitionExpand from "../subComponents/TransitionExpand.vue";
+
 export default {
 	name: "Accordion",
 	data() {
@@ -46,10 +38,39 @@ export default {
 			expanded: false
 		};
 	},
+	components:{transitionExpand},
 	methods: {
 		toggle() {
 			this.expanded = !this.expanded;
-		}
+		},
+		enter(element) {
+      const width = getComputedStyle(element).width;
+
+      element.style.width = width;
+      element.style.position = 'absolute';
+      element.style.visibility = 'hidden';
+      element.style.height = 'auto';
+
+      const height = getComputedStyle(element).height;
+
+      element.style.width = null;
+      element.style.position = null;
+      element.style.visibility = null;
+      element.style.height = 0;
+
+      // Force repaint to make sure the
+      // animation is triggered correctly.
+      getComputedStyle(element).height;
+
+      // Trigger the animation.
+      // We use `requestAnimationFrame` because we need
+      // to make sure the browser has finished
+      // painting after setting the `height`
+      // to `0` in the line above.
+      requestAnimationFrame(() => {
+        element.style.height = height;
+      });
+    },
 	}
 };
 </script>
@@ -58,4 +79,11 @@ export default {
 .scale_Y-50 {
 	transform: scaleY(0.5);
 }
+.scale_Y-100 {
+	transform: scaleY(1);
+}
+.scale_Y-0 {
+	transform: scaleY(0);
+}
+
 </style>

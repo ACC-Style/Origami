@@ -49,4 +49,7 @@ export default {
 .lorem-button {
 	width: 8rem;
 }
+.crossFade-move {
+	transition: 0.5s ease;
+}
 </style>

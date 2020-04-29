@@ -13,7 +13,7 @@
 				<div
 					class="bg_primary c_white font_0 font_n1:md font_bold display_none flex:md"
 				>
-					<div class="flex_auto w_30:md p_3">Registry</div>
+					<div class="flex_auto w_30:md p_3">Program</div>
 					<div class="flex_auto w_30:md p_3">Participation</div>
 					<div class="flex_auto w_40:md p_3">Associated Services</div>
 				</div>
