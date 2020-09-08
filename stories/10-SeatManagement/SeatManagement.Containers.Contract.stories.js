@@ -14,7 +14,7 @@ export default {
 
 };
 
-export const contract = () => {
+export const contractList = () => {
 	return {
 		components: {
 			ContractsList

@@ -1,5 +1,5 @@
 <template>
-	<section >
+	<div >
 		<div v-if="contracts==undefined">
 			<ContractLoading/>
 		</div>
@@ -8,10 +8,11 @@
 				<Contract :contract="contract" />
 			</div>
 		</div>
-		<div v-else>
-			<h3 class="font_display font_4">You don't seem to have any contracts</h3>
+		<div v-else class="reading-typography max-w_55">
+			<h3 >You don't seem to have any Contracts</h3>
+			<p ><strong>Contracts take 7-14 days to process we are greatful for your patients.</strong> If it has been longer that please contact us here and we will make sure you can start using your subscriptions quickly. </p>
 		</div>
-	</section>
+	</div>
 </template>
 
 <script>

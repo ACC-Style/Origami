@@ -1,8 +1,8 @@
 <template>
 	<section class="p-x_5">
 		<div class="flex font_display p_3 flex_column flex_row:md m-t_4">
-			<div class="flex_auto font_5 font_light">
-				Loading <i class="fas fa-spinner fa-spin opacity_5"></i>
+			<div class="flex_auto font_5 ">
+				<LoadingText/>
 			</div>
 			<div
 				class="flex_shrink c_primary-n1 lh_0 text_right:md text_left m-t_n3:md m-b_4:sm"
@@ -102,10 +102,10 @@
 <script>
 import StatefullIcon from "../../../subComponents/StatefullIcon.vue";
 import MicroChartLoading from "../../Charts/Seat.MicroSeatChart.Loading.vue";
-
+import LoadingText from "../../../subComponents/LoadingText.vue";
 export default {
 	components: {
-		MicroChartLoading,
+		MicroChartLoading,LoadingText
 	},
 	data() {
 		return {};

@@ -1,5 +1,5 @@
 <template>
-	<div class="p-x_5">
+	<div>
         <div v-if="groups == undefined">
                 <GroupLoading/>
         </div>
@@ -19,7 +19,7 @@
         		</ul>
         	</div>
             <div v-else class="reading-typography max-w_55"><h3>You don't seem to have any Groups.</h3><p>You can use groups to divide your bundles of products and delegate their management to appropriate admin or team leaders. You can always move seats from one group to another as long as the seat is empty.</p>
-			<Btn >Create a group</Btn>
+			<Btn :size="'large'" >Create a group</Btn>
 			 </div>
     </div>
 </template>

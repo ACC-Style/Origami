@@ -1,19 +1,7 @@
 <template>
-	<section
-		class="relative font_ui z_1 m-r_n5:md"
-		@mouseenter="hoverEffectOn"
-		@mouseleave="hoverEffectOff"
-	>
+	<HoverContainer>
 		<div
-			data-target="hover-indicator"
-			:class="hoverIndicatorStyles"
-			class="absolute t_0 r_0 b_0 br_1 br_primary-2 br_solid l_auto bg_primary-3 c_primary-n1 inline-block p-x_3:md p-x_2 z_0 flex flex_column justify_around shadow_n1  transition_1"
-		>
-			<i class="fa fa-arrow-right font_0:md font_n3"></i>
-		</div>
-		<div
-			class="br_solid br_black-2 br_1 flex flex_row:md flex_column p-y_3 p-x_4 transition_1 z_2 m-r_5:md m-r_4"
-			:class="hoverDataStyles"
+			class=" flex flex_row:md flex_column p-y_3 p-x_4"
 		>
 			<div class="flex_auto">
 				<h3 class="font_3 font_display m-t_2 lh_1 m-b_0">{{ name }}</h3>
@@ -34,11 +22,12 @@
 					:requested="requested"
 				/>
 			</div>
-		</div>
-	</section>
+</div>
+	</HoverContainer>
 </template>
 
 <script>
+import HoverContainer from '../../Containers/SubContainers/hoverContainer.vue'
 import MicroSeatChart from "../../Charts/Seat.MicroSeatChart.vue";
 export default {
 	props: {
@@ -68,7 +57,7 @@ export default {
 		},
 	},
 	components: {
-		MicroSeatChart,
+		MicroSeatChart,HoverContainer
 	},
 	data() {
 		return {

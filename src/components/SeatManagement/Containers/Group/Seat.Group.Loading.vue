@@ -4,8 +4,8 @@
 			class="br_solid br_black-2 br_1 flex flex_row p-y_3 p-l_4 p-r_3 transition_1 z_2 m-r_5"
 		>
 			<div class="flex_auto">
-				<h3 class="font_3 font_display m-t_2 lh_1 m-b_0">
-					Loading <i class="fas fa-spinner fa-spin opacity_5 p-r_3"></i>
+				<h3 class="font_3 m-t_2 m-b_0">
+					<LoadingText/>
 				</h3>
 			</div>
 			<div class="flex_auto m-r_3 p_3 c_black text_right font_2">
@@ -98,7 +98,9 @@
 </template>
 
 <script>
-export default {};
+import LoadingText from '../../../subComponents/LoadingText.vue';
+export default {
+	components:{LoadingText}};
 </script>
 
 <style scoped></style>

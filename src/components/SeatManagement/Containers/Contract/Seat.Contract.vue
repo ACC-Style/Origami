@@ -1,5 +1,5 @@
 <template>
-	<section class="p-x_5:md p-x_3 m-b_5">
+	<section class="m-b_5 m-t_4">
 		<div class="flex font_display p_3 flex_column flex_row:md m-t_4 m-b_3">
 			<div class="flex_auto font_5 font_light">
 				{{contract.nickname}}
