@@ -1,5 +1,5 @@
 <template>
-<hoverContainer class="">
+<hoverContainer class="" :isDisabled="disabled(status)">
 	<div class="flex min-h_4rem" :class="statusColor">
 			<div class="p-y_3 p-x_3 flex_none w_20:lg" v-if="status == 'filled' || status =='requested' " >
 				<span class="font_2 font_display lh_0 block" v-if="user.name != null">{{ user.name }}</span>
@@ -46,7 +46,7 @@
 					<a
 						v-if="status =='filled'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary h:c_alert-n2 h:bg_alert-5 flex_auto p_3 p-l_4"
+						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_alert-n2 h:bg_alert-5 flex_auto p_3 p-l_4"
 					>
 						<span class="self_center nowrap">
 							Remove
@@ -56,7 +56,7 @@
 					<a
 						v-if="status =='requested'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary h:c_black h:bg_warning-5 flex_auto p_3 p-l_4"
+						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_black h:bg_warning-5 flex_auto p_3 p-l_4"
 					>
 						<span class="self_center nowrap">
 							Resend Request
@@ -66,7 +66,7 @@
 					<a
 						v-if="status =='requested'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary h:c_alert-n2 h:bg_alert-5 flex_auto p_3 p-l_4"
+						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_alert-n2 h:bg_alert-5 flex_auto p_3 p-l_4"
 					>
 						<span class="self_center nowrap">
 							Cancel
@@ -76,7 +76,7 @@
 					<a
 						v-if="status =='empty'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary h:c_black h:bg_success-4 flex_auto p_3 p-l_4"
+						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_black h:bg_success-4 flex_auto p_3 p-l_4"
 					>
 						<span class="self_center nowrap">  Invite <i class="fal fa-fw fa-plus"></i></span>
 					</a>
@@ -113,7 +113,8 @@ hoverContainer
 		return {};
 	},
 	methods: {
-		action() { },
+		action: function() { },
+		disabled: function(status){ return status == 'locked'?true:false;}
 	},
 	computed: {
 		mailto: () => {
