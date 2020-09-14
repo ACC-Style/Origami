@@ -1,7 +1,7 @@
 <template>
 	<HoverContainer>
 		<div class="flex flex_row:md p_3">
-			<div class="flex_auto flex flex_column justify_start justify_between:lg flex_row:lg">
+			<div class="flex_auto w_40 flex flex_column justify_start justify_between:lg flex_row:lg">
 				<div class="flex_shrink m-l_3">
 				<h3 class="font_4 font_display m-t_2 lh_1 m-b_0">{{ name }} <a href="" class="c_primary h:c_primary-n3 p_2 font_1"><i class="fas fa-pencil"></i></a></h3>
 				<ul class="ul_none flex flex_column flex_row:lg font_n1 justify_start">
