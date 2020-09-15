@@ -1,53 +1,53 @@
 <template>
 	<div
 		data-target="readableSeatChart"
-		class="flex justify_between flex_column flex_row:md font_6:lg font_2"
+		class="flex justify_between flex_column flex_row:lg font_5:lg font_3:md font_1"
 	>
 
 		<div
 			title="filled"
-			class="flex_auto m-r_3:md m-b_2 m-b_0:md p_3 c_white text_right bg_success br_black-2 br_1 br_solid"
+			class="flex_auto m-r_3:lg m-b_2 overflow_hidden m-b_0:lg p_3 p-l_2 c_white text_right bg_success br_black-2 br_1 br_solid"
 		>
 			<span class="lowercase lh_0 font_display font_light block">{{
 				filled
 			}}</span
-			><span class="lowercase block font_n1 font_medium c_white-8">Filled</span>
+			><span class="lowercase block font_n1:lg font_n2 font_medium c_white-8 float_right">Filled</span>
 		</div>
 		<div
 			title="requested"
-			class="flex_auto m-r_3:md m-b_2 m-b_0:md p_3 c_white text_right bg_warning br_black-2 br_1 br_solid"
+			class="flex_auto m-r_3:lg m-b_2 overflow_hidden m-b_0:lg p_3 p-l_2 c_white text_right bg_warning br_black-2 br_1 br_solid"
 		>
 			<span class="lowercase lh_0 font_display font_light block">{{
 				requested
 			}}</span
-			><span class="lowercase block font_n1 font_medium c_white-8">requested</span>
+			><span class="lowercase block font_n1:lg font_n2 font_medium c_white-8 float_right">requested</span>
 		</div>
 		<div
 			title="empty"
-			class="flex_auto m-r_3:md m-b_2 m-b_0:md p_3 c_white text_right bg_primary br_black-2 br_1 br_solid"
+			class="flex_auto m-r_3:lg m-b_2 overflow_hidden m-b_0:lg p_3 p-l_2 c_white text_right bg_primary br_black-2 br_1 br_solid"
 		>
 			<span class="lowercase lh_0 font_display font_light block">{{
 				empty
 			}}</span
-			><span class="lowercase block font_n1 font_medium c_white-8">empty</span>
+			><span class="lowercase block font_n1:lg font_n2 font_medium c_white-8 float_right">empty</span>
 		</div>
 		<div
 			title="locked"
-			class="flex_auto  m-r_3:md m-b_2 m-b_0:md p_3 c_white text_right bg_alert-n1 br_black-2 br_1 br_solid flex"
+			class="flex_auto  m-r_3:lg m-b_2 overflow_hidden m-b_0:lg p_3 p-l_2 c_white text_right bg_alert-n1 br_black-2 br_1 br_solid flex"
 		>
 			<div class="flex_auto"><span class="lowercase lh_0 font_display font_light block">{{
 				locked
 			}}</span
-			><span class="lowercase block font_n1 font_medium c_white-8">locked</span></div>
-            <div class="flex_shrink  m-l_3 p-l_4 p-r_3 br-l_1 m-y_n3 br_white-8 br_solid text_center flex justify_center flex_column font_5"><i class="fal fa-lock"></i></div>
+			><span class="lowercase block font_n1:lg font_n2 font_medium c_white-8 float_right">locked</span></div>
+            <div class="flex_shrink  m-l_3 p-l_3 p-r_3 br-l_1 m-y_n3 br_white-8 br_solid text_center flex justify_center flex_column font_5:lg font_3:md font_1"><i class="fal fa-lock"></i></div>
 		</div>
 		<div
-			class="flex_auto c_black br_1 br_solid br_black-1 bg_black-2 c_black-8  p_3 text_right"
+			class="flex_auto c_black br_1 br_solid br_black-1 bg_black-2 c_black-8  p_3 p-l_2 text_right"
 		>
 			<span class="lowercase lh_0 font_display font_light block">{{
 				all
 			}}</span>
-			<span class="lowercase block font_n1 font_medium c_black-8">Seats</span>
+			<span class="lowercase block font_n1:lg font_n2 font_medium c_black-8">Seats</span>
 		</div>
 	</div>
 </template>

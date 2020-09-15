@@ -1,6 +1,6 @@
 <template>
-<hoverContainer class="" :isDisabled="disabled(status)">
-	<div class="flex min-h_4rem" :class="statusColor">
+<hoverContainer class="" :isDisabled="disabled(status)" :actionColor="actionColor" :actionIcon="actionIcon">
+	<div class="flex min-h_4rem relative" :class="statusColor">
 			<div class="p-y_3 p-x_3 flex_none w_20:lg" v-if="status == 'filled' || status =='requested' " >
 				<span class="font_2 font_display lh_0 block" v-if="user.name != null">{{ user.name }}</span>
 				<a
@@ -46,7 +46,9 @@
 					<a
 						v-if="status =='filled'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_alert-n2 h:bg_alert-5 flex_auto p_3 p-l_4"
+						@mouseenter="()=>{actionColor = 'alert'; actionIcon='fa-trash-alt'}"
+						@mouseleave="()=>{actionColor = undefined; actionIcon=undefined}"
+						class="flex flex_auto underline m-r_1 c_primary h:bg_alert-4 transition_2 h:c_alert-n2 flex_auto p_3 p-l_4"
 					>
 						<span class="self_center nowrap">
 							Remove
@@ -56,7 +58,9 @@
 					<a
 						v-if="status =='requested'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_black h:bg_warning-5 flex_auto p_3 p-l_4"
+						@mouseenter="()=>{actionColor = 'warning'; actionIcon='fa-reply'}"
+						@mouseleave="()=>{actionColor = undefined; actionIcon=undefined}"
+						class="flex flex_auto underline m-r_1 c_primary h:bg_warning-4 transition_2 h:c_black flex_auto p_3 p-l_4 expanded-click-area z_1"
 					>
 						<span class="self_center nowrap">
 							Resend Request
@@ -66,7 +70,8 @@
 					<a
 						v-if="status =='requested'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_alert-n2 h:bg_alert-5 flex_auto p_3 p-l_4"
+						@mouseenter="()=>{actionColor = 'shade'; actionIcon='fa-times'}"
+						class="flex flex_auto underline m-r_1 c_primary h:c_black transition_2 h:bg_shade-3 flex_auto p_3 p-l_4 z_2"
 					>
 						<span class="self_center nowrap">
 							Cancel
@@ -76,13 +81,14 @@
 					<a
 						v-if="status =='empty'"
 						href
-						class="flex flex_auto underline m-r_1 c_primary transition_1 h:c_black h:bg_success-4 flex_auto p_3 p-l_4"
+						@mouseenter="()=>{actionColor = 'success'; actionIcon='fa-plus'}"
+						class="flex flex_auto underline m-r_1 c_primary h:bg_success-4 transition_2 h:c_black  flex_auto p_3 p-l_4 expanded-click-area"
 					>
 						<span class="self_center nowrap">  Invite <i class="fal fa-fw fa-plus"></i></span>
 					</a>
 					<span v-if="status =='locked'" class="c_black-5 flex_auto flex p_3 p-l_4">
 						<span class="self_center nowrap">
-							 Locked <i class="fal fa-lock"></i>
+							 Removed <i class="fal fa-trash-alt"></i>
 						</span>
 					</span>
 				</ul>
@@ -98,7 +104,7 @@ export default {
 	components: {
 hoverContainer
 	},
-	props: {
+	props: {		
 		id: { type: Number, default: 1 },
 		status: { type: String, default: "empty" },
 		date_invite: { type: String, default: null },
@@ -110,11 +116,14 @@ hoverContainer
 		},
 	},
 	data() {
-		return {};
+		return {
+			actionColor:undefined,
+			actionIcon:undefined
+		};
 	},
 	methods: {
 		action: function() { },
-		disabled: function(status){ return status == 'locked'?true:false;}
+		disabled: function(status){ return (status == 'locked' || status == "empty")?true:false;}
 	},
 	computed: {
 		mailto: () => {
@@ -124,22 +133,22 @@ hoverContainer
 			var $class = "";
 			switch (this.status) {
 				case "locked":
-					$class = " br_solid br-l_3 br-r_5 br_alert";
+					$class = " br_solid br-l_4 br-r_3 br_alert";
 					break;
 				case "removed":
-					$class = " br_solid br-l_3 br-r_5 br_alert-n3";
+					$class = " br_solid br-l_4 br-r_3 br_alert-n3";
 					break;
 				case "rejected":
-					$class = " br_solid br-l_3 br-r_5 br_warning";
+					$class = " br_solid br-l_4 br-r_3 br_warning";
 					break;
 				case "filled":
-					$class = " br_solid br-l_3 br-r_5 br_success";
+					$class = " br_solid br-l_4 br-r_3 br_success";
 					break;
 				case "requested":
-					$class = " br_solid br-l_3 br-r_5 br_warning";
+					$class = " br_solid br-l_4 br-r_3 br_warning";
 					break;
 				case "empty":
-					$class = " br_solid br-l_3 br-r_5 br_primary"
+					$class = " br_solid br-l_4 br-r_3 br_primary"
 				default:
 					break;
 			}
