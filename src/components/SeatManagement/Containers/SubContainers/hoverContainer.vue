@@ -18,9 +18,9 @@
 			:class="hoverDataStyles"
 		>
 			<slot></slot>
-			<div
-				:class="' bg_'+ actionColor +'-5 ' "
-				class="br_solid br_black-2 br-t_1 shadow_n1 p_2 p-x_3 text_right display_none block:touch"
+			<div v-if="!isDisabled"
+				:class="' bg_'+ actionColor +'-5 br_' + actionColor + '-3 ' "
+				class="br_solid br_1 br-t_0 shadow_n1 p_2 p-x_3 text_right display_none block:touch"
 			>
 				{{actionLabel}}
 				<i :class="actionIcon" class="fa fa-arrow-right font_0:md font_n3"></i>
