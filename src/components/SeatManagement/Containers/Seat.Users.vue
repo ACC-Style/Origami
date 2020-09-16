@@ -3,10 +3,11 @@
 <div  v-if="users == null">
 	<SingleUserLoading />
 </div>
-<div v-else-if="users.length > 0">
-	<ul class="ul_none" v-for="(user, index) in users.sort(compare('status')) " :key="index">
+<div v-else-if="users.length > 0" class="relative">
+	<ul class="ul_none" v-for="(user, index) in users " :key="index">
 		<SingleUser v-bind="user" v-if="user.status != 'empty'"/>
 	</ul>
+    <!-- <div class="sticky font_n2 b_4 l_auto float_right r_4 font_medium bg_white br_solid br_1 shadow_overlap-light br_black-3 br_round z_4 w_auto inline-block p-y_2 p-x_4"><strong>Legend:</strong>  <span><i class="fa fa-user-crown"></i> admin</span><strong>Legend:</strong>  <span><i class="fa fa-users-crown"></i> group admin</span><span><i class="fa fa-user"></i> subscription holder</span></div>    -->
 </div>
 <div v-else class="reading-typography max-w_65">
 	<H3 class="font">You Currently Don't have any users for this product in this Group.</H3>

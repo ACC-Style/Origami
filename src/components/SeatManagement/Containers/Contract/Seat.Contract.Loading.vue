@@ -105,7 +105,7 @@ import MicroChartLoading from "../../Charts/Seat.MicroSeatChart.Loading.vue";
 import LoadingText from "../../../subComponents/LoadingText.vue";
 export default {
 	components: {
-		MicroChartLoading,LoadingText
+		MicroChartLoading,LoadingText,StatefullIcon
 	},
 	data() {
 		return {};

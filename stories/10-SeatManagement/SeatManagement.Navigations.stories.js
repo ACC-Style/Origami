@@ -11,9 +11,132 @@ export default {
 		notes: true,
 		info: true
 	},
-	excludeStories: ["sideNavigationNodes"]
+	excludeStories: ["sideNavigationNodes","sideNavigationUsers",]
 };
 
+
+export const SideNav =()=>({
+    components:{
+        SideNavList
+        },
+    template:`<SideNavList class="max-w_20" :label="node.label" :type="node.type" :pageID="node.pageID" :isActive="node.isActive"  :nodes="node.nodes"/>`,
+	data: () => ({
+		node:sideNavigationNodes
+	}),
+
+});
+export const UserNav =()=>({
+    components:{
+        SideNavList
+        },
+    template:`<SideNavList class="max-w_20" :label="node.label" :type="node.type" :pageID="node.pageID" :isActive="node.isActive"  :nodes="node.nodes"/>`,
+	data: () => ({
+		node:sideNavigationUsers
+	}),
+
+});
+
+export const CompanyProfile = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationNodes.nodes[0]
+        }),
+	};
+};
+export const Contracts = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationNodes.nodes[1]
+        }),
+	};
+};
+export const Bundles = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationNodes.nodes[2]
+        }),
+	};
+};
+export const Bundle = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationNodes.nodes[2].nodes[0]
+        }),
+	};
+};
+export const SubBundle = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationNodes.nodes[2].nodes[0].nodes[0]
+        }),
+	};
+};
+export const Groups = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationNodes.nodes[3]
+        }),
+	};
+};
+export const Group = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationNodes.nodes[3].nodes[0]
+        }),
+	};
+};
+
+
+export const AllUsers = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationUsers.nodes[0]
+        }),
+	};
+};
+export const Admin = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationUsers.nodes[1]
+        }),
+	};
+};
+export const GroupAdmin = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationUsers.nodes[2]
+        }),
+	};
+};
+export const SubscriptionHolders = () => {
+	return {
+        components: {SideNavItem},
+        template: `<SideNavItem v-bind="node"/>`,
+        data: () => ({
+            node:sideNavigationUsers.nodes[3]
+        }),
+	};
+};
 export const sideNavigationNodes = {
     "label": "Root",
     "type": "",
@@ -99,61 +222,30 @@ export const sideNavigationNodes = {
         }
     ]
 };
-export const SideNav =()=>({
-    components:{
-        SideNavList
-        },
-    template:`<SideNavList class="max-w_20" :label="node.label" :type="node.type" :pageID="node.pageID" :isActive="node.isActive"  :nodes="node.nodes"/>`,
-	data: () => ({
-		node:sideNavigationNodes
-	}),
-
-});
-
-export const ListItem = () => {
-	return {
-        components: { SideNavItem},
-        template: `
-        <ul class="ul_none max-w_30">
-        <li><SideNavItem :type="'company'" :isActive="false" :level="0" :label="'Company Profile'"/></li>
-        <li><SideNavItem :type="'contracts'" :isActive="false" :level="0" :label="'Contracts'"/></li>
-        <li><SideNavItem :type="'bundles'" :isActive="false" :isChildActive="true" :level="0" :label="'Bundles'" :hasChildren="true"/>
-            <ul class="ul_none">
-                <li><SideNavItem :type="'bundles'" :isActive="false" :level="1" :label="'Bundle'"/></li>
-                <li><SideNavItem :type="'bundles'" :isActive="false" :level="1" :label="'Bundle'"/></li>
-                <li><SideNavItem :type="'bundles'" :isActive="false" :isChildActive="true" :level="1" :label="'Bundle'" :hasChildren="true"/>
-                <ul class="ul_none">
-                    <li><SideNavItem :type="'subbundle'" :isActive="true" :level="2" :label="'Sub Bundle'"/></li>
-                </ul>
-            </li>
-            </ul>
-        </li>
-        <li><SideNavItem  :type="'groups'":isActive="false" :level="0" :label="'Gropus'"/>
-            <ul class="ul_none">
-                <li><SideNavItem :type="'group'" :isActive="false" :level="1" :label="'Group a'"/></li>
-                <li><SideNavItem :type="'group'" :isActive="false" :level="1" :label="'Group b'"/></li>
-                <li><SideNavItem :type="'group'" :isActive="false" :isChildActive="false" :level="1" :label="'Group c'"/></li>
-            </ul>
-        </li>
-    </ul>`
-	};
-};
-export const ParentItem = () => {
-	return {
-        components: { SideNavItem },
-        template: `<SideNavItem :isActive="false" :level="0" :label="'Parent Item'"/>`
-	};
-};
-
-export const ChildItem = () => {
-	return {
-        components: { SideNavItem },
-        template: `<SideNavItem :isActive="false" :level="1" :label="'Child Item'"/>`
-	};
-};
-export const GrandChild = () => {
-	return {
-        components: { SideNavItem },
-        template: `<SideNavItem :isActive="false" :level="2" :label="'Granchild Item'"/>`
-	};
+export const sideNavigationUsers = {
+	label: "Root",
+	type: "",
+	pageID: -1,
+	nodes: [
+		{
+			label: "All",
+			type: "users-all",
+			pageID: 1351,
+      },
+      {
+			label: "Admin",
+			type: "admin",
+			pageID: 1351,
+      },
+      {
+			label: "Group Admin",
+			type: "group-admin",
+			pageID: 1351,
+      },
+      {
+			label: "Subscription Holders",
+			type: "user",
+			pageID: 1351,
+		},
+	],
 };
