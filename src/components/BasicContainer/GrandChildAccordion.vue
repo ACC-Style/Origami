@@ -1,27 +1,27 @@
 <template>
-	<section class="bg_white font_ui">
+	<section class="bg_white font_ui font_0">
 		<header
 			data-attr="accordion-header"
 			@click="toggle"
 			:class="{ 'is-active': expanded }"
-			class="br_black-3 br_solid br_1 bg_black-1 flex"
+			class="font_n1 flex c_primary"
 		>
-			<div class="flex_shrink flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-2 br_solid br-r_1 ">
+			<div class="flex_shrink flex column justify_center   ">
 				<i
-					class="fas fa-fw  flex_auto self_center a:c_primary-n4 c_primary-n1"
+					class="fas fa-fw  flex_auto self_center "
 					:class="toggleClass"
 				></i>
 			</div>
-			<div class="flex_auto w_100 p-y_3 p-x_2 p-l_3">
-				<slot name="header">No Content Passed</slot>
+			<div class="flex_auto  p-y_3 p-x_2 p-l_3">
+				<slot name="header">read more ...</slot>
 			</div>
 		</header>
 		<transitionExpand>
-			<div class="br_black-3 br_solid br_1 br-t_1 ">
+			<div class="">
 				<article
 				v-if="expanded"
 				data-attr="accordion-content"
-				class="transition_2 origin_tl p_4"
+				class="transition_2 origin_tl p_4  br-t_1 br_dotted br_primary f"
 			>
 				<slot class="" name="content">No Content Passed</slot>
 			</article></div>
@@ -33,7 +33,7 @@
 import transitionExpand from "../subComponents/TransitionExpand.vue";
 
 export default {
-	name: "Accordion",
+	name: "ChildAccordion",
 	data() {
 		return {
 			expanded: false
@@ -43,11 +43,11 @@ export default {
 	computed: {
 		toggleClass(){
 			if(this.expanded){
-				return "fa-minus-square";
+				return "fa-minus";
 			}
 			else
 			{
-				return "fa-plus-square";
+				return "fa-plus";
 			}
 		}
 	},

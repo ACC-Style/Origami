@@ -6,9 +6,9 @@
 			:class="{ 'is-active': expanded }"
 			class="br_black-3 br_solid br_1 bg_black-1 flex"
 		>
-			<div class="flex_shrink flex column justify_center font-size_up p-x_3 p-x_4:md bg_primary-4 br_black-2 br_solid br-r_1 ">
+			<div class="flex_shrink flex column justify_center  p-x_3 p-x_4:md bg_shade-4 br_black-2 br_solid br-r_1 ">
 				<i
-					class="fas fa-fw  flex_auto self_center a:c_primary-n4 c_primary-n1"
+					class="fas fa-fw flex_auto self_center a:c_shade-n4 c_shade-n1"
 					:class="toggleClass"
 				></i>
 			</div>
@@ -33,7 +33,7 @@
 import transitionExpand from "../subComponents/TransitionExpand.vue";
 
 export default {
-	name: "Accordion",
+	name: "ChildAccordion",
 	data() {
 		return {
 			expanded: false
@@ -43,11 +43,11 @@ export default {
 	computed: {
 		toggleClass(){
 			if(this.expanded){
-				return "fa-minus-square";
+				return "fa-chevron-square-down";
 			}
 			else
 			{
-				return "fa-plus-square";
+				return "fa-chevron-square-right";
 			}
 		}
 	},
