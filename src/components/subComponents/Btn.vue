@@ -1,16 +1,11 @@
 <template>
 	<button
-		class="button text_center br_none inline-block w_auto"
+		class="f:outline_none text_center br_none inline-block w_auto font_medium"
 		@click="onClick()"
-		:class="[buttonStyles,{'is-active':isActive}]"
+		:class="[buttonStyles,{' is-active active ':isActive}, 'br_'+ corner]"
 	>
-		<span class="flex">
-			<span class="flex_auto p-x_2" v-if="hasSlotData">
-				<slot></slot>
-			</span>
-			<span class="flex_shrink flex flex_column self_center" v-if="icon">
-				<i class="far flex_shrink" :class="[iconStyles]"></i>
-			</span>
+		<span class="flex h:undecorated">
+			<slot></slot>
 		</span>
 	</button>
 </template>
@@ -23,17 +18,24 @@ export default {
 			type: String,
 			default: "medium"
 		},
-		icon: { type: Boolean, default: false },
 		state: {
 			type: String,
 			default: "primary"
+		},
+		corner:{
+			type:String,
+			default:"radius"
+		},
+		shadow:{
+			type:Boolean,
+			default:true
 		},
 		isActivatable: { type: Boolean, default: false },
 		isDisabled: { type: Boolean, default: false }
 	},
 	data() {
 		return {
-			isActive: false
+			isActive: this.isActivatable
 		};
 	},
 	methods: {
@@ -53,29 +55,6 @@ export default {
 		}
 	},
 	computed: {
-		hasSlotData() {
-			return this.$slots.default;
-		},
-		iconStyles() {
-			let classes = "";
-			switch (this.state) {
-				case "add":
-					classes = "fa-plus m-t_1";
-					break;
-				case "error":
-					classes = "fa-times m-t_1";
-					break;
-				case "success":
-					classes = "fa-check m-t_1";
-					break;
-				case "warning":
-					classes = "fa-exclamation-triangle m-t_1";
-					break;
-				default:
-					break;
-			}
-			return classes;
-		},
 		buttonStyles() {
 			let size = "";
 			switch (this.size) {
@@ -86,10 +65,10 @@ export default {
 					size = "p-y_2 p-x_3 font_n2 font_n2:md";
 					break;
 				case "medium":
-					size = "p-y_2 p-x_3 font_n1 font_0:md";
+					size = "p-y_3 p-x_4 font_0 font_1:md";
 					break;
 				case "large":
-					size = "p-y_3 p-x_4 font_1 font_2:md";
+					size = "p-y_4 p-x_5 font_1 font_3:md";
 					break;
 				default:
 					size = "p-y_2 p-x_3 font_n1 font_0:md";
@@ -97,7 +76,7 @@ export default {
 			}
 			let stateStyle = "";
 			switch (this.state) {
-				case "error":
+				case "alert":
 					stateStyle =
 						"c_white h:c_white bg_alert-n1 h:bg_alert-n3 a:bg_alert-n4 br_alert-n3";
 					if (this.isDisabled) stateStyle = "bg_alert-4";
@@ -114,7 +93,7 @@ export default {
 					break;
 				case "shade":
 					stateStyle =
-						"c_black bg_shade-3 h:bg_shade-1 h:c_white a:c_shade-4 a:bg_shade-n3";
+						"c_black bg_balack-3 h:bg_black-6 h:c_white a:c_white-8 a:bg_black-6";
 					if (this.isDisabled) stateStyle = "bg_shade-4";
 					break;
 				case "secondary":
@@ -124,8 +103,13 @@ export default {
 					break;
 				case "none":
 					stateStyle = this.isDisabled
-						? "c_shade bg_tansparent"
-						: "undecorated h:underline c_black-7 h:c_black bg_tansparent";
+						? ""
+						: "";
+					break;
+				case "empty":
+					stateStyle = this.isDisabled
+						? ""
+						: "undecorated h:underline";
 					break;
 				default:
 					stateStyle =
@@ -133,12 +117,20 @@ export default {
 					if (this.isDisabled) stateStyle = "bg_primary-4";
 					break;
 			}
+			let shadowStyle = "";
 			if (this.isDisabled) {
 				stateStyle += " c_black-3 disabled";
+			}else{
+				stateStyle += " ";
+				shadowStyle =this.shadow? " shadow_overlap-light" :" "
 			}
-			return size + " " + stateStyle;
+			return size + " " + stateStyle+" "+ shadowStyle;
 		}
 	}
 };
 </script>
+<style>
+	.f\:outline_none{outline:none}
+
+</style>
 

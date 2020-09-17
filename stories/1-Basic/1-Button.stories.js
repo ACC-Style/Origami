@@ -16,17 +16,18 @@ export default {
 export const templateBasic = `
 	<div class="flex p-y_3">
 		<div class="flex_shrink p-x_3">
-			<Btn @click="action" :icon="iconBoolean" :size="small" :state="status">Small Button</Btn>
+			<Btn @click="action"  :size="small" :state="status">Small Button</Btn>
 		</div>
 		<div class="flex_shrink p-x_3">
-			<Btn @click="action" :icon="iconBoolean" :size="medium" :state="status">Medium Button</Btn>
+			<Btn @click="action"  :size="medium" :state="status" >Default Size</Btn>
 		</div>
 		<div class="flex_shrink p-x_3">
-			<Btn @click="action" :icon="iconBoolean" :size="large" :state="status">Large Button</Btn>
+			<Btn @click="action"  :size="large" :state="status">Large Button</Btn>
 		</div>
 		<div class="flex_shrink p-x_3">
-			<Btn @click="action" :isDisabled="true" :icon="iconBoolean" :size="large" :state="status">Disabled Large Button</Btn>
+			<Btn @click="action" :isDisabled="true"  :size="large" :state="status">Disabled Large Button</Btn>
 		</div>
+
 	</div>`;
 export const btnDescription = {
 	Btn: {
@@ -105,7 +106,8 @@ export const shade = () => ({
 	},
 	description: btnDescription
 });
-export const add = () => ({
+
+export const alert = () => ({
 	components: {
 		Btn
 	},
@@ -118,27 +120,7 @@ export const add = () => ({
 			small: "small",
 			medium: "medium",
 			large: "large",
-			status: "add",
-			iconBoolean: true
-		};
-	},
-	description: btnDescription
-});
-export const error = () => ({
-	components: {
-		Btn
-	},
-	template: templateBasic,
-	methods: {
-		action: action("clicked")
-	},
-	data() {
-		return {
-			small: "small",
-			medium: "medium",
-			large: "large",
-			status: "error",
-			iconBoolean: true
+			status: "alert",
 		};
 	},
 	description: btnDescription
@@ -157,7 +139,6 @@ export const warning = () => ({
 			medium: "medium",
 			large: "large",
 			status: "warning",
-			iconBoolean: true
 		};
 	},
 	description: btnDescription
@@ -176,10 +157,42 @@ export const success = () => ({
 			medium: "medium",
 			large: "large",
 			status: "success",
-			iconBoolean: true
 		};
 	},
 	description: btnDescription
+});
+export const none = () => ({
+	components: {
+		Btn
+	},
+	template:  `
+	<div class="flex p-y_3">
+		<div class="flex_shrink p-x_3">
+			<Btn @click="action"  :size="small" :state="status">Small Button</Btn>
+		</div>
+		<div class="flex_shrink p-x_3">
+			<Btn class="" @click="action"  :size="medium" :state="status" >Default Size</Btn>
+		</div>
+		<div class="flex_shrink p-x_3">
+			<Btn class="bg_acc c_white h:bg_acc-n3" @click="action"  :size="large" :state="status">ACC Colored Button</Btn>
+		</div>
+		<div class="flex_shrink p-x_3">
+			<Btn @click="action" :isDisabled="true"  :size="large" :state="status">Disabled Large Button</Btn>
+		</div>
+
+	</div>`,
+	methods: {
+		action: action("clicked")
+	},
+	data() {
+		return {
+			small: "small",
+			medium: "medium",
+			large: "large",
+			status: "none",
+		};
+	},
+	description: 'This is used for when you need to apply custome styles to the the design of the button for example if you were making a button from a color code vs standard states. '
 });
 export const isActivatable = () => ({
 	components: {
@@ -210,43 +223,50 @@ export const toggle = () => ({
 	template: `
 	<section>
       <div class="flex p-y_3">
-         <div class="flex_shrink p-x_3">
-            <BtnToggle class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status"></BtnToggle>
-         </div>
-         <div class="flex_shrink p-x_3">
-            <BtnToggle class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="'fa-dot-circle'" :iconNotActive="'fa-circle'" :state="'secondary'" :size="medium"><template v-slot:activeText>Active</template>
-               <template v-slot:notActiveText>Not Active
-               </template>
-            </BtnToggle>
-         </div>
-         <div class="flex_shrink p-x_3">
-				<BtnToggle class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="'fa-sign-out-alt'" :iconNotActive="'fa-sign-in-alt'" :size="medium">
-				<template v-slot:activeText>Log Out
-               </template>
-               <template v-slot:notActiveText>Log In
-               </template>
-            </BtnToggle>
-         </div>
-      </div>
-      <div class="flex p-y_3">
-         <div class="flex_shrink p-x_3">
-            <BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :size="medium" :state="status">
-            </BtnToggle>
-         </div>
-         <div class="flex_shrink p-x_3">
-            <BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :defaultActiveState="true" :iconActive="'fa-dot-circle'" :iconNotActive="'fa-circle'" :state="'secondary'" :size="medium"><template v-slot:activeText>On By Defual
-                  t</template>
-               <template v-slot:notActiveText>Not Active
-               </template>
-            </BtnToggle>
-         </div>
-         <div class="flex_shrink p-x_3">
-            <BtnToggle :isDisabled="true" class="br_radius" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :icon="iconBoolean" :iconActive="'fa-sign-out-alt'" :iconNotActive="'fa-sign-in-alt'" :size="medium"><template v-slot:activeText>Log Out
-               </template>
-               <template v-slot:notActiveText>Log In
-               </template>
-            </BtnToggle>
-         </div>
+	  <div class="flex_shrink p-x_3">
+	  <BtnToggle  @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" :state="'warning'">
+		  <template v-slot:active>
+			  <i class="fas fa-check p-r_3"></i>Active
+		  </template>
+			 <template v-slot:notActive>
+			 <i class="fas fa-times p-r_3"></i>Not Active
+		  </template>
+	  </BtnToggle>
+   </div>
+   <div class="flex_shrink p-x_3">
+   <BtnToggle  @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" >
+	   <template v-slot:active>
+		   <i class="far fa-square p-r_3"></i>I agree
+	   </template>
+		  <template v-slot:notActive>
+		  <i class="far fa-check-square p-r_3"></i>I agree
+	   </template>
+   </BtnToggle>
+   <BtnToggle  status="none" class="a:bg_success bg_alert h:bg_shade-n3" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" >
+	<template v-slot:active>
+		On
+	</template>
+	  <template v-slot:notActive>
+	  Off
+   </template>
+</BtnToggle>
+<BtnToggle  status="none" class="a:bg_success bg_alert h:bg_shade-n3" @click="click" @clickActive="clickActive" @clickNotActive="clickNotActive" >
+<template v-slot:active>
+	<i class="fas fa-square p-r_4 m-l_n3"></i>
+</template>
+  <template v-slot:notActive>
+  <i class="fas fa-square p-l_4  m-r_n3"></i>
+</template>
+</BtnToggle>
+<BtnToggle  status="none" class="a:bg_primary bg_black-3 h:bg_black-7" @click="click" @clickActive="clickActive" :corner="'round'" @clickNotActive="clickNotActive" >
+<template v-slot:active>
+	<i class="fas fa-circle  m-x_n3"></i>
+</template>
+  <template v-slot:notActive>
+  <i class="fas fa-circle opacity_2 h:opacity m-x_n3"></i>
+</template>
+</BtnToggle>
+</div>
       </div>
 	</section>
 	`,
@@ -261,7 +281,6 @@ export const toggle = () => ({
 			medium: "medium",
 			large: "large",
 			status: "warning",
-			iconBoolean: true
 		};
 	}
 });
