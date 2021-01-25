@@ -7,7 +7,7 @@ export default {
 	component: Request,
 	parameters: {
 		componentSubtitle: "A Fellow in Training",
-		info: true
+		 
 	}
 };
 export const basic = () => {

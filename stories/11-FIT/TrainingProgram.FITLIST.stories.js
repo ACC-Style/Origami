@@ -1,6 +1,6 @@
 import FIT from "../../src/components/FIT/TrainingProgram.FIT";
 import ListFIT from "../../src/components/FIT/TrainingProgram.listOfFITs";
-import { methods } from "../4-FIT/TrainingProgram.FIT.stories";
+import { methods } from "./TrainingProgram.FIT.stories";
 export default {
 	title: "FIT/List FITs",
 	component: ListFIT,

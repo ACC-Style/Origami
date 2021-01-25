@@ -9,7 +9,7 @@ export default {
 	parameters: {
 		componentSubtitle: "The user that is getting a tool added to them",
 		notes: true,
-		info: true
+		 
 	},
 	excludeStories: ["userDataFound", "userDataNotFound", "methods"]
 };

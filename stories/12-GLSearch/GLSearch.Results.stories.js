@@ -9,7 +9,7 @@ export default {
 	parameters: {
 		componentSubtitle: "Guideline Search Result",
 		notes: true,
-		info: true
+		 
 	},
 	excludeStories: [ "recomendationData", "methods", "tableData" ]
 };

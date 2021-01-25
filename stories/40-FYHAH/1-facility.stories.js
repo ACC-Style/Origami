@@ -11,7 +11,7 @@ export default {
 	parameters: {
 		notes:
 			"Buttons are highly flexable with icons and colors changed by ':state' and you can even pass icons in with the text for even more options of icon.  Try adding 'br_radius' to add curved corders.",
-		info: true
+		 
 	}
 };
 

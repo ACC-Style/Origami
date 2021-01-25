@@ -8,7 +8,7 @@ export default {
 	parameters: {
 		componentSubtitle:
 			"A single line in the transcript is an activity that has an assigned credit value",
-		info: true
+		 
 	},
 	excludeStories: ["activity", "selectedSort", "selectedCreditFilter"]
 };

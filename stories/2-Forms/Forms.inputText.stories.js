@@ -8,7 +8,7 @@ export default {
 	parameters: {
 		componentSubtitle:
 			"email inputs can be used for just capturing a secondary input or turn on the user name feature to check if it is unique",
-		info: true
+		 
 	},
 	excludeStories: ["inputTextComponent"]
 };

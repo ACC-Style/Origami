@@ -8,7 +8,7 @@ export default {
     excludeStories: ["default","templateBasic", "sortTypes", "selectedSort", "descriptionObject"],
     parameters: {
         componentSubtitle: "A block area that shows the totals of credits and the amount that has be accumlated over time.",
-        info: true
+         
     }
 };
 export const descriptionObject = {

@@ -8,7 +8,7 @@ export default {
 	component: CreditLegend,
 	parameters: {
 		componentSubtitle: "Handy status label",
-		info: true
+		 
 	}
 };
 

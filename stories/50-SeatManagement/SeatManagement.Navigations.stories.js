@@ -9,7 +9,7 @@ export default {
 	parameters: {
 		componentSubtitle: "Navigation Elements that Route Users to Specific Sections of the Application",
 		notes: true,
-		info: true
+		 
 	},
 	excludeStories: ["sideNavigationNodes","sideNavigationUsers",]
 };

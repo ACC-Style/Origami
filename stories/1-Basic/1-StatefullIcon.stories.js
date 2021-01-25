@@ -9,7 +9,7 @@ export default {
 	parameters: {
 		notes:
 			"State Icons respond to the font size added to them or the font size that is inherited by the parent",
-		info: true
+		 
 	}
 };
 export const iconTemplate = ` 

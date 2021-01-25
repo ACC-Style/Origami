@@ -8,7 +8,7 @@ export default {
 		componentSubtitle: "A Fellow in Training",
 		notes:
 			"Fit is a container of information about the ACC Logged in User that is attached to a Training Program",
-		info: true
+		 
 	},
 	excludeStories: ["fit", "methods"]
 };

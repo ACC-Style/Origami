@@ -11,7 +11,7 @@ export default {
 	parameters: {
 		componentSubtitle: "The Owner of the Contract",
 		notes: true,
-		info: true
+		 
 	},
 	excludeStories: ["SeatData", "methods"]
 };

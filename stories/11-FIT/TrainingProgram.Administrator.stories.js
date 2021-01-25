@@ -8,7 +8,7 @@ export default {
 	parameters: {
 		componentSubtitle: "Administrator of Training Program",
 		notes: true,
-		info: true
+		 
 	},
 	excludeStories: ["adminData", "methods"],
 	methods: {
